@@ -164,7 +164,7 @@
     }
 
     // ── render: assets ────────────────────────────────
-    function renderAssets(p) {
+    function renderAssets(p, n) {
       document.getElementById('last-updated').textContent = p.last_updated ? '更新 '+fmtTime(p.last_updated) : '尚未更新';
       if (p.total_value_twd != null) {
         document.getElementById('total-value').innerHTML = `NT$ ${fmt(p.total_value_twd)}`;
@@ -182,9 +182,24 @@
       list.innerHTML = '';
       const twHoldings = (p.holdings||[]).filter(h => h.market === 'TW');
       const usHoldings = (p.holdings||[]).filter(h => h.market === 'US');
+      const aiMap = {};
+      ((n||{}).ai_analysis||[]).forEach(a => { aiMap[a.ticker] = a; });
+      const dirStyle = d => {
+        if (d==='可布局') return 'background:rgba(34,197,94,0.15);color:#22c55e;border:1px solid rgba(34,197,94,0.25);';
+        if (d==='減碼')   return 'background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.25);';
+        return 'background:rgba(245,158,11,0.15);color:#f59e0b;border:1px solid rgba(245,158,11,0.25);';
+      };
       const holdingCard = h => {
         const priceStr = h.current_price != null ? (h.currency==='TWD'?'NT$ ':'$ ')+fmt(h.current_price,2) : '—';
         const hasPos = h.quantity && h.avg_price;
+        const ai = aiMap[h.ticker];
+        const aiSection = ai ? `
+          <div class="divider"></div>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span style="font-size:10px;padding:2px 8px;border-radius:4px;${dirStyle(ai.direction)}">${ai.direction}</span>
+            <span style="font-size:11px;color:#64748b;flex:1;">${ai.timeframe}</span>
+          </div>
+          <div style="font-size:11px;color:#475569;margin-top:6px;line-height:1.6;">${ai.reasoning}</div>` : '';
         return `
           <div class="card">
             <div class="flex justify-between items-start">
@@ -199,6 +214,7 @@
               <div><div class="label">損益</div><div class="font-mono text-sm ${cls(h.gain_loss_twd)}">${h.gain_loss_twd!=null?sign(h.gain_loss_twd,0):'—'}</div></div>
             </div>
             <div class="mt-2 text-right">${badge(h.gain_loss_pct)}</div>
+            ${aiSection}
             ` : `<div class="divider"></div><div style="font-size:11px;color:#475569;">⚠️ 待補入持股數量與均價</div>`}
           </div>`;
       };
@@ -392,6 +408,32 @@
         html += ahtml;
       }
 
+      // 選股雷達
+      if ((n.stock_radar||[]).length) {
+        const dirS = d => d==='值得關注'
+          ? 'background:rgba(96,165,250,0.15);color:#60a5fa;border:1px solid rgba(96,165,250,0.25);'
+          : 'background:rgba(245,158,11,0.15);color:#f59e0b;border:1px solid rgba(245,158,11,0.25);';
+        let rhtml = `<div class="card mb-3">
+          <div style="font-size:13px;font-weight:700;color:#f8fafc;margin-bottom:4px;">🔍 選股雷達</div>
+          <div style="font-size:11px;color:#475569;margin-bottom:12px;">KOL 近期提及・美股優先・排除現有持股</div>`;
+        n.stock_radar.forEach((item, i) => {
+          rhtml += `
+            <div style="${i>0?'border-top:1px solid #1e293b;padding-top:12px;margin-top:12px;':''}">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;">
+                <span style="font-weight:700;font-size:13px;">${item.ticker}</span>
+                <span style="font-size:11px;color:#64748b;">${item.name}</span>
+                <span style="font-size:10px;padding:2px 7px;border-radius:4px;${dirS(item.direction)}">${item.direction}</span>
+                <span style="font-size:11px;color:#475569;margin-left:auto;">${item.market==='TW'?'🇹🇼':'🇺🇸'}</span>
+              </div>
+              <div style="font-size:11px;color:#64748b;margin-bottom:4px;">${item.timeframe}</div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.7;">${item.reasoning}</div>
+              <div style="font-size:11px;color:#475569;margin-top:6px;">📎 ${(item.sources||[]).join('・')}</div>
+            </div>`;
+        });
+        rhtml += `<div style="font-size:10px;color:#334155;margin-top:14px;border-top:1px solid #1e293b;padding-top:8px;">⚠️ 以上為 AI 整理 KOL 觀點，非投資建議</div></div>`;
+        html += rhtml;
+      }
+
       (n.articles||[]).forEach(a => {
         html += `
           <div class="card mb-3">
@@ -441,7 +483,7 @@
           fetch('data/news.json'+ts).then(r=>r.json()),
           fetch('data/trades.json'+ts).then(r=>r.json()),
         ]);
-        renderAssets(p);
+        renderAssets(p, n);
         renderMarket(w);
         renderNews(n);
         renderTrades(t);
