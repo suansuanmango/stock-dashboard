@@ -22,8 +22,9 @@
     .badge-neutral { background: rgba(100,116,139,0.15); color: #94a3b8; }
     .divider { border-top: 1px solid #1e2d45; margin: 12px 0; }
     .label { font-size: 11px; color: #64748b; margin-bottom: 2px; }
-    .skeleton { background: linear-gradient(90deg, #1e2d45 25%, #253550 50%, #1e2d45 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 6px; }
-    @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+    .market-btn { flex: 1; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 14px; transition: all 0.2s; }
+    .market-btn.active { border: 2px solid #60a5fa; background: rgba(96,165,250,0.1); color: #60a5fa; }
+    .market-btn.inactive { border: 1px solid #334155; background: transparent; color: #64748b; }
   </style>
 </head>
 <body class="text-white min-h-screen">
@@ -38,8 +39,6 @@
 
   <!-- ───── 資產頁 ───── -->
   <div id="page-assets" class="tab-content active px-4 pt-4 pb-28">
-
-    <!-- 總資產卡 -->
     <div class="card" style="background:linear-gradient(135deg,#131c2e,#1a2540);">
       <div class="label">總資產（台幣）</div>
       <div id="total-value" class="text-4xl font-bold mt-1 mb-3">—</div>
@@ -55,17 +54,12 @@
       </div>
       <div class="mt-2 text-xs" style="color:#334155;" id="exchange-rate"></div>
     </div>
-
-    <!-- 持股明細 -->
     <div class="label px-1 mb-2 mt-2">持股明細</div>
     <div id="holdings-list"></div>
-
-    <!-- 定存 -->
     <div id="deposits-section" style="display:none">
       <div class="label px-1 mb-2 mt-4">定存</div>
       <div id="deposits-list"></div>
     </div>
-
   </div>
 
   <!-- ───── 行情頁 ───── -->
@@ -75,6 +69,39 @@
     <div id="tw-list"></div>
     <div class="label px-1 mb-2 mt-5">🇺🇸 美股</div>
     <div id="us-list"></div>
+    <div id="custom-section" style="display:none;">
+      <div class="label px-1 mb-2 mt-5">⭐ 自訂追蹤</div>
+      <div id="custom-list"></div>
+    </div>
+  </div>
+
+  <!-- FAB 新增按鈕（僅行情頁顯示） -->
+  <button id="fab-add" onclick="openAddModal()"
+    style="display:none; position:fixed; bottom:82px; right:18px; width:48px; height:48px; background:#3b82f6; border-radius:50%; align-items:center; justify-content:center; z-index:15; box-shadow:0 4px 16px rgba(59,130,246,0.45);">
+    <svg width="22" height="22" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+  </button>
+
+  <!-- 新增股票 Modal -->
+  <div id="add-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:50;" onclick="closeAddModal()">
+    <div style="position:absolute; bottom:0; left:0; right:0; background:#131c2e; border-radius:20px 20px 0 0; padding:24px 20px 36px;" onclick="event.stopPropagation()">
+      <div class="flex justify-between items-center mb-5">
+        <div class="font-bold text-base">新增觀察標的</div>
+        <button onclick="closeAddModal()" style="color:#64748b; font-size:22px; line-height:1;">×</button>
+      </div>
+      <input id="ticker-input" type="text" placeholder="輸入股票代號（例：AAPL、2330）"
+        style="width:100%; background:#0a0f1e; border:1px solid #2d3f5c; border-radius:10px; padding:13px 14px; color:white; font-size:16px; margin-bottom:14px; outline:none;"
+        autocomplete="off" autocapitalize="characters"
+        onkeydown="if(event.key==='Enter') addCustomStock()">
+      <div class="flex gap-3 mb-5">
+        <button id="btn-us" class="market-btn active" onclick="selectMarket('US')">🇺🇸 美股</button>
+        <button id="btn-tw" class="market-btn inactive" onclick="selectMarket('TW')">🇹🇼 台股</button>
+      </div>
+      <button onclick="addCustomStock()"
+        style="width:100%; padding:14px; background:#3b82f6; border-radius:12px; font-weight:bold; font-size:16px;">
+        新增
+      </button>
+      <div id="add-error" style="color:#f87171; font-size:12px; text-align:center; margin-top:10px; min-height:16px;"></div>
+    </div>
   </div>
 
   <!-- ───── 財經頁 ───── -->
@@ -132,48 +159,35 @@
       document.querySelectorAll('.nav-btn').forEach(e=>e.classList.remove('active'));
       document.getElementById('page-'+tab).classList.add('active');
       document.getElementById('nav-'+tab).classList.add('active');
+      const fab = document.getElementById('fab-add');
+      fab.style.display = tab === 'market' ? 'flex' : 'none';
     }
 
     // ── render: assets ────────────────────────────────
     function renderAssets(p) {
       document.getElementById('last-updated').textContent = p.last_updated ? '更新 '+fmtTime(p.last_updated) : '尚未更新';
-
       if (p.total_value_twd != null) {
-        document.getElementById('total-value').innerHTML = `<span>NT$</span> <span>${fmt(p.total_value_twd)}</span>`;
+        document.getElementById('total-value').innerHTML = `NT$ ${fmt(p.total_value_twd)}`;
       } else {
         document.getElementById('total-value').innerHTML = '<span class="neutral text-2xl">等待資料更新</span>';
       }
-
       document.getElementById('daily-pnl').innerHTML = p.daily_gain_loss_twd != null
         ? `<span class="${cls(p.daily_gain_loss_twd)}">${sign(p.daily_gain_loss_twd,0)} TWD</span> ${badge(p.daily_gain_loss_pct)}`
         : '<span class="neutral">—</span>';
-
       document.getElementById('total-pnl').innerHTML = p.total_gain_loss_twd != null
         ? `<span class="${cls(p.total_gain_loss_twd)}">${sign(p.total_gain_loss_twd,0)} TWD</span> ${badge(p.total_gain_loss_pct)}`
         : '<span class="neutral">—</span>';
-
-      if (p.exchange_rate_usd_twd) {
-        document.getElementById('exchange-rate').textContent = `USD/TWD ${p.exchange_rate_usd_twd}`;
-      }
-
+      if (p.exchange_rate_usd_twd) document.getElementById('exchange-rate').textContent = `USD/TWD ${p.exchange_rate_usd_twd}`;
       const list = document.getElementById('holdings-list');
       list.innerHTML = '';
       (p.holdings||[]).forEach(h => {
-        const priceStr = h.current_price != null
-          ? (h.currency==='TWD'?'NT$ ':'$ ')+fmt(h.current_price,2)
-          : '—';
+        const priceStr = h.current_price != null ? (h.currency==='TWD'?'NT$ ':'$ ')+fmt(h.current_price,2) : '—';
         const hasPos = h.quantity && h.avg_price;
         list.innerHTML += `
           <div class="card">
             <div class="flex justify-between items-start">
-              <div>
-                <div class="font-semibold text-sm">${h.name}</div>
-                <div style="font-size:11px;color:#475569;">${h.ticker} · ${h.market==='TW'?'台股':'美股'}</div>
-              </div>
-              <div class="text-right">
-                <div class="font-mono font-bold text-sm">${priceStr}</div>
-                <div class="mt-0.5">${badge(h.price_change_pct)}</div>
-              </div>
+              <div><div class="font-semibold text-sm">${h.name}</div><div style="font-size:11px;color:#475569;">${h.ticker} · ${h.market==='TW'?'台股':'美股'}</div></div>
+              <div class="text-right"><div class="font-mono font-bold text-sm">${priceStr}</div><div class="mt-0.5">${badge(h.price_change_pct)}</div></div>
             </div>
             ${hasPos ? `
             <div class="divider"></div>
@@ -186,24 +200,20 @@
             ` : `<div class="divider"></div><div style="font-size:11px;color:#475569;">⚠️ 待補入持股數量與均價</div>`}
           </div>`;
       });
-
       const deps = p.deposits||[];
       if (deps.length > 0) {
         document.getElementById('deposits-section').style.display='block';
         document.getElementById('deposits-list').innerHTML = deps.map(d=>`
           <div class="card">
             <div class="flex justify-between items-center">
-              <div>
-                <div class="font-semibold text-sm">${d.bank} 定存</div>
-                <div style="font-size:11px;color:#475569;">${d.start_date} 起・年利率 ${d.rate}%</div>
-              </div>
+              <div><div class="font-semibold text-sm">${d.bank} 定存</div><div style="font-size:11px;color:#475569;">${d.start_date} 起・年利率 ${d.rate}%</div></div>
               <div class="font-mono font-bold text-sm">NT$ ${fmt(d.amount)}</div>
             </div>
           </div>`).join('');
       }
     }
 
-    // ── render: market ────────────────────────────────
+    // ── render: market (JSON stocks) ──────────────────
     function renderMarket(w) {
       document.getElementById('market-updated').textContent = w.last_updated ? '更新 '+fmtTime(w.last_updated) : '尚未更新';
       const twEl = document.getElementById('tw-list');
@@ -211,24 +221,122 @@
       twEl.innerHTML = '';
       usEl.innerHTML = '';
       (w.stocks||[]).forEach(s => {
-        const priceStr = s.current_price != null
-          ? (s.market==='TW'?'NT$ ':'$ ')+fmt(s.current_price,2)
-          : '—';
+        const priceStr = s.current_price != null ? (s.market==='TW'?'NT$ ':'$ ')+fmt(s.current_price,2) : '—';
         const el = `
           <div class="card" style="padding:12px 16px; margin-bottom:8px;">
             <div class="flex justify-between items-center">
-              <div>
-                <span class="font-semibold text-sm">${s.name}</span>
-                <span style="font-size:11px;color:#475569;margin-left:6px;">${s.ticker}</span>
-              </div>
-              <div class="text-right">
-                <div class="font-mono font-bold text-sm">${priceStr}</div>
-                <div class="mt-0.5">${badge(s.change_pct)}</div>
-              </div>
+              <div><span class="font-semibold text-sm">${s.name}</span><span style="font-size:11px;color:#475569;margin-left:6px;">${s.ticker}</span></div>
+              <div class="text-right"><div class="font-mono font-bold text-sm">${priceStr}</div><div class="mt-0.5">${badge(s.change_pct)}</div></div>
             </div>
           </div>`;
         (s.market==='TW'?twEl:usEl).innerHTML += el;
       });
+      renderCustomStocks();
+    }
+
+    // ── custom watchlist (localStorage) ──────────────
+    let _selectedMarket = 'US';
+
+    function getCustomStocks() {
+      return JSON.parse(localStorage.getItem('custom_watchlist') || '[]');
+    }
+    function saveCustomStocks(arr) {
+      localStorage.setItem('custom_watchlist', JSON.stringify(arr));
+    }
+
+    async function fetchLivePrice(ticker, market) {
+      const symbol = market === 'TW' ? ticker + '.TW' : ticker;
+      const target = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=1d&range=5d`;
+      const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(target)}`;
+      try {
+        const res = await fetch(proxy, { signal: AbortSignal.timeout(9000) });
+        const data = await res.json();
+        const parsed = JSON.parse(data.contents);
+        const closes = parsed.chart.result[0].indicators.quote[0].close.filter(v => v != null);
+        if (!closes.length) return { p: null, c: null };
+        const cur = closes[closes.length - 1];
+        const prev = closes.length >= 2 ? closes[closes.length - 2] : cur;
+        return {
+          p: Math.round(cur * 100) / 100,
+          c: prev ? Math.round((cur - prev) / prev * 10000) / 100 : 0
+        };
+      } catch(e) {
+        return { p: null, c: null };
+      }
+    }
+
+    async function renderCustomStocks() {
+      const customs = getCustomStocks();
+      const section = document.getElementById('custom-section');
+      const list = document.getElementById('custom-list');
+      if (!customs.length) { section.style.display = 'none'; return; }
+      section.style.display = 'block';
+      // show loading skeletons first
+      list.innerHTML = customs.map(s => `
+        <div class="card" style="padding:12px 16px; margin-bottom:8px;" id="custom-${s.ticker}">
+          <div class="flex justify-between items-center">
+            <div>
+              <span class="font-semibold text-sm">${s.ticker}</span>
+              <span style="font-size:11px;color:#475569;margin-left:6px;">${s.market==='TW'?'台股':'美股'}</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-right">
+                <div class="font-mono font-bold text-sm" id="p-${s.ticker}" style="color:#64748b;">抓取中…</div>
+              </div>
+              <button onclick="removeCustomStock('${s.ticker}')" style="color:#475569; font-size:18px; line-height:1; padding:2px 4px;">×</button>
+            </div>
+          </div>
+        </div>`).join('');
+      // fetch prices in parallel
+      customs.forEach(async s => {
+        const { p, c } = await fetchLivePrice(s.ticker, s.market);
+        const el = document.getElementById(`p-${s.ticker}`);
+        if (!el) return;
+        const priceStr = p != null ? (s.market==='TW'?'NT$ ':'$ ')+fmt(p,2) : '—';
+        el.closest('.card').querySelector('.flex').innerHTML = `
+          <div><span class="font-semibold text-sm">${s.ticker}</span><span style="font-size:11px;color:#475569;margin-left:6px;">${s.market==='TW'?'台股':'美股'}</span></div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <div class="font-mono font-bold text-sm">${priceStr}</div>
+              <div class="mt-0.5">${badge(c)}</div>
+            </div>
+            <button onclick="removeCustomStock('${s.ticker}')" style="color:#475569; font-size:18px; line-height:1; padding:2px 4px;">×</button>
+          </div>`;
+      });
+    }
+
+    function removeCustomStock(ticker) {
+      saveCustomStocks(getCustomStocks().filter(s => s.ticker !== ticker));
+      renderCustomStocks();
+    }
+
+    // ── modal ─────────────────────────────────────────
+    function openAddModal() {
+      document.getElementById('add-modal').style.display = 'block';
+      document.getElementById('ticker-input').value = '';
+      document.getElementById('add-error').textContent = '';
+      selectMarket('US');
+      setTimeout(() => document.getElementById('ticker-input').focus(), 100);
+    }
+    function closeAddModal() {
+      document.getElementById('add-modal').style.display = 'none';
+    }
+    function selectMarket(m) {
+      _selectedMarket = m;
+      document.getElementById('btn-us').className = 'market-btn ' + (m==='US'?'active':'inactive');
+      document.getElementById('btn-tw').className = 'market-btn ' + (m==='TW'?'active':'inactive');
+    }
+    async function addCustomStock() {
+      const ticker = document.getElementById('ticker-input').value.trim().toUpperCase();
+      const errEl = document.getElementById('add-error');
+      if (!ticker) { errEl.textContent = '請輸入股票代號'; return; }
+      const customs = getCustomStocks();
+      if (customs.find(s => s.ticker === ticker)) { errEl.textContent = '已在清單中'; return; }
+      errEl.textContent = '';
+      customs.push({ ticker, market: _selectedMarket });
+      saveCustomStocks(customs);
+      closeAddModal();
+      renderCustomStocks();
     }
 
     // ── render: news ──────────────────────────────────
@@ -245,9 +353,7 @@
         return;
       }
       let html = '';
-      if (n.summary) {
-        html += `<div class="card"><div class="text-sm leading-relaxed whitespace-pre-wrap" style="color:#cbd5e1;">${n.summary}</div></div>`;
-      }
+      if (n.summary) html += `<div class="card mb-3"><div style="font-size:12px;color:#94a3b8;">${n.summary}</div></div>`;
       (n.articles||[]).forEach(a => {
         html += `
           <div class="card mb-3">
@@ -275,10 +381,7 @@
       list.innerHTML = trades.map(tr => `
         <div class="card mb-3">
           <div class="flex justify-between items-start mb-3">
-            <div>
-              <div class="font-semibold text-sm">${tr.name||tr.ticker}</div>
-              <div style="font-size:11px;color:#475569;">${tr.ticker}</div>
-            </div>
+            <div><div class="font-semibold text-sm">${tr.name||tr.ticker}</div><div style="font-size:11px;color:#475569;">${tr.ticker}</div></div>
             <div style="font-size:11px;color:#475569;">${tr.date}</div>
           </div>
           <div class="grid grid-cols-2 gap-3 mb-3">
