@@ -180,13 +180,15 @@
       if (p.exchange_rate_usd_twd) document.getElementById('exchange-rate').textContent = `USD/TWD ${p.exchange_rate_usd_twd}`;
       const list = document.getElementById('holdings-list');
       list.innerHTML = '';
-      (p.holdings||[]).forEach(h => {
+      const twHoldings = (p.holdings||[]).filter(h => h.market === 'TW');
+      const usHoldings = (p.holdings||[]).filter(h => h.market === 'US');
+      const holdingCard = h => {
         const priceStr = h.current_price != null ? (h.currency==='TWD'?'NT$ ':'$ ')+fmt(h.current_price,2) : '—';
         const hasPos = h.quantity && h.avg_price;
-        list.innerHTML += `
+        return `
           <div class="card">
             <div class="flex justify-between items-start">
-              <div><div class="font-semibold text-sm">${h.name}</div><div style="font-size:11px;color:#475569;">${h.ticker} · ${h.market==='TW'?'台股':'美股'}</div></div>
+              <div><div class="font-semibold text-sm">${h.name}</div><div style="font-size:11px;color:#475569;">${h.ticker}</div></div>
               <div class="text-right"><div class="font-mono font-bold text-sm">${priceStr}</div><div class="mt-0.5">${badge(h.price_change_pct)}</div></div>
             </div>
             ${hasPos ? `
@@ -199,7 +201,15 @@
             <div class="mt-2 text-right">${badge(h.gain_loss_pct)}</div>
             ` : `<div class="divider"></div><div style="font-size:11px;color:#475569;">⚠️ 待補入持股數量與均價</div>`}
           </div>`;
-      });
+      };
+      if (twHoldings.length) {
+        list.innerHTML += `<div class="label px-1 mb-2">🇹🇼 台股 / ETF</div>`;
+        twHoldings.forEach(h => list.innerHTML += holdingCard(h));
+      }
+      if (usHoldings.length) {
+        list.innerHTML += `<div class="label px-1 mb-2 ${twHoldings.length?'mt-4':''}">🇺🇸 美股</div>`;
+        usHoldings.forEach(h => list.innerHTML += holdingCard(h));
+      }
       const deps = p.deposits||[];
       if (deps.length > 0) {
         document.getElementById('deposits-section').style.display='block';
