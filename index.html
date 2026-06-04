@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>投資儀表板</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    body { background: #0a0f1e; font-family: -apple-system, 'Segoe UI', sans-serif; overscroll-behavior: none; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .nav-btn { color: #475569; transition: color 0.2s; }
+    .nav-btn.active { color: #60a5fa; }
+    .card { background: #131c2e; border: 1px solid #1e2d45; border-radius: 14px; padding: 16px; margin-bottom: 12px; }
+    .gain { color: #4ade80; }
+    .loss { color: #f87171; }
+    .neutral { color: #64748b; }
+    .badge { padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+    .badge-gain { background: rgba(74,222,128,0.12); color: #4ade80; }
+    .badge-loss { background: rgba(248,113,113,0.12); color: #f87171; }
+    .badge-neutral { background: rgba(100,116,139,0.15); color: #94a3b8; }
+    .divider { border-top: 1px solid #1e2d45; margin: 12px 0; }
+    .label { font-size: 11px; color: #64748b; margin-bottom: 2px; }
+    .skeleton { background: linear-gradient(90deg, #1e2d45 25%, #253550 50%, #1e2d45 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 6px; }
+    @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+  </style>
+</head>
+<body class="text-white min-h-screen">
+
+  <!-- Header -->
+  <div class="sticky top-0 z-20" style="background:rgba(10,15,30,0.95); backdrop-filter:blur(10px); border-bottom:1px solid #1e2d45;">
+    <div class="flex justify-between items-center px-4 py-3">
+      <div class="font-bold tracking-wide">📊 酸酸投資板</div>
+      <div id="last-updated" class="text-xs" style="color:#475569;">載入中…</div>
+    </div>
+  </div>
+
+  <!-- ───── 資產頁 ───── -->
+  <div id="page-assets" class="tab-content active px-4 pt-4 pb-28">
+
+    <!-- 總資產卡 -->
+    <div class="card" style="background:linear-gradient(135deg,#131c2e,#1a2540);">
+      <div class="label">總資產（台幣）</div>
+      <div id="total-value" class="text-4xl font-bold mt-1 mb-3">—</div>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <div class="label">今日損益</div>
+          <div id="daily-pnl" class="text-sm font-semibold">—</div>
+        </div>
+        <div>
+          <div class="label">累計損益</div>
+          <div id="total-pnl" class="text-sm font-semibold">—</div>
+        </div>
+      </div>
+      <div class="mt-2 text-xs" style="color:#334155;" id="exchange-rate"></div>
+    </div>
+
+    <!-- 持股明細 -->
+    <div class="label px-1 mb-2 mt-2">持股明細</div>
+    <div id="holdings-list"></div>
+
+    <!-- 定存 -->
+    <div id="deposits-section" style="display:none">
+      <div class="label px-1 mb-2 mt-4">定存</div>
+      <div id="deposits-list"></div>
+    </div>
+
+  </div>
+
+  <!-- ───── 行情頁 ───── -->
+  <div id="page-market" class="tab-content px-4 pt-4 pb-28">
+    <div id="market-updated" class="label px-1 mb-3">—</div>
+    <div class="label px-1 mb-2">🇹🇼 台股 / ETF</div>
+    <div id="tw-list"></div>
+    <div class="label px-1 mb-2 mt-5">🇺🇸 美股</div>
+    <div id="us-list"></div>
+  </div>
+
+  <!-- ───── 財經頁 ───── -->
+  <div id="page-news" class="tab-content px-4 pt-4 pb-28">
+    <div id="news-updated" class="label px-1 mb-3">—</div>
+    <div id="news-container"></div>
+  </div>
+
+  <!-- ───── 交易頁 ───── -->
+  <div id="page-trades" class="tab-content px-4 pt-4 pb-28">
+    <div class="label px-1 mb-3">交易紀錄（最新在上）</div>
+    <div id="trades-list"></div>
+  </div>
+
+  <!-- Bottom Nav -->
+  <nav class="fixed bottom-0 left-0 right-0 z-20" style="background:rgba(10,15,30,0.97); border-top:1px solid #1e2d45; padding-bottom:env(safe-area-inset-bottom);">
+    <div class="grid grid-cols-4">
+      <button class="nav-btn active py-3 flex flex-col items-center gap-0.5" onclick="switchTab('assets')" id="nav-assets">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 13h4v8H3zM10 9h4v12h-4zM17 5h4v16h-4z"/></svg>
+        <span style="font-size:10px;">資產</span>
+      </button>
+      <button class="nav-btn py-3 flex flex-col items-center gap-0.5" onclick="switchTab('market')" id="nav-market">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <span style="font-size:10px;">行情</span>
+      </button>
+      <button class="nav-btn py-3 flex flex-col items-center gap-0.5" onclick="switchTab('news')" id="nav-news">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        <span style="font-size:10px;">財經</span>
+      </button>
+      <button class="nav-btn py-3 flex flex-col items-center gap-0.5" onclick="switchTab('trades')" id="nav-trades">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        <span style="font-size:10px;">交易</span>
+      </button>
+    </div>
+  </nav>
+
+  <script>
+    // ── helpers ──────────────────────────────────────
+    const fmt = (n, d=0) => n == null ? '—' : new Intl.NumberFormat('zh-TW',{minimumFractionDigits:d,maximumFractionDigits:d}).format(n);
+    const sign = (n, d=0) => n == null ? '—' : (n>=0?'+':'')+fmt(n,d);
+    const cls = n => n == null ? 'neutral' : n>0 ? 'gain' : n<0 ? 'loss' : 'neutral';
+    const badge = (n, unit='%', d=2) => {
+      if (n == null) return '<span class="badge badge-neutral">—</span>';
+      const c = n>0?'badge-gain':n<0?'badge-loss':'badge-neutral';
+      return `<span class="badge ${c}">${n>=0?'+':''}${fmt(n,d)}${unit}</span>`;
+    };
+    const fmtTime = iso => {
+      if (!iso) return '—';
+      return new Date(iso).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'});
+    };
+
+    // ── tab switching ─────────────────────────────────
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-content').forEach(e=>e.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(e=>e.classList.remove('active'));
+      document.getElementById('page-'+tab).classList.add('active');
+      document.getElementById('nav-'+tab).classList.add('active');
+    }
+
+    // ── render: assets ────────────────────────────────
+    function renderAssets(p) {
+      document.getElementById('last-updated').textContent = p.last_updated ? '更新 '+fmtTime(p.last_updated) : '尚未更新';
+
+      if (p.total_value_twd != null) {
+        document.getElementById('total-value').innerHTML = `<span>NT$</span> <span>${fmt(p.total_value_twd)}</span>`;
+      } else {
+        document.getElementById('total-value').innerHTML = '<span class="neutral text-2xl">等待資料更新</span>';
+      }
+
+      document.getElementById('daily-pnl').innerHTML = p.daily_gain_loss_twd != null
+        ? `<span class="${cls(p.daily_gain_loss_twd)}">${sign(p.daily_gain_loss_twd,0)} TWD</span> ${badge(p.daily_gain_loss_pct)}`
+        : '<span class="neutral">—</span>';
+
+      document.getElementById('total-pnl').innerHTML = p.total_gain_loss_twd != null
+        ? `<span class="${cls(p.total_gain_loss_twd)}">${sign(p.total_gain_loss_twd,0)} TWD</span> ${badge(p.total_gain_loss_pct)}`
+        : '<span class="neutral">—</span>';
+
+      if (p.exchange_rate_usd_twd) {
+        document.getElementById('exchange-rate').textContent = `USD/TWD ${p.exchange_rate_usd_twd}`;
+      }
+
+      const list = document.getElementById('holdings-list');
+      list.innerHTML = '';
+      (p.holdings||[]).forEach(h => {
+        const priceStr = h.current_price != null
+          ? (h.currency==='TWD'?'NT$ ':'$ ')+fmt(h.current_price,2)
+          : '—';
+        const hasPos = h.quantity && h.avg_price;
+        list.innerHTML += `
+          <div class="card">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="font-semibold text-sm">${h.name}</div>
+                <div style="font-size:11px;color:#475569;">${h.ticker} · ${h.market==='TW'?'台股':'美股'}</div>
+              </div>
+              <div class="text-right">
+                <div class="font-mono font-bold text-sm">${priceStr}</div>
+                <div class="mt-0.5">${badge(h.price_change_pct)}</div>
+              </div>
+            </div>
+            ${hasPos ? `
+            <div class="divider"></div>
+            <div class="grid grid-cols-3 gap-2">
+              <div><div class="label">持股數</div><div class="font-mono text-sm">${fmt(h.quantity)}</div></div>
+              <div><div class="label">現值 (NT$)</div><div class="font-mono text-sm">${h.current_value_twd!=null?fmt(h.current_value_twd):'—'}</div></div>
+              <div><div class="label">損益</div><div class="font-mono text-sm ${cls(h.gain_loss_twd)}">${h.gain_loss_twd!=null?sign(h.gain_loss_twd,0):'—'}</div></div>
+            </div>
+            <div class="mt-2 text-right">${badge(h.gain_loss_pct)}</div>
+            ` : `<div class="divider"></div><div style="font-size:11px;color:#475569;">⚠️ 待補入持股數量與均價</div>`}
+          </div>`;
+      });
+
+      const deps = p.deposits||[];
+      if (deps.length > 0) {
+        document.getElementById('deposits-section').style.display='block';
+        document.getElementById('deposits-list').innerHTML = deps.map(d=>`
+          <div class="card">
+            <div class="flex justify-between items-center">
+              <div>
+                <div class="font-semibold text-sm">${d.bank} 定存</div>
+                <div style="font-size:11px;color:#475569;">${d.start_date} 起・年利率 ${d.rate}%</div>
+              </div>
+              <div class="font-mono font-bold text-sm">NT$ ${fmt(d.amount)}</div>
+            </div>
+          </div>`).join('');
+      }
+    }
+
+    // ── render: market ────────────────────────────────
+    function renderMarket(w) {
+      document.getElementById('market-updated').textContent = w.last_updated ? '更新 '+fmtTime(w.last_updated) : '尚未更新';
+      const twEl = document.getElementById('tw-list');
+      const usEl = document.getElementById('us-list');
+      twEl.innerHTML = '';
+      usEl.innerHTML = '';
+      (w.stocks||[]).forEach(s => {
+        const priceStr = s.current_price != null
+          ? (s.market==='TW'?'NT$ ':'$ ')+fmt(s.current_price,2)
+          : '—';
+        const el = `
+          <div class="card" style="padding:12px 16px; margin-bottom:8px;">
+            <div class="flex justify-between items-center">
+              <div>
+                <span class="font-semibold text-sm">${s.name}</span>
+                <span style="font-size:11px;color:#475569;margin-left:6px;">${s.ticker}</span>
+              </div>
+              <div class="text-right">
+                <div class="font-mono font-bold text-sm">${priceStr}</div>
+                <div class="mt-0.5">${badge(s.change_pct)}</div>
+              </div>
+            </div>
+          </div>`;
+        (s.market==='TW'?twEl:usEl).innerHTML += el;
+      });
+    }
+
+    // ── render: news ──────────────────────────────────
+    function renderNews(n) {
+      document.getElementById('news-updated').textContent = n.last_updated ? '更新 '+fmtTime(n.last_updated) : '尚未更新（等待每日排程）';
+      const c = document.getElementById('news-container');
+      if (!n.summary && !(n.articles||[]).length) {
+        c.innerHTML = `
+          <div class="card text-center py-10">
+            <div style="font-size:40px;margin-bottom:10px;">📰</div>
+            <div style="color:#475569;">財經摘要每日早上自動更新</div>
+            <div style="color:#334155;font-size:11px;margin-top:6px;">來源：股癌・財報狗・股感・財經M平方</div>
+          </div>`;
+        return;
+      }
+      let html = '';
+      if (n.summary) {
+        html += `<div class="card"><div class="text-sm leading-relaxed whitespace-pre-wrap" style="color:#cbd5e1;">${n.summary}</div></div>`;
+      }
+      (n.articles||[]).forEach(a => {
+        html += `
+          <div class="card mb-3">
+            <div style="font-size:11px;color:#60a5fa;margin-bottom:4px;">${a.source}</div>
+            <div class="font-semibold text-sm mb-2">${a.title}</div>
+            <div class="text-sm leading-relaxed" style="color:#94a3b8;">${a.summary}</div>
+          </div>`;
+      });
+      c.innerHTML = html;
+    }
+
+    // ── render: trades ────────────────────────────────
+    function renderTrades(t) {
+      const list = document.getElementById('trades-list');
+      const trades = [...(t.trades||[])].reverse();
+      if (!trades.length) {
+        list.innerHTML = `
+          <div class="card text-center py-10">
+            <div style="font-size:40px;margin-bottom:10px;">🗒️</div>
+            <div style="color:#475569;">尚無交易紀錄</div>
+            <div style="color:#334155;font-size:11px;margin-top:6px;">和 Claude 討論決定買入後自動記錄</div>
+          </div>`;
+        return;
+      }
+      list.innerHTML = trades.map(tr => `
+        <div class="card mb-3">
+          <div class="flex justify-between items-start mb-3">
+            <div>
+              <div class="font-semibold text-sm">${tr.name||tr.ticker}</div>
+              <div style="font-size:11px;color:#475569;">${tr.ticker}</div>
+            </div>
+            <div style="font-size:11px;color:#475569;">${tr.date}</div>
+          </div>
+          <div class="grid grid-cols-2 gap-3 mb-3">
+            <div><div class="label">成交數量</div><div class="font-mono text-sm">${fmt(tr.quantity)} 股</div></div>
+            <div><div class="label">成交價</div><div class="font-mono text-sm">${tr.currency==='USD'?'$ ':'NT$ '}${fmt(tr.price,2)}</div></div>
+          </div>
+          ${tr.reason?`<div class="divider"></div><div class="label">買入原因</div><div style="font-size:12px;color:#94a3b8;line-height:1.6;">${tr.reason}</div>`:''}
+          ${tr.notes?`<div class="mt-2"><div class="label">備註</div><div style="font-size:12px;color:#64748b;line-height:1.6;">${tr.notes}</div></div>`:''}
+        </div>`).join('');
+    }
+
+    // ── main load ─────────────────────────────────────
+    async function loadData() {
+      const ts = '?t='+Date.now();
+      try {
+        const [p,w,n,t] = await Promise.all([
+          fetch('data/portfolio.json'+ts).then(r=>r.json()),
+          fetch('data/watchlist.json'+ts).then(r=>r.json()),
+          fetch('data/news.json'+ts).then(r=>r.json()),
+          fetch('data/trades.json'+ts).then(r=>r.json()),
+        ]);
+        renderAssets(p);
+        renderMarket(w);
+        renderNews(n);
+        renderTrades(t);
+      } catch(e) {
+        document.getElementById('last-updated').textContent = '載入失敗，請重新整理';
+        console.error(e);
+      }
+    }
+
+    loadData();
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "last_updated": null,
+  "exchange_rate_usd_twd": null,
+  "total_cost_twd": null,
+  "total_value_twd": null,
+  "total_gain_loss_twd": null,
+  "total_gain_loss_pct": null,
+  "holdings": [
+    {
+      "ticker": "006208",
+      "name": "富邦台灣50",
+      "market": "TW",
+      "currency": "TWD",
+      "quantity": 7559,
+      "avg_price": 87.26,
+      "current_price": null,
+      "price_change": null,
+      "price_change_pct": null,
+      "current_value_twd": null,
+      "cost_twd": null,
+      "gain_loss_twd": null,
+      "gain_loss_pct": null
+    },
+    {
+      "ticker": "TSM",
+      "name": "台積電 ADR",
+      "market": "US",
+      "currency": "USD",
+      "quantity": null,
+      "avg_price": null,
+      "current_price": null,
+      "price_change": null,
+      "price_change_pct": null,
+      "current_value_twd": null,
+      "cost_twd": null,
+      "gain_loss_twd": null,
+      "gain_loss_pct": null
+    },
+    {
+      "ticker": "TSLA",
+      "name": "特斯拉",
+      "market": "US",
+      "currency": "USD",
+      "quantity": null,
+      "avg_price": null,
+      "current_price": null,
+      "price_change": null,
+      "price_change_pct": null,
+      "current_value_twd": null,
+      "cost_twd": null,
+      "gain_loss_twd": null,
+      "gain_loss_pct": null
+    }
+  ],
+  "deposits": []
+}
