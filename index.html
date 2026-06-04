@@ -159,7 +159,7 @@
       const arrow = document.getElementById(id+'-arrow');
       const open = el.style.display === 'none';
       el.style.display = open ? 'block' : 'none';
-      arrow.style.transform = open ? 'rotate(90deg)' : '';
+      arrow.style.transform = open ? 'rotate(180deg)' : '';
     }
 
     function switchTab(tab) {
@@ -207,7 +207,7 @@
           <div onclick="toggleAI('${aid}')" style="display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;">
             <span style="font-size:10px;padding:2px 8px;border-radius:4px;${dirStyle(ai.direction)}">${ai.direction}</span>
             <span style="font-size:11px;color:#64748b;flex:1;">${ai.timeframe}</span>
-            <span id="${aid}-arrow" style="font-size:11px;color:#475569;transition:transform 0.2s;">▶</span>
+            <svg id="${aid}-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition:transform 0.25s;flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
           <div id="${aid}" style="display:none;margin-top:8px;font-size:11px;color:#475569;line-height:1.7;border-left:2px solid #1e293b;padding-left:10px;">
             ${ai.reasoning}
