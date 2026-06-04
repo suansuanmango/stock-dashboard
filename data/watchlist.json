@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-04T21:09:20+08:00",
+  "last_updated": "2026-06-04T22:20:01+08:00",
   "stocks": [
     {
       "ticker": "006208",
@@ -29,41 +29,41 @@
       "ticker": "TSM",
       "name": "台積電 ADR",
       "market": "US",
-      "current_price": 436.69,
-      "change": -10.0,
-      "change_pct": -2.24
+      "current_price": 433.52,
+      "change": -3.17,
+      "change_pct": -0.73
     },
     {
       "ticker": "TSLA",
       "name": "特斯拉",
       "market": "US",
-      "current_price": 423.7,
-      "change": -0.04,
-      "change_pct": -0.01
+      "current_price": 423.92,
+      "change": 0.22,
+      "change_pct": 0.05
     },
     {
       "ticker": "NVDA",
       "name": "輝達",
       "market": "US",
-      "current_price": 214.75,
-      "change": -8.07,
-      "change_pct": -3.62
+      "current_price": 212.79,
+      "change": -1.97,
+      "change_pct": -0.92
     },
     {
       "ticker": "SPY",
       "name": "S&P 500 ETF",
       "market": "US",
-      "current_price": 754.24,
-      "change": -5.33,
-      "change_pct": -0.7
+      "current_price": 753.24,
+      "change": -1.0,
+      "change_pct": -0.13
     },
     {
       "ticker": "QQQ",
       "name": "Nasdaq 100 ETF",
       "market": "US",
-      "current_price": 744.21,
-      "change": -1.95,
-      "change_pct": -0.26
+      "current_price": 735.44,
+      "change": -8.77,
+      "change_pct": -1.18
     }
   ]
 }
