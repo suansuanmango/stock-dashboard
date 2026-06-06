@@ -25,6 +25,8 @@
     .market-btn { flex: 1; padding: 10px; border-radius: 8px; font-weight: 600; font-size: 14px; transition: all 0.2s; }
     .market-btn.active { border: 2px solid #60a5fa; background: rgba(96,165,250,0.1); color: #60a5fa; }
     .market-btn.inactive { border: 1px solid #334155; background: transparent; color: #64748b; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinning { animation: spin 0.8s linear infinite; display: inline-block; }
   </style>
 </head>
 <body class="text-white min-h-screen">
@@ -33,7 +35,11 @@
   <div class="sticky top-0 z-20" style="background:rgba(10,15,30,0.95); backdrop-filter:blur(10px); border-bottom:1px solid #1e2d45;">
     <div class="flex justify-between items-center px-4 py-3">
       <div class="font-bold tracking-wide">📊 酸酸投資板</div>
-      <div id="last-updated" class="text-xs" style="color:#475569;">載入中…</div>
+      <div class="flex items-center gap-1">
+        <div id="last-updated" class="text-xs" style="color:#475569;">載入中…</div>
+        <button id="refresh-btn" onclick="refreshLivePrices()" title="刷新即時股價"
+          style="color:#475569; font-size:16px; line-height:1; padding:2px 4px; transition:opacity 0.2s; background:none; border:none; cursor:pointer;">↻</button>
+      </div>
     </div>
   </div>
 
@@ -139,6 +145,10 @@
   </nav>
 
   <script>
+    // ── global state ──────────────────────────────────
+    let _portfolioData = null;
+    let _newsData = null;
+
     // ── helpers ──────────────────────────────────────
     const fmt = (n, d=0) => n == null ? '—' : new Intl.NumberFormat('zh-TW',{minimumFractionDigits:d,maximumFractionDigits:d}).format(n);
     const sign = (n, d=0) => n == null ? '—' : (n>=0?'+':'')+fmt(n,d);
@@ -459,6 +469,65 @@
         </div>`).join('');
     }
 
+    // ── live price refresh ────────────────────────────
+    async function refreshLivePrices() {
+      if (!_portfolioData) return;
+      const btn = document.getElementById('refresh-btn');
+      btn.classList.add('spinning');
+      btn.style.pointerEvents = 'none';
+
+      const holdings = _portfolioData.holdings || [];
+      const exRate = _portfolioData.exchange_rate_usd_twd || 31;
+
+      const results = await Promise.all(holdings.map(h => fetchLivePrice(h.ticker, h.market)));
+
+      const updated = { ..._portfolioData };
+      updated.holdings = holdings.map((h, i) => {
+        const { p, c } = results[i];
+        if (p == null) return h;
+        const newH = { ...h, current_price: p, price_change_pct: c };
+        if (h.quantity && h.avg_price) {
+          const valueLocal = p * h.quantity;
+          const costLocal = h.avg_price * h.quantity;
+          const rate = h.market === 'US' ? exRate : 1;
+          newH.current_value_twd = Math.round(valueLocal * rate);
+          const costTwd = Math.round(costLocal * rate);
+          newH.gain_loss_twd = newH.current_value_twd - costTwd;
+          newH.gain_loss_pct = Math.round((p - h.avg_price) / h.avg_price * 10000) / 100;
+          if (c != null) {
+            const prevPrice = p / (1 + c / 100);
+            newH.daily_gain_loss_twd = Math.round((p - prevPrice) * h.quantity * rate);
+            newH.daily_gain_loss_pct = c;
+          }
+        }
+        return newH;
+      });
+
+      const withValue = updated.holdings.filter(h => h.current_value_twd != null);
+      if (withValue.length) {
+        updated.total_value_twd = withValue.reduce((s, h) => s + h.current_value_twd, 0);
+        const totalDaily = withValue.reduce((s, h) => s + (h.daily_gain_loss_twd || 0), 0);
+        updated.daily_gain_loss_twd = totalDaily;
+        updated.daily_gain_loss_pct = updated.total_value_twd
+          ? Math.round(totalDaily / (updated.total_value_twd - totalDaily) * 10000) / 100 : 0;
+        const totalGain = withValue.reduce((s, h) => s + (h.gain_loss_twd || 0), 0);
+        updated.total_gain_loss_twd = totalGain;
+        const exR = updated.exchange_rate_usd_twd || 31;
+        const totalCost = withValue.reduce((s, h) => {
+          if (!h.quantity || !h.avg_price) return s;
+          return s + Math.round(h.avg_price * h.quantity * (h.market === 'US' ? exR : 1));
+        }, 0);
+        updated.total_gain_loss_pct = totalCost ? Math.round(totalGain / totalCost * 10000) / 100 : null;
+      }
+
+      updated.last_updated = new Date().toISOString();
+      _portfolioData = updated;
+      renderAssets(updated, _newsData);
+
+      btn.classList.remove('spinning');
+      btn.style.pointerEvents = 'auto';
+    }
+
     // ── main load ─────────────────────────────────────
     async function loadData() {
       const ts = '?t='+Date.now();
@@ -469,6 +538,8 @@
           fetch('data/news.json'+ts).then(r=>r.json()),
           fetch('data/trades.json'+ts).then(r=>r.json()),
         ]);
+        _portfolioData = p;
+        _newsData = n;
         renderAssets(p, n);
         renderMarket(w);
         renderNews(n);
