@@ -220,7 +220,7 @@
 
     // ── render: assets ────────────────────────────────
     function renderAssets(p, n) {
-      document.getElementById('last-updated').textContent = p.last_updated ? '更新 '+fmtTime(p.last_updated) : '尚未更新';
+      document.getElementById('last-updated').textContent = n && n.last_updated ? '分析 '+fmtTime(n.last_updated) : '尚未更新';
       if (p.total_value_twd != null) {
         document.getElementById('total-value').innerHTML = `NT$ ${fmt(p.total_value_twd)}`;
       } else {
