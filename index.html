@@ -37,6 +37,7 @@
       <div class="font-bold tracking-wide">📊 酸酸投資板</div>
       <div class="flex items-center gap-1">
         <div id="last-updated" class="text-xs" style="color:#475569;">載入中…</div>
+        <div id="refresh-updated" class="text-xs" style="color:#60a5fa;display:none;"></div>
         <button id="refresh-btn" onclick="refreshLivePrices()" title="刷新即時股價"
           style="color:#60a5fa; font-size:18px; line-height:1; padding:4px 8px; border-radius:8px; background:rgba(96,165,250,0.12); border:1px solid rgba(96,165,250,0.25); cursor:pointer; transition:opacity 0.2s;">↻</button>
       </div>
@@ -565,6 +566,10 @@
       updated.last_updated = new Date().toISOString();
       _portfolioData = updated;
       renderAssets(updated, _newsData);
+
+      const el = document.getElementById('refresh-updated');
+      el.textContent = '刷新 ' + fmtTime(updated.last_updated);
+      el.style.display = 'block';
 
       } catch(e) {
         console.warn('refreshLivePrices error:', e);
