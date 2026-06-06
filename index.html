@@ -514,10 +514,14 @@
       btn.classList.add('spinning');
       btn.style.pointerEvents = 'none';
 
+      try {
       const holdings = _portfolioData.holdings || [];
       const exRate = _portfolioData.exchange_rate_usd_twd || 31;
 
-      const results = await Promise.all(holdings.map(h => fetchLivePrice(h.ticker, h.market)));
+      const results = await Promise.race([
+        Promise.all(holdings.map(h => fetchLivePrice(h.ticker, h.market))),
+        new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), 15000))
+      ]);
 
       const updated = { ..._portfolioData };
       updated.holdings = holdings.map((h, i) => {
@@ -562,8 +566,12 @@
       _portfolioData = updated;
       renderAssets(updated, _newsData);
 
-      btn.classList.remove('spinning');
-      btn.style.pointerEvents = 'auto';
+      } catch(e) {
+        console.warn('refreshLivePrices error:', e);
+      } finally {
+        btn.classList.remove('spinning');
+        btn.style.pointerEvents = 'auto';
+      }
     }
 
     // ── main load ─────────────────────────────────────
