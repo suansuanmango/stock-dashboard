@@ -8,27 +8,7 @@
       "price": 179.41,
       "currency": "USD",
       "reason": "AI 晶片需求強勁，股癌看好長線，法說會展望樂觀，分批建倉。",
-      "notes": "TEST"
-    },
-    {
-      "date": "2026-05-15",
-      "ticker": "TSLA",
-      "name": "特斯拉",
-      "quantity": 6,
-      "price": 254.08,
-      "currency": "USD",
-      "reason": "馬斯克回歸專注 Tesla，股價從高點回落，視為合理進場點。",
-      "notes": "TEST"
-    },
-    {
-      "date": "2026-06-01",
-      "ticker": "006208",
-      "name": "富邦台灣50",
-      "quantity": 7559,
-      "price": 87.26,
-      "currency": "TWD",
-      "reason": "台股 ETF 長期持有，分散風險，定期定額策略。",
-      "notes": "TEST"
+      "notes": "⚠️ 這是測試資料，非真實交易"
     }
   ]
 }
