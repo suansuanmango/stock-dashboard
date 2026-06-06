@@ -48,6 +48,7 @@
     <div class="card" style="background:linear-gradient(135deg,#131c2e,#1a2540);">
       <div class="label">總資產（台幣）</div>
       <div id="total-value" class="text-4xl font-bold mt-1 mb-3">—</div>
+      <div id="donut-chart-container"></div>
       <div class="grid grid-cols-2 gap-3">
         <div>
           <div class="label">今日損益</div>
@@ -181,6 +182,42 @@
       fab.style.display = tab === 'market' ? 'flex' : 'none';
     }
 
+    // ── donut chart ───────────────────────────────────
+    function renderDonut(holdings) {
+      const colors = ['#60a5fa','#4ade80','#a78bfa','#fb923c','#f472b6'];
+      const withValue = holdings.filter(h => h.current_value_twd != null && h.quantity);
+      const total = withValue.reduce((s, h) => s + h.current_value_twd, 0);
+      const container = document.getElementById('donut-chart-container');
+      if (!total || !withValue.length) { container.innerHTML = ''; return; }
+
+      let pct = 0;
+      const items = withValue.map((h, i) => {
+        const p = h.current_value_twd / total * 100;
+        const color = colors[i % colors.length];
+        const seg = { start: pct, end: pct + p, pct: Math.round(p), color, ticker: h.ticker, name: h.name };
+        pct += p;
+        return seg;
+      });
+
+      const gradient = items.map(s => `${s.color} ${s.start.toFixed(2)}% ${s.end.toFixed(2)}%`).join(', ');
+
+      container.innerHTML = `
+        <div style="display:flex;align-items:center;gap:20px;margin:14px 0 12px;">
+          <div style="position:relative;width:96px;height:96px;flex-shrink:0;">
+            <div style="width:96px;height:96px;border-radius:50%;background:conic-gradient(${gradient});"></div>
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;background:#131c2e;"></div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
+            ${items.map(s => `
+              <div style="display:flex;align-items:center;gap:7px;">
+                <div style="width:8px;height:8px;border-radius:50%;background:${s.color};flex-shrink:0;"></div>
+                <span style="font-size:12px;color:#94a3b8;">${s.ticker}</span>
+                <span style="font-size:12px;color:#64748b;margin-left:auto;">${s.pct}%</span>
+              </div>`).join('')}
+          </div>
+        </div>`;
+    }
+
     // ── render: assets ────────────────────────────────
     function renderAssets(p, n) {
       document.getElementById('last-updated').textContent = p.last_updated ? '更新 '+fmtTime(p.last_updated) : '尚未更新';
@@ -241,6 +278,7 @@
             ` : `<div class="divider"></div><div style="font-size:11px;color:#475569;">⚠️ 待補入持股數量與均價</div>`}
           </div>`;
       };
+      renderDonut(p.holdings || []);
       if (twHoldings.length) {
         list.innerHTML += `<div class="label px-1 mb-2">🇹🇼 台股 / ETF</div>`;
         twHoldings.forEach(h => list.innerHTML += holdingCard(h));
