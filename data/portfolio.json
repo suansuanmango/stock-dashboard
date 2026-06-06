@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-06-05T22:56:31+08:00",
-  "exchange_rate_usd_twd": 31.52,
-  "total_cost_twd": 817489,
-  "total_value_twd": 2019969,
-  "total_gain_loss_twd": 1202480,
-  "total_gain_loss_pct": 147.09,
+  "last_updated": "2026-06-06T19:11:39+08:00",
+  "exchange_rate_usd_twd": 31.58,
+  "total_cost_twd": 817790,
+  "total_value_twd": 2013712,
+  "total_gain_loss_twd": 1195923,
+  "total_gain_loss_pct": 146.24,
   "holdings": [
     {
       "ticker": "006208",
@@ -28,13 +28,13 @@
       "currency": "USD",
       "quantity": 6,
       "avg_price": 401.38,
-      "current_price": 429.61,
-      "price_change": -15.31,
-      "price_change_pct": -3.44,
-      "current_value_twd": 81248,
-      "cost_twd": 75909,
-      "gain_loss_twd": 5339,
-      "gain_loss_pct": 7.03
+      "current_price": 415.17,
+      "price_change": -29.75,
+      "price_change_pct": -6.69,
+      "current_value_twd": 78666,
+      "cost_twd": 76053,
+      "gain_loss_twd": 2613,
+      "gain_loss_pct": 3.44
     },
     {
       "ticker": "TSLA",
@@ -43,13 +43,13 @@
       "currency": "USD",
       "quantity": 6,
       "avg_price": 254.08,
-      "current_price": 405.73,
-      "price_change": -12.72,
-      "price_change_pct": -3.04,
-      "current_value_twd": 76732,
-      "cost_twd": 48052,
-      "gain_loss_twd": 28680,
-      "gain_loss_pct": 59.69
+      "current_price": 391.0,
+      "price_change": -27.45,
+      "price_change_pct": -6.56,
+      "current_value_twd": 74087,
+      "cost_twd": 48143,
+      "gain_loss_twd": 25944,
+      "gain_loss_pct": 53.89
     },
     {
       "ticker": "NVDA",
@@ -58,13 +58,13 @@
       "currency": "USD",
       "quantity": 6,
       "avg_price": 179.41,
-      "current_price": 210.94,
-      "price_change": -7.72,
-      "price_change_pct": -3.53,
-      "current_value_twd": 39893,
-      "cost_twd": 33930,
-      "gain_loss_twd": 5963,
-      "gain_loss_pct": 17.57
+      "current_price": 205.1,
+      "price_change": -13.56,
+      "price_change_pct": -6.2,
+      "current_value_twd": 38862,
+      "cost_twd": 33995,
+      "gain_loss_twd": 4868,
+      "gain_loss_pct": 14.32
     }
   ],
   "deposits": []
