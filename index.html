@@ -113,7 +113,10 @@
 
   <!-- ───── 財經頁 ───── -->
   <div id="page-news" class="tab-content px-4 pt-4 pb-28">
-    <div id="news-updated" class="label px-1 mb-3">—</div>
+    <div class="flex items-center gap-2 px-1 mb-3">
+      <div id="news-updated" class="label">—</div>
+      <div id="news-error" style="color:#f87171;font-size:11px;display:none;"></div>
+    </div>
     <div id="news-container"></div>
   </div>
 
@@ -428,6 +431,9 @@
     // ── render: news ──────────────────────────────────
     function renderNews(n) {
       document.getElementById('news-updated').textContent = n.last_updated ? '自動更新時間 '+fmtTime(n.last_updated) : '尚未更新（等待每日排程）';
+      const errEl = document.getElementById('news-error');
+      if (n.error) { errEl.textContent = '⚠ ' + n.error; errEl.style.display = 'inline'; }
+      else { errEl.style.display = 'none'; }
       const c = document.getElementById('news-container');
       if (!n.summary && !(n.articles||[]).length) {
         c.innerHTML = `
