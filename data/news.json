@@ -1,84 +1,59 @@
 {
-  "summary": "AI概念股波動加劇，市場資金分化，地緣政治與通膨擔憂籠罩。",
+  "summary": "AI概念股面臨修正壓力，然部分個股仍有亮點，市場情緒趨於謹慎。",
   "articles": [
     {
       "source": "股癌",
-      "title": "EP667 | 🌍",
-      "summary": "EP667於6月3日發布，探討近期市場土味情節，由NordVPN贊助。節目內容涵蓋金融投資知識與海內外時事，預計分析當前市場氛圍與科技股動向。"
+      "title": "EP668 | 賈偷島現在只要下載Saily APP",
+      "summary": "股癌最新一集Podcast主要推廣Saily APP的優惠活動，鼓勵聽眾下載並使用其提供的eSIM服務，結帳時輸入專屬優惠碼可享折扣，內容偏向業配性質，未有明確財經分析重點。"
     },
     {
       "source": "財報狗",
-      "title": "本日資料不足",
-      "summary": "本日資料不足"
+      "title": "近三日資料不足",
+      "summary": "近三日財報狗網站未發布符合搜尋條件的最新分析文章，故無法提供摘要內容。"
     },
     {
       "source": "股感",
-      "title": "本日資料不足",
-      "summary": "本日資料不足"
+      "title": "近三日資料不足",
+      "summary": "近三日股感網站未發布符合搜尋條件的最新市場觀察文章，故無法提供摘要內容。"
     },
     {
       "source": "財經M平方",
-      "title": "最新總經分析與關鍵圖表",
-      "summary": "最新關鍵圖表分析半導體超級循環與AI算力產業鏈，並探討通膨再起與聯準會升息的可能性。美國巴菲特指標顯示市場估值偏高，聯準會目標利率上限為3.75%。"
+      "title": "近三日資料不足",
+      "summary": "近三日財經M平方網站未發布符合搜尋條件的最新總經分析文章，故無法提供摘要內容。"
     }
   ],
   "stock_radar": [
     {
-      "ticker": "MU",
-      "name": "美光科技",
+      "ticker": "AOI",
+      "name": "Applied Optoelectronics",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將美光科技列為2026年牛市擒拿手，因其在記憶體晶片領域的領先地位，特別是HBM對Nvidia Blackwell晶片的關鍵性，且2026年HBM4產能已售罄。",
+      "timeframe": "短期",
+      "reasoning": "Seeking Alpha於6月5日分析Applied Optoelectronics為AI領域的900%贏家，但同時也提出其上漲空間是否已完全反映的疑問，建議投資人審慎評估潛在風險與報酬。",
       "sources": [
-        "16",
-        "27"
+        "Seeking Alpha"
       ]
     },
     {
-      "ticker": "MRVL",
-      "name": "邁威爾科技",
+      "ticker": "ROOT",
+      "name": "Root Inc.",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中短期",
-      "reasoning": "邁威爾科技被納入標普500指數後盤後股價大漲，顯示市場對AI晶片與資料中心基礎設施股的強勁信心，Nvidia也曾點名其為關鍵夥伴。",
+      "timeframe": "中期",
+      "reasoning": "Seeking Alpha於6月6日刊登一篇關於Root Inc.的分析文章，探討這家AI驅動的保險公司是否已開始紮根，暗示其商業模式可能逐漸成熟，值得投資人持續追蹤其發展。",
       "sources": [
-        "13",
-        "14"
+        "Seeking Alpha"
       ]
     },
     {
-      "ticker": "LLY",
-      "name": "禮來",
+      "ticker": "VNT",
+      "name": "Vistance Networks",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "根據Seeking Alpha報告，禮來在過去一個月表現強勁，上漲18.44%，顯示其在「高成長股息股」中受到青睞。",
+      "timeframe": "中期",
+      "reasoning": "Seeking Alpha於6月6日發布文章，分析Vistance Networks在銷售之後，股東實際擁有什麼，可能暗示其價值被低估或有潛在機會，值得進一步研究。",
       "sources": [
-        "18"
-      ]
-    },
-    {
-      "ticker": "MSFT",
-      "name": "微軟",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "微軟在過去一個月上漲10.65%，被Seeking Alpha列為表現優異的「高成長股息股」之一，顯示其穩健的成長動能。",
-      "sources": [
-        "18"
-      ]
-    },
-    {
-      "ticker": "PAYX",
-      "name": "Paychex",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Paychex在過去一個月上漲6.08%，同時被Seeking Alpha評為「高殖利率股息股」，兼具成長與收益潛力。",
-      "sources": [
-        "18",
-        "24"
+        "Seeking Alpha"
       ]
     }
   ],
@@ -87,13 +62,11 @@
       "ticker": "006208",
       "name": "富邦台灣50",
       "market": "TW",
-      "direction": "觀望",
-      "timeframe": "短期",
-      "reasoning": "富邦台灣50近期雖有強勁漲幅，但6月5日下跌1.99%，顯示短期面臨獲利了結壓力。儘管一個月內仍上漲9.77%，且今年以來績效達60.59%，但台股加權指數近期震盪整理，國際地緣政治風險升溫，可能影響市場情緒。考量短期波動與大盤整理態勢，建議觀望。",
+      "direction": "可布局",
+      "timeframe": "長期",
+      "reasoning": "富邦台50（006208）與元大台灣50等重量級ETF於6月5日公告成分股季度調整，新增南電、創意等四檔AI供應鏈關鍵企業，刪除部分舊經濟股票，使AI含金量大增，預計將獲資金挹注，有利於長期布局。",
       "sources": [
-        "5",
-        "15",
-        "22"
+        "國泰證券"
       ]
     },
     {
@@ -102,12 +75,11 @@
       "market": "US",
       "direction": "觀望",
       "timeframe": "短期",
-      "reasoning": "台積電ADR在6月5日大跌逾5%，報422.33美元，費城半導體指數也重挫，顯示AI概念股面臨資金拋售潮與市場重新評估。儘管公司基本面仍強勁，為全球最大晶圓代工廠，但短期內受科技股疲軟與市場情緒影響，股價可能持續震盪。",
+      "reasoning": "台積電ADR近期受費城半導體指數慘崩影響，6月5日下殺6.69%。儘管台積電股東會上魏哲家對AI需求持續成長抱持信心，但市場對AI類股漲多回檔修正的擔憂仍在，且有AI分析判斷為「賣出」，短期內建議觀望。",
       "sources": [
-        "2",
-        "6",
-        "13",
-        "17"
+        "工商時報",
+        "株探米国株",
+        "統一綜合證券"
       ]
     },
     {
@@ -115,30 +87,26 @@
       "name": "特斯拉",
       "market": "US",
       "direction": "可布局",
-      "timeframe": "中長期",
-      "reasoning": "特斯拉近期股價雖有波動，但市場焦點已從傳統電動車銷售轉向Robotaxi與AI技術的轉型潛力。摩根大通與Erste Group近期上調其評級，顯示分析師對其未來發展持樂觀態度，特別是SpaceX合併的可能性及Robotaxi商業化進程。短期雖有中國FSD訴訟等負面消息，但中長期成長動能值得關注。",
+      "timeframe": "中期",
+      "reasoning": "特斯拉近期迎來增長引擎重啟，歐洲銷量狂飆，且歐洲自動駕駛監管框架出現歷史性轉變，對FSD進入歐洲市場是關鍵一步。儘管市場對強勁非農數據引發加息擔憂，但特斯拉的利好消息仍提供中期布局機會。",
       "sources": [
-        "7",
-        "11",
-        "29",
-        "32"
+        "英为财情",
+        "YouTube"
       ]
     },
     {
       "ticker": "NVDA",
       "name": "輝達",
       "market": "US",
-      "direction": "可布局",
-      "timeframe": "中長期",
-      "reasoning": "輝達近期因科技股疲軟及AI概念股重新評估而下跌，6月5日盤中下跌3.57%。然而，此前曾因新一代AI晶片發表而飆漲6%，帶動美股創新高。輝達正從晶片供應商轉型為全棧運算平台提供商，企業級AI與AI推論超級週期是未來五年成長動能，長期估值仍有上漲空間。",
+      "direction": "觀望",
+      "timeframe": "短期",
+      "reasoning": "輝達推出新款PC晶片，但PC市場面臨記憶體短缺等挑戰，且Windows on Arm的推動屢屢受挫。同時，AI類股近期漲多回檔修正，費城半導體指數慘崩，輝達也受影響。雖然AI基礎建設需求強勁，但短期市場情緒偏向謹慎。",
       "sources": [
-        "6",
-        "13",
-        "20",
-        "25"
+        "AASTOCKS.com",
+        "工商時報",
+        "永豐金證券"
       ]
     }
   ],
-  "last_updated": "2026-06-07T12:42:21.597695+08:00",
-  "error": "Gemini API 失敗: HTTP Error 503: Service Unavailable"
+  "last_updated": "2026-06-07T15:08:19.281475+08:00"
 }
