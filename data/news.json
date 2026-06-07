@@ -139,5 +139,6 @@
       ]
     }
   ],
-  "last_updated": "2026-06-07T12:42:21.597695+08:00"
+  "last_updated": "2026-06-07T12:42:21.597695+08:00",
+  "error": "Gemini API 失敗: HTTP Error 503: Service Unavailable"
 }
