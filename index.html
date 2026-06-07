@@ -36,7 +36,6 @@
     <div class="flex justify-between items-center px-4 py-3">
       <div class="font-bold tracking-wide">📊 酸酸投資板</div>
       <div class="flex items-center gap-1">
-        <div id="last-updated" class="text-xs" style="color:#475569;">載入中…</div>
         <div id="refresh-updated" class="text-xs" style="color:#60a5fa;display:none;"></div>
         <button id="refresh-btn" onclick="refreshLivePrices()" title="刷新即時股價"
           style="color:#60a5fa; font-size:18px; line-height:1; padding:4px 8px; border-radius:8px; background:rgba(96,165,250,0.12); border:1px solid rgba(96,165,250,0.25); cursor:pointer; transition:opacity 0.2s;">↻</button>
@@ -221,7 +220,6 @@
 
     // ── render: assets ────────────────────────────────
     function renderAssets(p, n) {
-      document.getElementById('last-updated').textContent = n && n.last_updated ? '分析 '+fmtTime(n.last_updated) : '尚未更新';
       if (p.total_value_twd != null) {
         document.getElementById('total-value').innerHTML = `NT$ ${fmt(p.total_value_twd)}`;
       } else {
@@ -303,7 +301,7 @@
 
     // ── render: market (JSON stocks) ──────────────────
     function renderMarket(w) {
-      document.getElementById('market-updated').textContent = w.last_updated ? '更新 '+fmtTime(w.last_updated) : '尚未更新';
+      document.getElementById('market-updated').textContent = w.last_updated ? '股價更新 '+fmtTime(w.last_updated) : '尚未更新';
       const twEl = document.getElementById('tw-list');
       const usEl = document.getElementById('us-list');
       twEl.innerHTML = '';
@@ -429,7 +427,7 @@
 
     // ── render: news ──────────────────────────────────
     function renderNews(n) {
-      document.getElementById('news-updated').textContent = n.last_updated ? '更新 '+fmtTime(n.last_updated) : '尚未更新（等待每日排程）';
+      document.getElementById('news-updated').textContent = n.last_updated ? '自動更新時間 '+fmtTime(n.last_updated) : '尚未更新（等待每日排程）';
       const c = document.getElementById('news-container');
       if (!n.summary && !(n.articles||[]).length) {
         c.innerHTML = `
@@ -568,7 +566,7 @@
       renderAssets(updated, _newsData);
 
       const el = document.getElementById('refresh-updated');
-      el.textContent = '刷新 ' + fmtTime(updated.last_updated);
+      el.textContent = '股價更新 ' + fmtTime(updated.last_updated);
       el.style.display = 'block';
 
       } catch(e) {
@@ -596,7 +594,6 @@
         renderNews(n);
         renderTrades(t);
       } catch(e) {
-        document.getElementById('last-updated').textContent = '載入失敗，請重新整理';
         console.error(e);
       }
     }
