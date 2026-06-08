@@ -9,6 +9,16 @@
       "currency": "USD",
       "reason": "AI 晶片需求強勁，股癌看好長線，法說會展望樂觀，分批建倉。",
       "notes": "⚠️ 這是測試資料，非真實交易"
+    },
+    {
+      "date": "2026-06-08",
+      "ticker": "006208",
+      "name": "ETF",
+      "quantity": 599,
+      "price": 233.5,
+      "currency": "TWD",
+      "reason": "停業生活費補充",
+      "notes": ""
     }
   ]
 }
