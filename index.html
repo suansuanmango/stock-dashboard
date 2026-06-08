@@ -111,6 +111,52 @@
     </div>
   </div>
 
+  <!-- 下單 Modal -->
+  <div id="trade-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.65); z-index:50;" onclick="closeTradeModal()">
+    <div style="position:absolute; bottom:0; left:0; right:0; background:#131c2e; border-radius:20px 20px 0 0; padding:24px 20px 36px;" onclick="event.stopPropagation()">
+      <div class="flex justify-between items-center mb-4">
+        <div id="tm-title" class="font-bold text-base">新增交易</div>
+        <button onclick="closeTradeModal()" style="color:#64748b; font-size:24px; line-height:1;">×</button>
+      </div>
+      <!-- 代號 -->
+      <div class="mb-3">
+        <div class="label mb-1">股票代號</div>
+        <input id="tm-ticker" type="text" placeholder="006208 / NVDA"
+          style="width:100%; background:#0a0f1e; border:1px solid #2d3f5c; border-radius:10px; padding:12px 14px; color:white; font-size:16px; outline:none;"
+          autocapitalize="characters"
+          oninput="this.value=this.value.toUpperCase(); autoFillName(this.value)"
+          autocomplete="off">
+      </div>
+      <!-- 名稱（自動帶入，可覆蓋） -->
+      <div class="mb-3">
+        <div class="label mb-1">名稱</div>
+        <input id="tm-name" type="text" placeholder="輸入代號後自動帶入"
+          style="width:100%; background:#0a0f1e; border:1px solid #2d3f5c; border-radius:10px; padding:12px 14px; color:white; font-size:16px; outline:none;" autocomplete="off">
+      </div>
+      <!-- 股數 & 成交價 -->
+      <div class="grid grid-cols-2 gap-3 mb-3">
+        <div>
+          <div class="label mb-1">股數</div>
+          <input id="tm-qty" type="number" placeholder="0" min="1" inputmode="numeric"
+            style="width:100%; background:#0a0f1e; border:1px solid #2d3f5c; border-radius:10px; padding:12px 14px; color:white; font-size:16px; outline:none;">
+        </div>
+        <div>
+          <div class="label mb-1">成交價</div>
+          <input id="tm-price" type="number" placeholder="0.00" step="0.01" min="0" inputmode="decimal"
+            style="width:100%; background:#0a0f1e; border:1px solid #2d3f5c; border-radius:10px; padding:12px 14px; color:white; font-size:16px; outline:none;">
+        </div>
+      </div>
+      <!-- 原因 -->
+      <div class="mb-5">
+        <div class="label mb-1">原因（選填）</div>
+        <input id="tm-reason" type="text" placeholder="買入 / 賣出原因"
+          style="width:100%; background:#0a0f1e; border:1px solid #2d3f5c; border-radius:10px; padding:12px 14px; color:white; font-size:16px; outline:none;" autocomplete="off">
+      </div>
+      <div id="tm-btns" class="flex gap-3"></div>
+      <div id="tm-error" style="color:#f87171; font-size:12px; text-align:center; margin-top:10px; min-height:16px;"></div>
+    </div>
+  </div>
+
   <!-- ───── 財經頁 ───── -->
   <div id="page-news" class="tab-content px-4 pt-4 pb-28">
     <div class="flex items-center gap-2 px-1 mb-3">
@@ -152,6 +198,8 @@
     // ── global state ──────────────────────────────────
     let _portfolioData = null;
     let _newsData = null;
+    let _tradesData = { trades: [] };
+    let _editTradeIndex = null;
 
     // ── helpers ──────────────────────────────────────
     const fmt = (n, d=0) => n == null ? '—' : new Intl.NumberFormat('zh-TW',{minimumFractionDigits:d,maximumFractionDigits:d}).format(n);
@@ -182,7 +230,15 @@
       document.getElementById('page-'+tab).classList.add('active');
       document.getElementById('nav-'+tab).classList.add('active');
       const fab = document.getElementById('fab-add');
-      fab.style.display = tab === 'market' ? 'flex' : 'none';
+      if (tab === 'market') {
+        fab.style.display = 'flex';
+        fab.onclick = openAddModal;
+      } else if (tab === 'trades') {
+        fab.style.display = 'flex';
+        fab.onclick = () => openTradeModal(null);
+      } else {
+        fab.style.display = 'none';
+      }
     }
 
     // ── donut chart ───────────────────────────────────
@@ -487,29 +543,41 @@
     // ── render: trades ────────────────────────────────
     function renderTrades(t) {
       const list = document.getElementById('trades-list');
-      const trades = [...(t.trades||[])].reverse();
+      const allTrades = t.trades || [];
+      const trades = [...allTrades].reverse();
       if (!trades.length) {
         list.innerHTML = `
           <div class="card text-center py-10">
             <div style="font-size:40px;margin-bottom:10px;">🗒️</div>
             <div style="color:#475569;">尚無交易紀錄</div>
-            <div style="color:#334155;font-size:11px;margin-top:6px;">和 Claude 討論決定買入後自動記錄</div>
+            <div style="color:#334155;font-size:11px;margin-top:6px;">點右下角 ＋ 新增</div>
           </div>`;
         return;
       }
-      list.innerHTML = trades.map(tr => `
+      list.innerHTML = trades.map((tr, i) => {
+        const origIdx = allTrades.length - 1 - i;
+        const actionLabel = tr.action === 'sell' ? '<span style="color:#f87171;font-size:10px;font-weight:600;">賣出</span>' : '<span style="color:#60a5fa;font-size:10px;font-weight:600;">買入</span>';
+        return `
         <div class="card mb-3">
           <div class="flex justify-between items-start mb-3">
-            <div><div class="font-semibold text-sm">${tr.name||tr.ticker}</div><div style="font-size:11px;color:#475569;">${tr.ticker}</div></div>
-            <div style="font-size:11px;color:#475569;">${tr.date}</div>
+            <div class="flex items-center gap-2">
+              ${actionLabel}
+              <div><div class="font-semibold text-sm">${tr.name||tr.ticker}</div><div style="font-size:11px;color:#475569;">${tr.ticker}</div></div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div style="font-size:11px;color:#475569;">${tr.date}</div>
+              <button onclick="openTradeModal(${origIdx})" style="color:#60a5fa;font-size:15px;padding:2px 4px;">✏️</button>
+              <button onclick="deleteTrade(${origIdx})" style="color:#f87171;font-size:15px;padding:2px 4px;">🗑️</button>
+            </div>
           </div>
           <div class="grid grid-cols-2 gap-3 mb-3">
             <div><div class="label">成交數量</div><div class="font-mono text-sm">${fmt(tr.quantity)} 股</div></div>
             <div><div class="label">成交價</div><div class="font-mono text-sm">${tr.currency==='USD'?'$ ':'NT$ '}${fmt(tr.price,2)}</div></div>
           </div>
-          ${tr.reason?`<div class="divider"></div><div class="label">買入原因</div><div style="font-size:12px;color:#94a3b8;line-height:1.6;">${tr.reason}</div>`:''}
+          ${tr.reason?`<div class="divider"></div><div class="label">原因</div><div style="font-size:12px;color:#94a3b8;line-height:1.6;">${tr.reason}</div>`:''}
           ${tr.notes?`<div class="mt-2"><div class="label">備註</div><div style="font-size:12px;color:#64748b;line-height:1.6;">${tr.notes}</div></div>`:''}
-        </div>`).join('');
+        </div>`;
+      }).join('');
     }
 
     // ── live price refresh ────────────────────────────
@@ -595,12 +663,184 @@
         ]);
         _portfolioData = p;
         _newsData = n;
+        _tradesData = t;
         renderAssets(p, n);
         renderMarket(w);
         renderNews(n);
         renderTrades(t);
       } catch(e) {
         console.error(e);
+      }
+    }
+
+    // ── GitHub API ────────────────────────────────────
+    const GH_OWNER = 'suansuanmango';
+    const GH_REPO  = 'stock-dashboard';
+
+    function getGHPAT() {
+      let token = localStorage.getItem('gh_pat');
+      if (!token) {
+        token = prompt('首次使用：請貼上 GitHub PAT token');
+        if (token) localStorage.setItem('gh_pat', token.trim());
+      }
+      return token ? token.trim() : null;
+    }
+
+    async function ghGetSHA(path) {
+      const token = getGHPAT();
+      if (!token) throw new Error('未設定 token');
+      const r = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`, {
+        headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github.v3+json' }
+      });
+      if (!r.ok) throw new Error('讀取失敗 ' + r.status);
+      const j = await r.json();
+      return j.sha;
+    }
+
+    async function ghPut(path, content, sha, msg) {
+      const token = getGHPAT();
+      const body = JSON.stringify({ message: msg, sha,
+        content: btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2)))) });
+      const r = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`, {
+        method: 'PUT',
+        headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+        body
+      });
+      if (!r.ok) { const e = await r.json(); throw new Error(e.message || r.status); }
+    }
+
+    async function commitBoth(newTrades, newPortfolio, msg) {
+      const [tSHA, pSHA] = await Promise.all([
+        ghGetSHA('data/trades.json'),
+        ghGetSHA('data/portfolio.json')
+      ]);
+      await ghPut('data/trades.json', newTrades, tSHA, msg);
+      await ghPut('data/portfolio.json', newPortfolio, pSHA, msg);
+    }
+
+    // ── portfolio 計算 ────────────────────────────────
+    function applyTrade(portfolio, ticker, name, qty, price, currency, action) {
+      const holdings = JSON.parse(JSON.stringify(portfolio.holdings || []));
+      const market = currency === 'TWD' ? 'TW' : 'US';
+      const idx = holdings.findIndex(h => h.ticker === ticker);
+
+      if (action === 'buy') {
+        if (idx >= 0) {
+          const h = holdings[idx];
+          const totalCost = h.avg_price * h.quantity + price * qty;
+          h.quantity += qty;
+          h.avg_price = Math.round(totalCost / h.quantity * 100) / 100;
+        } else {
+          holdings.push({ ticker, name: name||ticker, market, currency,
+            quantity: qty, avg_price: price, current_price: price,
+            price_change: 0, price_change_pct: 0,
+            current_value_twd: 0, cost_twd: 0, gain_loss_twd: 0, gain_loss_pct: 0 });
+        }
+      } else if (action === 'sell') {
+        if (idx >= 0) {
+          holdings[idx].quantity -= qty;
+          if (holdings[idx].quantity <= 0) holdings.splice(idx, 1);
+        }
+      }
+      return { ...portfolio, holdings, last_updated: new Date().toISOString() };
+    }
+
+    // ── Trade Modal ───────────────────────────────────
+    function autoFillName(ticker) {
+      if (!ticker || !_portfolioData) return;
+      const h = (_portfolioData.holdings||[]).find(h => h.ticker === ticker);
+      if (h) document.getElementById('tm-name').value = h.name;
+    }
+
+    function openTradeModal(origIdx) {
+      _editTradeIndex = origIdx;
+      document.getElementById('tm-error').textContent = '';
+      const isEdit = origIdx != null;
+      document.getElementById('tm-title').textContent = isEdit ? '編輯交易' : '新增交易';
+
+      if (isEdit) {
+        const tr = _tradesData.trades[origIdx];
+        document.getElementById('tm-ticker').value = tr.ticker || '';
+        document.getElementById('tm-name').value   = tr.name   || '';
+        document.getElementById('tm-qty').value    = tr.quantity || '';
+        document.getElementById('tm-price').value  = tr.price  || '';
+        document.getElementById('tm-reason').value = tr.reason || '';
+        document.getElementById('tm-btns').innerHTML = `
+          <button onclick="submitTrade('edit')" style="flex:1;padding:16px;background:#3b82f6;border-radius:12px;font-weight:bold;font-size:16px;">儲存</button>`;
+      } else {
+        ['tm-ticker','tm-name','tm-qty','tm-price','tm-reason'].forEach(id => document.getElementById(id).value = '');
+        document.getElementById('tm-btns').innerHTML = `
+          <button onclick="submitTrade('buy')"  style="flex:1;padding:16px;background:#3b82f6;border-radius:12px;font-weight:bold;font-size:16px;">買進</button>
+          <button onclick="submitTrade('sell')" style="flex:1;padding:16px;background:#ef4444;border-radius:12px;font-weight:bold;font-size:16px;">賣出</button>`;
+      }
+      document.getElementById('trade-modal').style.display = 'block';
+    }
+
+    function closeTradeModal() {
+      document.getElementById('trade-modal').style.display = 'none';
+    }
+
+    async function submitTrade(action) {
+      const ticker = document.getElementById('tm-ticker').value.trim().toUpperCase();
+      const name   = document.getElementById('tm-name').value.trim();
+      const qty    = parseInt(document.getElementById('tm-qty').value);
+      const price  = parseFloat(document.getElementById('tm-price').value);
+      const reason = document.getElementById('tm-reason').value.trim();
+      const errEl  = document.getElementById('tm-error');
+
+      if (!ticker)          { errEl.textContent = '請輸入股票代號'; return; }
+      if (!name)            { errEl.textContent = '請輸入名稱'; return; }
+      if (!qty || qty <= 0) { errEl.textContent = '請輸入有效股數'; return; }
+      if (!price || price <= 0) { errEl.textContent = '請輸入有效成交價'; return; }
+
+      const currency = /^\d/.test(ticker) ? 'TWD' : 'USD';
+      const now = new Date();
+      const dateStr = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+
+      errEl.textContent = '上傳中…';
+      const btns = document.getElementById('tm-btns');
+      btns.querySelectorAll('button').forEach(b => b.disabled = true);
+
+      try {
+        let newTrades, newPortfolio;
+
+        if (action === 'edit') {
+          const old = _tradesData.trades[_editTradeIndex];
+          const oldAction = old.action || 'buy';
+          // 先反向舊交易，再套用新值
+          let port = applyTrade(_portfolioData, old.ticker, old.name, old.quantity, old.price, old.currency, oldAction === 'sell' ? 'buy' : 'sell');
+          port = applyTrade(port, ticker, name, qty, price, currency, oldAction);
+          newPortfolio = port;
+          const updArr = JSON.parse(JSON.stringify(_tradesData.trades));
+          updArr[_editTradeIndex] = { ...old, ticker, name, quantity: qty, price, currency, reason };
+          newTrades = { trades: updArr };
+        } else {
+          const entry = { date: dateStr, ticker, name, quantity: qty, price, currency, action, reason, notes: '' };
+          newTrades = { trades: [..._tradesData.trades, entry] };
+          newPortfolio = applyTrade(_portfolioData, ticker, name, qty, price, currency, action);
+        }
+
+        await commitBoth(newTrades, newPortfolio, `trade: ${action} ${ticker} ${qty}股`);
+        closeTradeModal();
+        await loadData();
+      } catch(e) {
+        errEl.textContent = '失敗：' + e.message;
+        btns.querySelectorAll('button').forEach(b => b.disabled = false);
+      }
+    }
+
+    async function deleteTrade(origIdx) {
+      if (!confirm('確定刪除這筆交易紀錄？')) return;
+      const tr = _tradesData.trades[origIdx];
+      const action = tr.action || 'buy';
+      const reverseAction = action === 'sell' ? 'buy' : 'sell';
+      const newPortfolio = applyTrade(_portfolioData, tr.ticker, tr.name, tr.quantity, tr.price, tr.currency, reverseAction);
+      const newTrades = { trades: _tradesData.trades.filter((_, i) => i !== origIdx) };
+      try {
+        await commitBoth(newTrades, newPortfolio, `trade: delete ${tr.ticker}`);
+        await loadData();
+      } catch(e) {
+        alert('刪除失敗：' + e.message);
       }
     }
 
