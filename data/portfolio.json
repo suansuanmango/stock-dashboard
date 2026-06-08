@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-08T14:02:48.770Z",
+  "last_updated": "2026-06-08T14:02:59.303Z",
   "exchange_rate_usd_twd": 31.51,
   "total_cost_twd": 716392,
   "total_value_twd": 1688064,
@@ -27,7 +27,7 @@
       "market": "US",
       "currency": "USD",
       "quantity": 506,
-      "avg_price": 498.83,
+      "avg_price": 55.32,
       "current_price": 415.17,
       "price_change": -29.75,
       "price_change_pct": -6.69,
