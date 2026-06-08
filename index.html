@@ -820,9 +820,14 @@
           newPortfolio = applyTrade(_portfolioData, ticker, name, qty, price, currency, action);
         }
 
-        await commitBoth(newTrades, newPortfolio, `trade: ${action} ${ticker} ${qty}股`);
+        // 先更新本地 state，立即重新 render
+        _tradesData = newTrades;
+        _portfolioData = newPortfolio;
+        renderTrades(_tradesData);
+        renderAssets(_portfolioData, _newsData);
         closeTradeModal();
-        await loadData();
+        // 背景 push（不 await，不卡 UI）
+        commitBoth(newTrades, newPortfolio, `trade: ${action} ${ticker} ${qty}股`).catch(e => console.warn('push failed:', e));
       } catch(e) {
         errEl.textContent = '失敗：' + e.message;
         btns.querySelectorAll('button').forEach(b => b.disabled = false);
@@ -836,12 +841,13 @@
       const reverseAction = action === 'sell' ? 'buy' : 'sell';
       const newPortfolio = applyTrade(_portfolioData, tr.ticker, tr.name, tr.quantity, tr.price, tr.currency, reverseAction);
       const newTrades = { trades: _tradesData.trades.filter((_, i) => i !== origIdx) };
-      try {
-        await commitBoth(newTrades, newPortfolio, `trade: delete ${tr.ticker}`);
-        await loadData();
-      } catch(e) {
-        alert('刪除失敗：' + e.message);
-      }
+      // 立即更新本地 state 和畫面
+      _tradesData = newTrades;
+      _portfolioData = newPortfolio;
+      renderTrades(_tradesData);
+      renderAssets(_portfolioData, _newsData);
+      // 背景 push
+      commitBoth(newTrades, newPortfolio, `trade: delete ${tr.ticker}`).catch(e => alert('同步失敗：' + e.message));
     }
 
     loadData();
