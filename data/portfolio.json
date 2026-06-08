@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-06-08T14:03:04.845Z",
+  "last_updated": "2026-06-08T14:03:50.570Z",
   "exchange_rate_usd_twd": 31.51,
   "total_cost_twd": 716392,
   "total_value_twd": 1688064,
   "total_gain_loss_twd": 971673,
-  "total_gain_loss_pct": 97.3,
+  "total_gain_loss_pct": 96.02,
   "holdings": [
     {
       "ticker": "006208",
@@ -26,7 +26,7 @@
       "name": "台積電 ADR",
       "market": "US",
       "currency": "USD",
-      "quantity": 56,
+      "quantity": 6,
       "avg_price": 50.57,
       "current_price": 415.17,
       "price_change": -29.75,
