@@ -1,17 +1,17 @@
 {
-  "last_updated": "2026-06-08T13:52:22.461Z",
+  "last_updated": "2026-06-08T13:58:41.428Z",
   "exchange_rate_usd_twd": 31.51,
   "total_cost_twd": 716392,
-  "total_value_twd": 1688065,
+  "total_value_twd": 1688064,
   "total_gain_loss_twd": 971673,
-  "total_gain_loss_pct": 135.63,
+  "total_gain_loss_pct": 114.45,
   "holdings": [
     {
       "ticker": "006208",
       "name": "富邦台灣50",
       "market": "TW",
       "currency": "TWD",
-      "quantity": 7000,
+      "quantity": 6401,
       "avg_price": 98.74,
       "current_price": 233.85,
       "price_change": -7.2,
@@ -64,8 +64,12 @@
       "current_value_twd": 38776,
       "cost_twd": 33919,
       "gain_loss_twd": 4857,
-      "gain_loss_pct": 14.32
+      "gain_loss_pct": 14.32,
+      "daily_gain_loss_twd": -2563,
+      "daily_gain_loss_pct": -6.2
     }
   ],
-  "deposits": []
+  "deposits": [],
+  "daily_gain_loss_twd": -2563,
+  "daily_gain_loss_pct": -0.15
 }
