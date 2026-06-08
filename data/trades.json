@@ -19,6 +19,16 @@
       "currency": "TWD",
       "reason": "停業生活費補充",
       "notes": ""
+    },
+    {
+      "date": "2026-06-08",
+      "ticker": "006208",
+      "name": "",
+      "quantity": 559,
+      "price": 0,
+      "currency": "TWD",
+      "reason": "生活費",
+      "notes": "修正：賣出股數應為559，原誤植為599。"
     }
   ]
 }

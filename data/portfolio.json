@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-08T14:35:04+08:00",
+  "last_updated": "2026-06-08T18:33:31+08:00",
   "exchange_rate_usd_twd": 31.56,
   "total_cost_twd": 765421,
   "total_value_twd": 1819090,
@@ -11,7 +11,7 @@
       "name": "富邦台灣50",
       "market": "TW",
       "currency": "TWD",
-      "quantity": 6960,
+      "quantity": 6401,
       "avg_price": 87.26,
       "current_price": 233.85,
       "price_change": -7.2,
