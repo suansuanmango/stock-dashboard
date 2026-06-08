@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-08T14:02:59.303Z",
+  "last_updated": "2026-06-08T14:03:04.845Z",
   "exchange_rate_usd_twd": 31.51,
   "total_cost_twd": 716392,
   "total_value_twd": 1688064,
@@ -26,8 +26,8 @@
       "name": "台積電 ADR",
       "market": "US",
       "currency": "USD",
-      "quantity": 506,
-      "avg_price": 55.32,
+      "quantity": 56,
+      "avg_price": 50.57,
       "current_price": 415.17,
       "price_change": -29.75,
       "price_change_pct": -6.69,
