@@ -19,17 +19,6 @@
       "currency": "TWD",
       "reason": "停業生活費補充",
       "notes": ""
-    },
-    {
-      "date": "2026-06-08",
-      "ticker": "006208",
-      "name": "富邦台灣50",
-      "quantity": 559,
-      "price": 233.5,
-      "currency": "TWD",
-      "action": "sell",
-      "reason": "生活費",
-      "notes": ""
     }
   ]
 }
