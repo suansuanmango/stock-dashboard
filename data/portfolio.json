@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-08T14:03:50.570Z",
+  "last_updated": "2026-06-08T14:16:53.221Z",
   "exchange_rate_usd_twd": 31.51,
   "total_cost_twd": 716392,
   "total_value_twd": 1688064,
@@ -12,7 +12,7 @@
       "market": "TW",
       "currency": "TWD",
       "quantity": 7000,
-      "avg_price": 120.11,
+      "avg_price": 129.17,
       "current_price": 233.85,
       "price_change": -7.2,
       "price_change_pct": -2.99,
