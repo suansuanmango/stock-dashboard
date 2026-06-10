@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-06-08T14:16:53.221Z",
-  "exchange_rate_usd_twd": 31.51,
-  "total_cost_twd": 716392,
-  "total_value_twd": 1688064,
-  "total_gain_loss_twd": 971673,
-  "total_gain_loss_pct": 96.02,
+  "last_updated": "2026-06-10T21:25:42+08:00",
+  "exchange_rate_usd_twd": 31.62,
+  "total_cost_twd": 996026,
+  "total_value_twd": 1820291,
+  "total_gain_loss_twd": 824265,
+  "total_gain_loss_pct": 82.76,
   "holdings": [
     {
       "ticker": "006208",
@@ -13,13 +13,13 @@
       "currency": "TWD",
       "quantity": 7000,
       "avg_price": 129.17,
-      "current_price": 233.85,
-      "price_change": -7.2,
-      "price_change_pct": -2.99,
-      "current_value_twd": 1496874,
-      "cost_twd": 558551,
-      "gain_loss_twd": 938323,
-      "gain_loss_pct": 167.99
+      "current_price": 232.05,
+      "price_change": -7.5,
+      "price_change_pct": -3.13,
+      "current_value_twd": 1624350,
+      "cost_twd": 904190,
+      "gain_loss_twd": 720160,
+      "gain_loss_pct": 79.65
     },
     {
       "ticker": "TSM",
@@ -28,13 +28,13 @@
       "currency": "USD",
       "quantity": 6,
       "avg_price": 50.57,
-      "current_price": 415.17,
-      "price_change": -29.75,
-      "price_change_pct": -6.69,
-      "current_value_twd": 78492,
-      "cost_twd": 75885,
-      "gain_loss_twd": 2607,
-      "gain_loss_pct": 3.44
+      "current_price": 427.92,
+      "price_change": 1.12,
+      "price_change_pct": 0.26,
+      "current_value_twd": 81185,
+      "cost_twd": 9594,
+      "gain_loss_twd": 71591,
+      "gain_loss_pct": 746.19
     },
     {
       "ticker": "TSLA",
@@ -46,9 +46,9 @@
       "current_price": 396.68,
       "price_change": -12.27,
       "price_change_pct": -3.0,
-      "current_value_twd": 75234,
-      "cost_twd": 48189,
-      "gain_loss_twd": 27046,
+      "current_value_twd": 75258,
+      "cost_twd": 48204,
+      "gain_loss_twd": 27054,
       "gain_loss_pct": 56.12
     },
     {
@@ -58,13 +58,13 @@
       "currency": "USD",
       "quantity": 6,
       "avg_price": 179.41,
-      "current_price": 205.1,
-      "price_change": -13.56,
-      "price_change_pct": -6.2,
-      "current_value_twd": 38776,
-      "cost_twd": 33919,
-      "gain_loss_twd": 4857,
-      "gain_loss_pct": 14.32,
+      "current_price": 208.19,
+      "price_change": -0.45,
+      "price_change_pct": -0.22,
+      "current_value_twd": 39498,
+      "cost_twd": 34038,
+      "gain_loss_twd": 5460,
+      "gain_loss_pct": 16.04,
       "daily_gain_loss_twd": -2563,
       "daily_gain_loss_pct": -6.2
     }
