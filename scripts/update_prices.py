@@ -106,6 +106,33 @@ def update_watchlist():
         json.dump(data, f, ensure_ascii=False, indent=2)
     print("  ✓ Watchlist saved")
 
+def update_history():
+    path = os.path.join(DATA_DIR, "history.json")
+    if not os.path.exists(path):
+        print("  ⚠ history.json 不存在，跳過（請先跑 init_history.py）")
+        return
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+
+    tz = datetime.timezone(datetime.timedelta(hours=8))
+    today = datetime.datetime.now(tz).strftime("%Y-%m-%d")
+    indices = {"TWII": "^TWII", "GSPC": "^GSPC"}
+
+    for key, ticker_str in indices.items():
+        existing = data.get(key, {}).get("data", [])
+        if existing and existing[-1]["date"] == today:
+            print(f"  — {key} 今日已有數據，跳過")
+            continue
+        price, _, _ = fetch_stock(ticker_str)
+        if price:
+            existing.append({"date": today, "close": price})
+            data[key]["data"] = existing
+            print(f"  ✓ {key} 追加 {today}: {price}")
+
+    data["last_updated"] = taipei_now()
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
 def git_push():
     os.chdir(BASE_DIR)
     try:
@@ -128,6 +155,8 @@ if __name__ == "__main__":
     update_portfolio()
     print("📊 Updating watchlist...")
     update_watchlist()
+    print("📉 Updating history...")
+    update_history()
     print("🚀 Pushing to GitHub...")
     git_push()
     print("✅ Done!")

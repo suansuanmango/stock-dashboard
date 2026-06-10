@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>投資儀表板</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
     * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
     body { background: #0a0f1e; font-family: -apple-system, 'Segoe UI', sans-serif; overscroll-behavior: none; }
@@ -163,6 +164,7 @@
       <div id="news-updated" class="label">—</div>
       <div id="news-error" style="color:#f87171;font-size:11px;display:none;"></div>
     </div>
+    <div id="history-chart-container"></div>
     <div id="news-container"></div>
   </div>
 
@@ -484,6 +486,128 @@
       renderCustomStocks();
     }
 
+    // ── render: history chart ─────────────────────────
+    let _historyChart = null;
+    let _historyData = null;
+    let _historyRange = '3M';
+
+    function renderHistoryChart(h) {
+      _historyData = h;
+      const container = document.getElementById('history-chart-container');
+      if (!h || !h.TWII || !h.GSPC) { container.innerHTML = ''; return; }
+
+      container.innerHTML = `
+        <div class="card mb-3">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <div style="font-size:13px;font-weight:700;color:#f8fafc;">📈 台美大盤走勢</div>
+            <div id="history-range-btns" style="display:flex;gap:4px;">
+              ${['1M','3M','6M','1Y'].map(r=>`
+                <button onclick="switchHistoryRange('${r}')" id="hbtn-${r}"
+                  style="font-size:10px;padding:3px 8px;border-radius:6px;border:1px solid #1e2d45;
+                  background:${r===_historyRange?'#1e3a5f':'transparent'};
+                  color:${r===_historyRange?'#60a5fa':'#475569'};cursor:pointer;">${r}</button>
+              `).join('')}
+            </div>
+          </div>
+          <div style="font-size:10px;color:#334155;margin-bottom:10px;">以起始點為基準，顯示相對漲跌幅（%）</div>
+          <canvas id="history-canvas" style="width:100%;max-height:220px;"></canvas>
+          <div style="display:flex;gap:16px;margin-top:10px;">
+            <div style="display:flex;align-items:center;gap:5px;">
+              <div style="width:12px;height:3px;background:#60a5fa;border-radius:2px;"></div>
+              <span style="font-size:10px;color:#64748b;">台灣加權</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:5px;">
+              <div style="width:12px;height:3px;background:#34d399;border-radius:2px;"></div>
+              <span style="font-size:10px;color:#64748b;">S&P 500</span>
+            </div>
+          </div>
+        </div>`;
+
+      drawHistoryChart();
+    }
+
+    function switchHistoryRange(r) {
+      _historyRange = r;
+      ['1M','3M','6M','1Y'].forEach(x => {
+        const btn = document.getElementById('hbtn-'+x);
+        if (!btn) return;
+        btn.style.background = x===r ? '#1e3a5f' : 'transparent';
+        btn.style.color = x===r ? '#60a5fa' : '#475569';
+      });
+      drawHistoryChart();
+    }
+
+    function drawHistoryChart() {
+      if (!_historyData) return;
+      const canvas = document.getElementById('history-canvas');
+      if (!canvas) return;
+
+      const days = {'1M':30,'3M':90,'6M':180,'1Y':365}[_historyRange] || 90;
+      const twiiAll = _historyData.TWII.data;
+      const gspcAll = _historyData.GSPC.data;
+      const cutDate = new Date(Date.now() - days * 86400000).toISOString().slice(0,10);
+
+      const twii = twiiAll.filter(d => d.date >= cutDate);
+      const gspc = gspcAll.filter(d => d.date >= cutDate);
+
+      // 對齊共有日期
+      const twiiMap = Object.fromEntries(twii.map(d=>[d.date, d.close]));
+      const gspcMap = Object.fromEntries(gspc.map(d=>[d.date, d.close]));
+      const dates = [...new Set([...twii.map(d=>d.date), ...gspc.map(d=>d.date)])].sort();
+
+      const twiiBase = twii[0]?.close || 1;
+      const gspcBase = gspc[0]?.close || 1;
+
+      const twiiPct = dates.map(d => twiiMap[d] != null ? +((twiiMap[d]/twiiBase-1)*100).toFixed(2) : null);
+      const gspcPct = dates.map(d => gspcMap[d] != null ? +((gspcMap[d]/gspcBase-1)*100).toFixed(2) : null);
+
+      if (_historyChart) _historyChart.destroy();
+      _historyChart = new Chart(canvas, {
+        type: 'line',
+        data: {
+          labels: dates.map(d => d.slice(5)),
+          datasets: [
+            {
+              label: '台灣加權', data: twiiPct,
+              borderColor: '#60a5fa', backgroundColor: 'rgba(96,165,250,0.05)',
+              borderWidth: 1.5, pointRadius: 0, tension: 0.3, spanGaps: true,
+            },
+            {
+              label: 'S&P 500', data: gspcPct,
+              borderColor: '#34d399', backgroundColor: 'rgba(52,211,153,0.05)',
+              borderWidth: 1.5, pointRadius: 0, tension: 0.3, spanGaps: true,
+            }
+          ]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          animation: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              mode: 'index', intersect: false,
+              callbacks: {
+                label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y > 0 ? '+' : ''}${ctx.parsed.y}%`
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: { color: '#475569', font: { size: 9 }, maxTicksLimit: 6, maxRotation: 0 },
+              grid: { color: 'rgba(30,45,69,0.8)' }
+            },
+            y: {
+              ticks: {
+                color: '#475569', font: { size: 9 },
+                callback: v => (v > 0 ? '+' : '') + v + '%'
+              },
+              grid: { color: 'rgba(30,45,69,0.8)' }
+            }
+          }
+        }
+      });
+    }
+
     // ── render: news ──────────────────────────────────
     function renderNews(n) {
       document.getElementById('news-updated').textContent = n.last_updated ? '自動更新時間 '+fmtTime(n.last_updated) : '尚未更新（等待每日排程）';
@@ -663,17 +787,19 @@
     async function loadData() {
       const ts = '?t='+Date.now();
       try {
-        const [p,w,n,t] = await Promise.all([
+        const [p,w,n,t,h] = await Promise.all([
           fetch('data/portfolio.json'+ts).then(r=>r.json()),
           fetch('data/watchlist.json'+ts).then(r=>r.json()),
           fetch('data/news.json'+ts).then(r=>r.json()),
           fetch('data/trades.json'+ts).then(r=>r.json()),
+          fetch('data/history.json'+ts).then(r=>r.json()).catch(()=>null),
         ]);
         _portfolioData = p;
         _newsData = n;
         _tradesData = t;
         renderAssets(p, n);
         renderMarket(w);
+        renderHistoryChart(h);
         renderNews(n);
         renderTrades(t);
       } catch(e) {
