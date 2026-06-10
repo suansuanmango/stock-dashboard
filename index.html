@@ -73,6 +73,7 @@
   <!-- ───── 行情頁 ───── -->
   <div id="page-market" class="tab-content px-4 pt-4 pb-28">
     <div id="market-updated" class="label px-1 mb-3">—</div>
+    <div id="watchlist-chart-container"></div>
     <div class="label px-1 mb-2">🇹🇼 台股 / ETF</div>
     <div id="tw-list"></div>
     <div class="label px-1 mb-2 mt-5">🇺🇸 美股</div>
@@ -235,6 +236,8 @@
       if (tab === 'market') {
         fab.style.display = 'flex';
         fab.onclick = openAddModal;
+        buildWatchlistChart();
+        drawWatchlistChart();
       } else if (tab === 'trades') {
         fab.style.display = 'flex';
         fab.onclick = () => openTradeModal(null);
@@ -357,6 +360,122 @@
               <div class="font-mono font-bold text-sm">NT$ ${fmt(d.amount)}</div>
             </div>
           </div>`).join('');
+      }
+    }
+
+    // ── render: watchlist chart ───────────────────────
+    let _watchlistChart = null;
+    let _watchlistRange = '3M';
+    let _watchlistBuilt = false;
+
+    function buildWatchlistChart() {
+      if (_watchlistBuilt) return;
+      _watchlistBuilt = true;
+      document.getElementById('watchlist-chart-container').innerHTML = `
+        <div class="card mb-3">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <div style="font-size:13px;font-weight:700;color:#f8fafc;">📊 個股走勢</div>
+            <div style="display:flex;gap:4px;">
+              ${['1M','3M','6M'].map(r=>`
+                <button onclick="switchWatchlistRange('${r}')" id="wbtn-${r}"
+                  style="font-size:10px;padding:3px 8px;border-radius:6px;border:1px solid #1e2d45;
+                  background:${r==='3M'?'#1e3a5f':'transparent'};
+                  color:${r==='3M'?'#60a5fa':'#475569'};cursor:pointer;">${r}</button>
+              `).join('')}
+            </div>
+          </div>
+          <div style="font-size:10px;color:#334155;margin-bottom:10px;">相對漲跌幅（%）・TSM / NVDA / TSLA / SPY</div>
+          <div id="wl-loading" style="text-align:center;padding:36px 0;color:#475569;font-size:12px;">載入中...</div>
+          <canvas id="watchlist-canvas" style="width:100%;max-height:200px;display:none;"></canvas>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;">
+            ${[['TSM','#60a5fa'],['NVDA','#34d399'],['TSLA','#f472b6'],['SPY','#fb923c']].map(([t,c])=>`
+              <div style="display:flex;align-items:center;gap:5px;">
+                <div style="width:12px;height:3px;background:${c};border-radius:2px;"></div>
+                <span style="font-size:10px;color:#64748b;">${t}</span>
+              </div>`).join('')}
+          </div>
+        </div>`;
+    }
+
+    function switchWatchlistRange(r) {
+      _watchlistRange = r;
+      ['1M','3M','6M'].forEach(x => {
+        const btn = document.getElementById('wbtn-'+x);
+        if (!btn) return;
+        btn.style.background = x===r ? '#1e3a5f' : 'transparent';
+        btn.style.color = x===r ? '#60a5fa' : '#475569';
+      });
+      drawWatchlistChart(true);
+    }
+
+    async function fetchStockHistory(ticker, range) {
+      const rangeMap = {'1M':'1mo','3M':'3mo','6M':'6mo'};
+      const target = `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d&range=${rangeMap[range]}`;
+      const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(target)}`;
+      const res = await fetch(proxy, { signal: AbortSignal.timeout(12000) });
+      const outer = await res.json();
+      const parsed = JSON.parse(outer.contents);
+      const result = parsed.chart.result[0];
+      const timestamps = result.timestamp;
+      const closes = result.indicators.quote[0].close;
+      return timestamps.map((ts, i) => ({
+        date: new Date(ts * 1000).toISOString().slice(0,10),
+        close: closes[i]
+      })).filter(d => d.close != null);
+    }
+
+    async function drawWatchlistChart(forceRedraw = false) {
+      const canvas = document.getElementById('watchlist-canvas');
+      const loading = document.getElementById('wl-loading');
+      if (!canvas) return;
+      if (!forceRedraw && _watchlistChart) return;
+
+      if (loading) loading.style.display = 'block';
+      canvas.style.display = 'none';
+
+      const STOCKS = [
+        { ticker: 'TSM',  color: '#60a5fa' },
+        { ticker: 'NVDA', color: '#34d399' },
+        { ticker: 'TSLA', color: '#f472b6' },
+        { ticker: 'SPY',  color: '#fb923c' },
+      ];
+      try {
+        const results = await Promise.all(STOCKS.map(s => fetchStockHistory(s.ticker, _watchlistRange)));
+        const allDates = [...new Set(results.flatMap(r => r.map(d => d.date)))].sort();
+        const datasets = STOCKS.map((s, i) => {
+          const map = Object.fromEntries(results[i].map(d => [d.date, d.close]));
+          const base = results[i][0]?.close || 1;
+          return {
+            label: s.ticker,
+            data: allDates.map(d => map[d] != null ? +((map[d]/base-1)*100).toFixed(2) : null),
+            borderColor: s.color, borderWidth: 1.5,
+            pointRadius: 0, tension: 0.3, spanGaps: true,
+          };
+        });
+        if (_watchlistChart) _watchlistChart.destroy();
+        if (loading) loading.style.display = 'none';
+        canvas.style.display = 'block';
+        _watchlistChart = new Chart(canvas, {
+          type: 'line',
+          data: { labels: allDates.map(d => d.slice(5)), datasets },
+          options: {
+            responsive: true, maintainAspectRatio: false, animation: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                mode: 'index', intersect: false,
+                callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y>0?'+':''}${ctx.parsed.y}%` }
+              }
+            },
+            scales: {
+              x: { ticks: { color:'#475569', font:{size:9}, maxTicksLimit:6, maxRotation:0 }, grid:{color:'rgba(30,45,69,0.8)'} },
+              y: { ticks: { color:'#475569', font:{size:9}, callback: v=>(v>0?'+':'')+v+'%' }, grid:{color:'rgba(30,45,69,0.8)'} }
+            }
+          }
+        });
+      } catch(e) {
+        if (loading) loading.textContent = '走勢圖載入失敗，請稍後再試';
+        console.error(e);
       }
     }
 
