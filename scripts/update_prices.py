@@ -116,7 +116,7 @@ def update_history():
 
     tz = datetime.timezone(datetime.timedelta(hours=8))
     today = datetime.datetime.now(tz).strftime("%Y-%m-%d")
-    indices = {"TWII": "^TWII", "GSPC": "^GSPC"}
+    indices = {"TWII": "^TWII", "GSPC": "^GSPC", "TSM": "TSM", "NVDA": "NVDA", "TSLA": "TSLA", "SPY": "SPY"}
 
     for key, ticker_str in indices.items():
         existing = data.get(key, {}).get("data", [])

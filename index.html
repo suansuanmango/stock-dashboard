@@ -237,7 +237,7 @@
         fab.style.display = 'flex';
         fab.onclick = openAddModal;
         buildWatchlistChart();
-        drawWatchlistChart();
+        if (_historyData) drawWatchlistChart();
       } else if (tab === 'trades') {
         fab.style.display = 'flex';
         fab.onclick = () => openTradeModal(null);
@@ -408,86 +408,59 @@
       drawWatchlistChart(true);
     }
 
-    async function fetchStockHistory(ticker, range) {
-      const rangeMap = {'1M':'1mo','3M':'3mo','6M':'6mo'};
-      const target = `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d&range=${rangeMap[range]}`;
-      const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(target)}`;
-      const ctrl = new AbortController();
-      const tid = setTimeout(() => ctrl.abort(), 15000);
-      try {
-        const res = await fetch(proxy, { signal: ctrl.signal });
-        clearTimeout(tid);
-        const outer = await res.json();
-        const parsed = JSON.parse(outer.contents);
-        const result = parsed.chart.result[0];
-        const timestamps = result.timestamp;
-        const closes = result.indicators.quote[0].close;
-        return timestamps.map((ts, i) => ({
-          date: new Date(ts * 1000).toISOString().slice(0,10),
-          close: closes[i]
-        })).filter(d => d.close != null);
-      } catch(e) {
-        clearTimeout(tid);
-        throw e;
-      }
-    }
-
-    async function drawWatchlistChart(forceRedraw = false) {
+    function drawWatchlistChart(forceRedraw = false) {
       const canvas = document.getElementById('watchlist-canvas');
       const loading = document.getElementById('wl-loading');
-      if (!canvas) return;
+      if (!canvas || !_historyData) return;
       if (!forceRedraw && _watchlistChart) return;
 
-      if (loading) loading.style.display = 'block';
-      canvas.style.display = 'none';
-
       const STOCKS = [
-        { ticker: 'TSM',  color: '#60a5fa' },
-        { ticker: 'NVDA', color: '#34d399' },
-        { ticker: 'TSLA', color: '#f472b6' },
-        { ticker: 'SPY',  color: '#fb923c' },
+        { key: 'TSM',  color: '#60a5fa' },
+        { key: 'NVDA', color: '#34d399' },
+        { key: 'TSLA', color: '#f472b6' },
+        { key: 'SPY',  color: '#fb923c' },
       ];
-      try {
-        const results = [];
-        for (const s of STOCKS) {
-          results.push(await fetchStockHistory(s.ticker, _watchlistRange));
-        }
-        const allDates = [...new Set(results.flatMap(r => r.map(d => d.date)))].sort();
-        const datasets = STOCKS.map((s, i) => {
-          const map = Object.fromEntries(results[i].map(d => [d.date, d.close]));
-          const base = results[i][0]?.close || 1;
-          return {
-            label: s.ticker,
-            data: allDates.map(d => map[d] != null ? +((map[d]/base-1)*100).toFixed(2) : null),
-            borderColor: s.color, borderWidth: 1.5,
-            pointRadius: 0, tension: 0.3, spanGaps: true,
-          };
-        });
-        if (_watchlistChart) _watchlistChart.destroy();
-        if (loading) loading.style.display = 'none';
-        canvas.style.display = 'block';
-        _watchlistChart = new Chart(canvas, {
-          type: 'line',
-          data: { labels: allDates.map(d => d.slice(5)), datasets },
-          options: {
-            responsive: true, maintainAspectRatio: false, animation: false,
-            plugins: {
-              legend: { display: false },
-              tooltip: {
-                mode: 'index', intersect: false,
-                callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y>0?'+':''}${ctx.parsed.y}%` }
-              }
-            },
-            scales: {
-              x: { ticks: { color:'#475569', font:{size:9}, maxTicksLimit:6, maxRotation:0 }, grid:{color:'rgba(30,45,69,0.8)'} },
-              y: { ticks: { color:'#475569', font:{size:9}, callback: v=>(v>0?'+':'')+v+'%' }, grid:{color:'rgba(30,45,69,0.8)'} }
+
+      const days = {'1M':30,'3M':90,'6M':180}[_watchlistRange] || 90;
+      const cutDate = new Date(Date.now() - days * 86400000).toISOString().slice(0,10);
+
+      const allDates = [...new Set(
+        STOCKS.flatMap(s => (_historyData[s.key]?.data || []).map(d => d.date).filter(d => d >= cutDate))
+      )].sort();
+
+      const datasets = STOCKS.map(s => {
+        const rows = (_historyData[s.key]?.data || []).filter(d => d.date >= cutDate);
+        const map = Object.fromEntries(rows.map(d => [d.date, d.close]));
+        const base = rows[0]?.close || 1;
+        return {
+          label: s.key,
+          data: allDates.map(d => map[d] != null ? +((map[d]/base-1)*100).toFixed(2) : null),
+          borderColor: s.color, borderWidth: 1.5,
+          pointRadius: 0, tension: 0.3, spanGaps: true,
+        };
+      });
+
+      if (loading) loading.style.display = 'none';
+      canvas.style.display = 'block';
+      if (_watchlistChart) _watchlistChart.destroy();
+      _watchlistChart = new Chart(canvas, {
+        type: 'line',
+        data: { labels: allDates.map(d => d.slice(5)), datasets },
+        options: {
+          responsive: true, maintainAspectRatio: false, animation: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              mode: 'index', intersect: false,
+              callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y>0?'+':''}${ctx.parsed.y}%` }
             }
+          },
+          scales: {
+            x: { ticks: { color:'#475569', font:{size:9}, maxTicksLimit:6, maxRotation:0 }, grid:{color:'rgba(30,45,69,0.8)'} },
+            y: { ticks: { color:'#475569', font:{size:9}, callback: v=>(v>0?'+':'')+v+'%' }, grid:{color:'rgba(30,45,69,0.8)'} }
           }
-        });
-      } catch(e) {
-        if (loading) loading.textContent = '走勢圖載入失敗，請稍後再試';
-        console.error(e);
-      }
+        }
+      });
     }
 
     // ── render: market (JSON stocks) ──────────────────
@@ -975,6 +948,7 @@
         renderHistoryChart(h, ev);
         renderNews(n);
         renderTrades(t);
+        if (_watchlistBuilt) drawWatchlistChart();
       } catch(e) {
         console.error(e);
       }

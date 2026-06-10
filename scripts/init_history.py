@@ -16,6 +16,10 @@ HISTORY_PATH = os.path.join(DATA_DIR, "history.json")
 INDICES = {
     "TWII": {"ticker": "^TWII", "name": "台灣加權指數"},
     "GSPC": {"ticker": "^GSPC", "name": "S&P 500"},
+    "TSM":  {"ticker": "TSM",   "name": "台積電 ADR"},
+    "NVDA": {"ticker": "NVDA",  "name": "輝達"},
+    "TSLA": {"ticker": "TSLA",  "name": "特斯拉"},
+    "SPY":  {"ticker": "SPY",   "name": "S&P 500 ETF"},
 }
 
 def fetch_history(ticker_str, start="2025-01-01"):
@@ -31,8 +35,18 @@ def main():
     tz = datetime.timezone(datetime.timedelta(hours=8))
     now = datetime.datetime.now(tz).strftime("%Y-%m-%dT%H:%M:%S+08:00")
 
-    data = {"last_updated": now}
+    # 保留現有數據，只補缺少的 key
+    if os.path.exists(HISTORY_PATH):
+        with open(HISTORY_PATH, encoding="utf-8") as f:
+            data = json.load(f)
+    else:
+        data = {}
+    data["last_updated"] = now
+
     for key, info in INDICES.items():
+        if key in data:
+            print(f"  — {key} 已存在，跳過")
+            continue
         print(f"  抓取 {info['name']} ({info['ticker']})...")
         rows = fetch_history(info["ticker"])
         data[key] = {"name": info["name"], "data": rows}
