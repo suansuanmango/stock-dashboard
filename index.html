@@ -801,9 +801,9 @@
                 <span style="font-size:11px;color:#64748b;">${item.name}</span>
                 <span style="font-size:10px;padding:2px 7px;border-radius:4px;${dirS(item.direction)}">${item.direction}</span>
                 <span style="font-size:11px;color:#475569;margin-left:auto;">${item.market==='TW'?'🇹🇼':'🇺🇸'}</span>
-                <span id="${bid}-icon" style="color:#64748b;font-size:10px;">▼</span>
+                <span id="${bid}-icon" style="color:#64748b;font-size:10px;">▲</span>
               </div>
-              <div id="${bid}">
+              <div id="${bid}" style="display:none;">
                 <div style="font-size:11px;color:#64748b;margin-bottom:4px;">${item.timeframe}</div>
                 <div style="font-size:12px;color:#94a3b8;line-height:1.7;">${item.reasoning}</div>
                 <div style="font-size:11px;color:#475569;margin-top:6px;">📎 ${(item.sources||[]).join('・')}</div>
