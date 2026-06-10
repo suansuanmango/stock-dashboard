@@ -412,16 +412,24 @@
       const rangeMap = {'1M':'1mo','3M':'3mo','6M':'6mo'};
       const target = `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d&range=${rangeMap[range]}`;
       const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(target)}`;
-      const res = await fetch(proxy, { signal: AbortSignal.timeout(12000) });
-      const outer = await res.json();
-      const parsed = JSON.parse(outer.contents);
-      const result = parsed.chart.result[0];
-      const timestamps = result.timestamp;
-      const closes = result.indicators.quote[0].close;
-      return timestamps.map((ts, i) => ({
-        date: new Date(ts * 1000).toISOString().slice(0,10),
-        close: closes[i]
-      })).filter(d => d.close != null);
+      const ctrl = new AbortController();
+      const tid = setTimeout(() => ctrl.abort(), 15000);
+      try {
+        const res = await fetch(proxy, { signal: ctrl.signal });
+        clearTimeout(tid);
+        const outer = await res.json();
+        const parsed = JSON.parse(outer.contents);
+        const result = parsed.chart.result[0];
+        const timestamps = result.timestamp;
+        const closes = result.indicators.quote[0].close;
+        return timestamps.map((ts, i) => ({
+          date: new Date(ts * 1000).toISOString().slice(0,10),
+          close: closes[i]
+        })).filter(d => d.close != null);
+      } catch(e) {
+        clearTimeout(tid);
+        throw e;
+      }
     }
 
     async function drawWatchlistChart(forceRedraw = false) {
@@ -440,7 +448,10 @@
         { ticker: 'SPY',  color: '#fb923c' },
       ];
       try {
-        const results = await Promise.all(STOCKS.map(s => fetchStockHistory(s.ticker, _watchlistRange)));
+        const results = [];
+        for (const s of STOCKS) {
+          results.push(await fetchStockHistory(s.ticker, _watchlistRange));
+        }
         const allDates = [...new Set(results.flatMap(r => r.map(d => d.date)))].sort();
         const datasets = STOCKS.map((s, i) => {
           const map = Object.fromEntries(results[i].map(d => [d.date, d.close]));
