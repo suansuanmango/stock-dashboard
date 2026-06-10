@@ -787,14 +787,11 @@
           ? 'background:rgba(96,165,250,0.15);color:#60a5fa;border:1px solid rgba(96,165,250,0.25);'
           : 'background:rgba(245,158,11,0.15);color:#f59e0b;border:1px solid rgba(245,158,11,0.25);';
         let rhtml = `<div class="card mb-3">
-          <div style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;margin-bottom:4px;" onclick="toggleSection('radar-body','radar-toggle')">
-            <div>
-              <div style="font-size:13px;font-weight:700;color:#f8fafc;">🔍 選股雷達</div>
-              <div style="font-size:11px;color:#475569;margin-top:2px;">KOL 近期提及・美股優先・排除現有持股</div>
-            </div>
-            <span id="radar-toggle" style="color:#64748b;font-size:11px;flex-shrink:0;">▼</span>
+          <div style="margin-bottom:4px;">
+            <div style="font-size:13px;font-weight:700;color:#f8fafc;">🔍 選股雷達</div>
+            <div style="font-size:11px;color:#475569;margin-top:2px;">KOL 近期提及・美股優先・排除現有持股</div>
           </div>
-          <div id="radar-body">`;
+          <div>`;
         n.stock_radar.forEach((item, i) => {
           const bid = `radar-item-${i}`;
           rhtml += `
@@ -818,19 +815,15 @@
         html += rhtml;
       }
 
-      // 財經來源摘要（預設收合）
+      // 財經來源摘要
       if ((n.articles||[]).length) {
-        html += `<div class="card mb-3" style="cursor:pointer;" onclick="toggleSection('articles-body','articles-toggle')">
-          <div style="display:flex;justify-content:space-between;align-items:center;">
-            <div style="font-size:13px;font-weight:700;color:#f8fafc;">📰 財經來源摘要</div>
-            <span id="articles-toggle" style="color:#64748b;font-size:11px;">▲</span>
-          </div>
-        </div>
-        <div id="articles-body" style="display:none;">`;
+        html += `<div class="card mb-3">
+          <div style="font-size:13px;font-weight:700;color:#f8fafc;margin-bottom:12px;">📰 財經來源摘要</div>
+          <div id="articles-body">`;
         (n.articles||[]).forEach((a, i) => {
           const bid = `article-item-${i}`;
           html += `
-            <div class="card mb-3">
+            <div style="${i>0?'border-top:1px solid #1e293b;padding-top:12px;margin-top:12px;':''}">
               <div style="display:flex;justify-content:space-between;align-items:flex-start;cursor:pointer;" onclick="toggleSection('${bid}','${bid}-icon')">
                 <div style="flex:1;padding-right:8px;">
                   <div style="font-size:11px;color:#60a5fa;margin-bottom:4px;">${a.source}</div>
@@ -843,7 +836,7 @@
               </div>
             </div>`;
         });
-        html += `</div>`;
+        html += `</div></div>`;
       }
       c.innerHTML = html;
     }
