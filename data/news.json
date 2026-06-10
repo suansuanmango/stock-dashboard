@@ -139,5 +139,6 @@
       ]
     }
   ],
-  "last_updated": "2026-06-09T08:33:14.741003+08:00"
+  "last_updated": "2026-06-09T08:33:14.741003+08:00",
+  "error": "Gemini API 失敗: The read operation timed out"
 }
