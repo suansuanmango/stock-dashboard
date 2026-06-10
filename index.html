@@ -796,17 +796,21 @@
           </div>
           <div id="radar-body">`;
         n.stock_radar.forEach((item, i) => {
+          const bid = `radar-item-${i}`;
           rhtml += `
             <div style="${i>0?'border-top:1px solid #1e293b;padding-top:12px;margin-top:12px;':'margin-top:10px;'}">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;cursor:pointer;" onclick="toggleSection('${bid}','${bid}-icon')">
                 <span style="font-weight:700;font-size:13px;">${item.ticker}</span>
                 <span style="font-size:11px;color:#64748b;">${item.name}</span>
                 <span style="font-size:10px;padding:2px 7px;border-radius:4px;${dirS(item.direction)}">${item.direction}</span>
                 <span style="font-size:11px;color:#475569;margin-left:auto;">${item.market==='TW'?'🇹🇼':'🇺🇸'}</span>
+                <span id="${bid}-icon" style="color:#64748b;font-size:10px;">▼</span>
               </div>
-              <div style="font-size:11px;color:#64748b;margin-bottom:4px;">${item.timeframe}</div>
-              <div style="font-size:12px;color:#94a3b8;line-height:1.7;">${item.reasoning}</div>
-              <div style="font-size:11px;color:#475569;margin-top:6px;">📎 ${(item.sources||[]).join('・')}</div>
+              <div id="${bid}">
+                <div style="font-size:11px;color:#64748b;margin-bottom:4px;">${item.timeframe}</div>
+                <div style="font-size:12px;color:#94a3b8;line-height:1.7;">${item.reasoning}</div>
+                <div style="font-size:11px;color:#475569;margin-top:6px;">📎 ${(item.sources||[]).join('・')}</div>
+              </div>
             </div>`;
         });
         rhtml += `<div style="font-size:10px;color:#334155;margin-top:14px;border-top:1px solid #1e293b;padding-top:8px;">⚠️ 以上為 AI 整理 KOL 觀點，非投資建議</div>
@@ -823,12 +827,20 @@
           </div>
         </div>
         <div id="articles-body" style="display:none;">`;
-        (n.articles||[]).forEach(a => {
+        (n.articles||[]).forEach((a, i) => {
+          const bid = `article-item-${i}`;
           html += `
             <div class="card mb-3">
-              <div style="font-size:11px;color:#60a5fa;margin-bottom:4px;">${a.source}</div>
-              <div class="font-semibold text-sm mb-2">${a.title}</div>
-              <div class="text-sm leading-relaxed" style="color:#94a3b8;">${a.summary}</div>
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;cursor:pointer;" onclick="toggleSection('${bid}','${bid}-icon')">
+                <div style="flex:1;padding-right:8px;">
+                  <div style="font-size:11px;color:#60a5fa;margin-bottom:4px;">${a.source}</div>
+                  <div class="font-semibold text-sm">${a.title}</div>
+                </div>
+                <span id="${bid}-icon" style="color:#64748b;font-size:10px;flex-shrink:0;margin-top:2px;">▼</span>
+              </div>
+              <div id="${bid}" style="display:none;">
+                <div class="text-sm leading-relaxed mt-2" style="color:#94a3b8;">${a.summary}</div>
+              </div>
             </div>`;
         });
         html += `</div>`;
