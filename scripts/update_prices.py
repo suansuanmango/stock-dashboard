@@ -19,11 +19,18 @@ def taipei_now():
 def fetch_stock(ticker_str):
     try:
         t = yf.Ticker(ticker_str)
-        hist = t.history(period="5d")
-        if len(hist) < 1:
-            return None, None, None
-        current = float(hist["Close"].iloc[-1])
-        prev = float(hist["Close"].iloc[-2]) if len(hist) >= 2 else current
+        fi = t.fast_info
+        current = fi.get("last_price") or fi.get("regularMarketPrice")
+        prev = fi.get("previous_close") or fi.get("regularMarketPreviousClose")
+        if not current:
+            # fallback: use historical close (e.g. market closed / data unavailable)
+            hist = t.history(period="5d")
+            if len(hist) < 1:
+                return None, None, None
+            current = float(hist["Close"].iloc[-1])
+            prev = float(hist["Close"].iloc[-2]) if len(hist) >= 2 else current
+        current = float(current)
+        prev = float(prev) if prev else current
         change = round(current - prev, 4)
         change_pct = round((change / prev * 100) if prev else 0, 2)
         return round(current, 2), round(change, 2), change_pct
