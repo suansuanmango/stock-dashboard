@@ -1,69 +1,69 @@
 {
-  "last_updated": "2026-06-08T18:33:35+08:00",
+  "last_updated": "2026-06-10T21:24:10+08:00",
   "stocks": [
     {
       "ticker": "006208",
       "name": "富邦台灣50",
       "market": "TW",
-      "current_price": 233.85,
-      "change": -7.2,
-      "change_pct": -2.99
+      "current_price": 232.05,
+      "change": -7.5,
+      "change_pct": -3.13
     },
     {
       "ticker": "0050",
       "name": "元大台灣50",
       "market": "TW",
-      "current_price": 100.95,
-      "change": -3.2,
-      "change_pct": -3.07
+      "current_price": 100.25,
+      "change": -3.25,
+      "change_pct": -3.14
     },
     {
       "ticker": "00878",
       "name": "國泰永續高股息",
       "market": "TW",
-      "current_price": 31.11,
-      "change": -1.21,
-      "change_pct": -3.74
+      "current_price": 31.6,
+      "change": -0.71,
+      "change_pct": -2.2
     },
     {
       "ticker": "TSM",
       "name": "台積電 ADR",
       "market": "US",
-      "current_price": 415.17,
-      "change": -29.75,
-      "change_pct": -6.69
+      "current_price": 427.92,
+      "change": 1.12,
+      "change_pct": 0.26
     },
     {
       "ticker": "TSLA",
       "name": "特斯拉",
       "market": "US",
-      "current_price": 391.0,
-      "change": -27.45,
-      "change_pct": -6.56
+      "current_price": 396.68,
+      "change": -12.27,
+      "change_pct": -3.0
     },
     {
       "ticker": "NVDA",
       "name": "輝達",
       "market": "US",
-      "current_price": 205.1,
-      "change": -13.56,
-      "change_pct": -6.2
+      "current_price": 208.19,
+      "change": -0.45,
+      "change_pct": -0.22
     },
     {
       "ticker": "SPY",
       "name": "S&P 500 ETF",
       "market": "US",
-      "current_price": 737.55,
-      "change": -19.54,
-      "change_pct": -2.58
+      "current_price": 737.05,
+      "change": -2.17,
+      "change_pct": -0.29
     },
     {
       "ticker": "QQQ",
       "name": "Nasdaq 100 ETF",
       "market": "US",
-      "current_price": 705.06,
-      "change": -35.55,
-      "change_pct": -4.8
+      "current_price": 707.83,
+      "change": -8.24,
+      "change_pct": -1.15
     }
   ]
 }
