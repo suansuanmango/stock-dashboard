@@ -491,8 +491,11 @@
     let _historyData = null;
     let _historyRange = '3M';
 
-    function renderHistoryChart(h) {
+    let _eventsData = [];
+
+    function renderHistoryChart(h, events) {
       _historyData = h;
+      if (events) _eventsData = events;
       const container = document.getElementById('history-chart-container');
       if (!h || !h.TWII || !h.GSPC) { container.innerHTML = ''; return; }
 
@@ -561,6 +564,39 @@
       const twiiPct = dates.map(d => twiiMap[d] != null ? +((twiiMap[d]/twiiBase-1)*100).toFixed(2) : null);
       const gspcPct = dates.map(d => gspcMap[d] != null ? +((gspcMap[d]/gspcBase-1)*100).toFixed(2) : null);
 
+      // 找出在此時間範圍內的事件，對應到 labels 索引
+      const eventsInRange = (_eventsData || []).filter(e => e.date >= cutDate);
+      const eventMap = Object.fromEntries(eventsInRange.map(e => [e.date.slice(5), e.event]));
+
+      // 自訂 plugin：在事件日期畫垂直虛線
+      const eventLinesPlugin = {
+        id: 'eventLines',
+        afterDraw(chart) {
+          const { ctx, scales: { x, y } } = chart;
+          chart.data.labels.forEach((label, i) => {
+            const ev = eventMap[label];
+            if (!ev) return;
+            const xPos = x.getPixelForIndex(i);
+            ctx.save();
+            ctx.setLineDash([3, 4]);
+            ctx.strokeStyle = 'rgba(251,191,36,0.45)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(xPos, y.top);
+            ctx.lineTo(xPos, y.bottom);
+            ctx.stroke();
+            ctx.restore();
+            // 頂部小圓點
+            ctx.save();
+            ctx.fillStyle = '#fbbf24';
+            ctx.beginPath();
+            ctx.arc(xPos, y.top + 4, 3, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+          });
+        }
+      };
+
       if (_historyChart) _historyChart.destroy();
       _historyChart = new Chart(canvas, {
         type: 'line',
@@ -587,6 +623,11 @@
             tooltip: {
               mode: 'index', intersect: false,
               callbacks: {
+                title: items => {
+                  const label = items[0]?.label;
+                  const ev = eventMap[label];
+                  return ev ? `${label}  ★ ${ev}` : label;
+                },
                 label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y > 0 ? '+' : ''}${ctx.parsed.y}%`
               }
             }
@@ -604,7 +645,8 @@
               grid: { color: 'rgba(30,45,69,0.8)' }
             }
           }
-        }
+        },
+        plugins: [eventLinesPlugin]
       });
     }
 
@@ -787,19 +829,20 @@
     async function loadData() {
       const ts = '?t='+Date.now();
       try {
-        const [p,w,n,t,h] = await Promise.all([
+        const [p,w,n,t,h,ev] = await Promise.all([
           fetch('data/portfolio.json'+ts).then(r=>r.json()),
           fetch('data/watchlist.json'+ts).then(r=>r.json()),
           fetch('data/news.json'+ts).then(r=>r.json()),
           fetch('data/trades.json'+ts).then(r=>r.json()),
           fetch('data/history.json'+ts).then(r=>r.json()).catch(()=>null),
+          fetch('data/events.json'+ts).then(r=>r.json()).catch(()=>[]),
         ]);
         _portfolioData = p;
         _newsData = n;
         _tradesData = t;
         renderAssets(p, n);
         renderMarket(w);
-        renderHistoryChart(h);
+        renderHistoryChart(h, ev);
         renderNews(n);
         renderTrades(t);
       } catch(e) {
