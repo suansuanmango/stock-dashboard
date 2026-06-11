@@ -1,6 +1,7 @@
 # credentials
 .env
 .env.*
+*.token
 *_token.json
 *_secret.json
 
