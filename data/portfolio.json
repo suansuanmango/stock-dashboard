@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-06-10T22:09:12+08:00",
+  "last_updated": "2026-06-14T08:33:18+08:00",
   "exchange_rate_usd_twd": 31.61,
   "total_cost_twd": 995997,
-  "total_value_twd": 1817172,
-  "total_gain_loss_twd": 821175,
-  "total_gain_loss_pct": 82.45,
+  "total_value_twd": 1849102,
+  "total_gain_loss_twd": 853106,
+  "total_gain_loss_pct": 85.65,
   "holdings": [
     {
       "ticker": "006208",
@@ -13,13 +13,13 @@
       "currency": "TWD",
       "quantity": 7000,
       "avg_price": 129.17,
-      "current_price": 232.05,
-      "price_change": -7.5,
-      "price_change_pct": -3.13,
-      "current_value_twd": 1624350,
+      "current_price": 236.1,
+      "price_change": 5.1,
+      "price_change_pct": 2.21,
+      "current_value_twd": 1652700,
       "cost_twd": 904190,
-      "gain_loss_twd": 720160,
-      "gain_loss_pct": 79.65
+      "gain_loss_twd": 748510,
+      "gain_loss_pct": 82.78
     },
     {
       "ticker": "TSM",
@@ -28,13 +28,13 @@
       "currency": "USD",
       "quantity": 6,
       "avg_price": 50.57,
-      "current_price": 420.61,
-      "price_change": -7.31,
-      "price_change_pct": -1.71,
-      "current_value_twd": 79773,
+      "current_price": 423.93,
+      "price_change": 2.86,
+      "price_change_pct": 0.68,
+      "current_value_twd": 80403,
       "cost_twd": 9591,
-      "gain_loss_twd": 70182,
-      "gain_loss_pct": 731.74
+      "gain_loss_twd": 70811,
+      "gain_loss_pct": 738.3
     },
     {
       "ticker": "TSLA",
@@ -43,13 +43,13 @@
       "currency": "USD",
       "quantity": 6,
       "avg_price": 254.08,
-      "current_price": 390.06,
-      "price_change": -6.62,
-      "price_change_pct": -1.67,
-      "current_value_twd": 73979,
+      "current_price": 406.43,
+      "price_change": 7.28,
+      "price_change_pct": 1.82,
+      "current_value_twd": 77084,
       "cost_twd": 48189,
-      "gain_loss_twd": 25790,
-      "gain_loss_pct": 53.52
+      "gain_loss_twd": 28895,
+      "gain_loss_pct": 59.96
     },
     {
       "ticker": "NVDA",
@@ -58,13 +58,13 @@
       "currency": "USD",
       "quantity": 6,
       "avg_price": 179.41,
-      "current_price": 206.0,
-      "price_change": -2.19,
-      "price_change_pct": -1.05,
-      "current_value_twd": 39070,
+      "current_price": 205.19,
+      "price_change": 0.32,
+      "price_change_pct": 0.16,
+      "current_value_twd": 38916,
       "cost_twd": 34027,
-      "gain_loss_twd": 5043,
-      "gain_loss_pct": 14.82,
+      "gain_loss_twd": 4889,
+      "gain_loss_pct": 14.37,
       "daily_gain_loss_twd": -2563,
       "daily_gain_loss_pct": -6.2
     }
