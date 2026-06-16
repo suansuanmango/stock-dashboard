@@ -120,5 +120,6 @@
       ]
     }
   ],
-  "last_updated": "2026-06-15T09:58:02.421032+08:00"
+  "last_updated": "2026-06-15T09:58:02.421032+08:00",
+  "error": "Gemini API 失敗: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
 }
