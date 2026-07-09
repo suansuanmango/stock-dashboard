@@ -1,82 +1,83 @@
 {
-  "summary": "全球市場受AI疑慮與中東地緣政治緊張影響，科技股承壓，油價上漲，但美股主要指數上週仍有漲幅，市場情緒複雜。",
+  "summary": "中東地緣政治緊張局勢升級，油價飆升，美股漲跌互見，AI板塊估值受關注。",
   "articles": [
     {
       "source": "股癌",
-      "title": "股癌關注功率元件缺貨漲價，點名MOSFET受AI伺服器需求帶動",
-      "summary": "股癌謝孟恭在最新節目中指出，科技產業資金流向出現變化，功率元件（如MOSFET）的缺貨和漲價程度不輸被動元件，部分應用甚至出現斷貨。他提到AI伺服器、高效能運算及電動車需求推升功率元件供給趨緊，國際大廠帶頭漲價，台灣廠商如強茂、台半、德微等可望受惠。然而，謝孟恭提醒，雖然7月將迎來密集漲價潮，但許多個股已上漲一段，產業利多不代表股價會持續噴出，投資人需謹慎。"
+      "title": "股癌EP677：關注大趨勢與資金流向，思考股價下跌原因",
+      "summary": "股癌在最新一集節目中強調，投資應掌握大趨勢如AI發展，並密切關注資金流向。他提醒，股價短期下跌可能受利空或市場情緒影響，但若基本面未變，長期展望仍可能維持不變，投資人應避免過度恐慌。"
     },
     {
       "source": "Bloomberg",
-      "title": "全球股市因AI擔憂而波動，油價受伊朗問題影響飆升",
-      "summary": "彭博社報導指出，全球股市週二下跌，科技股儘管三星電子業績亮眼，但投資者仍擔憂AI驅動漲勢的可持續性。油價則因中東緊張局勢加劇而上漲。市場對AI採用、支出、監管和獲利能力等方面的擔憂情緒普遍存在，導致市場波動加劇。儘管如此，長期趨勢顯示AI主題仍在推動全球經濟增長。"
+      "title": "川普稱伊朗停火協議「已結束」，美股下跌油價飆升",
+      "summary": "美國總統川普表示與伊朗的停火協議「已結束」，導致中東地緣政治緊張局勢升級。受此影響，美國股指期貨下跌，國際油價大幅飆升。市場正重新評估地緣政治風險對全球經濟的潛在影響。"
     },
     {
       "source": "Reuters",
-      "title": "全球市場：AI擔憂導致股市動搖，伊朗問題推升油價",
-      "summary": "路透社報導，全球股市週二下跌，科技股表現不佳，儘管三星電子公布了亮眼的業績，但投資者對AI驅動的漲勢持續性感到擔憂。同時，由於中東緊張局勢升級，油價飆升。此外，有報導稱中國新創公司DeepSeek正在開發自己的AI晶片，這可能降低其對主要晶片製造商的依賴，進一步加劇了市場對晶片產業的擔憂。"
+      "title": "派拉蒙與華納兄弟合併案受阻，美國多州擬起訴阻擋",
+      "summary": "根據路透社報導，派拉蒙與華納兄弟探索高達1100億美元的合併案面臨美國多州政府的反壟斷訴訟威脅。各州擔憂此合併案將破壞市場競爭，可能導致影音串流平台訂閱價格上漲、裁員及內容多樣性減少。"
     },
     {
       "source": "CNBC",
-      "title": "美股上週強勁上漲後，本週市場關注聯準會會議紀要與AI前景",
-      "summary": "CNBC報導，S&P 500期貨在華爾街經歷強勁一週後，週一保持上漲動能，道瓊工業平均指數創下歷史新高。上週道瓊上漲近2%，S&P 500和那斯達克綜合指數分別上漲1.8%和2.1%。本週交易員將密切關注聯準會6月會議紀要。此外，Jim Cramer指出生物科技是市場上最熱門的板塊，預計併購交易將大量湧入市場。"
+      "title": "美股半導體股上演「報復性反彈」，看好博通表現",
+      "summary": "CNBC分析指出，儘管整體市場受地緣政治緊張局勢影響，美股半導體板塊近期卻呈現「報復性反彈」。其中，博通（Broadcom）表現尤其受到看好，顯示資金對特定AI及半導體領域的信心依然強勁。"
     }
   ],
   "stock_radar": [
     {
-      "ticker": "CIEN",
-      "name": "Ciena Corporation",
+      "ticker": "AVGO",
+      "name": "博通",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "中短期",
+      "reasoning": "CNBC財經名嘴看好博通在美股半導體股「報復性反彈」中的表現。蘋果公司宣布將支出逾300億美元與博通達成晶片供應協議，此消息對博通股價形成強勁支撐。",
+      "sources": [
+        "CNBC",
+        "鉅亨網"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "name": "美光科技",
       "market": "US",
       "direction": "值得關注",
       "timeframe": "中長期",
-      "reasoning": "Seeking Alpha量化分析指出，Ciena受惠於AI驅動的需求，上調2026財年營收預期，並與主要超大規模業者簽訂合約。儘管估值中性，但其遠期PEG相較同業有27%的折價，近期回檔提供了買入機會，顯示其在AI基礎設施建置中具備成長潛力。",
+      "reasoning": "Seeking Alpha將美光科技列為「強烈買入」或「買入」評級的頂級股票之一，顯示其在投資社群中受到看好。記憶體市場需求回溫及AI相關應用有望帶動其長期成長。",
       "sources": [
         "Seeking Alpha"
       ]
     },
     {
-      "ticker": "AVGO",
-      "name": "Broadcom",
+      "ticker": "PLTR",
+      "name": "Palantir Technologies",
       "market": "US",
       "direction": "值得關注",
       "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將Broadcom列為2026年7月高成長股息股票之一，儘管未提供詳細理由，但其被歸類為高質量、強勁股息增長且估值具吸引力的公司。Bloomberg報導其與Apple的合作關係擴展，顯示其在科技供應鏈中的重要性。",
+      "reasoning": "Seeking Alpha將Palantir Technologies列為其「頂級股票」清單，顯示分析師對其數據分析和AI解決方案的潛力持樂觀態度。其在政府和商業領域的應用擴展值得關注。",
+      "sources": [
+        "Seeking Alpha"
+      ]
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "中長期",
+      "reasoning": "Seeking Alpha將Meta Platforms列為「頂級股票」之一，顯示市場對其在AI領域的投資及廣告業務的復甦抱有期待。儘管短期內股價可能受市場情緒影響，但長期發展潛力仍受關注。",
+      "sources": [
+        "Seeking Alpha"
+      ]
+    },
+    {
+      "ticker": "PENG",
+      "name": "Penguin Solutions Inc.",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "短期",
+      "reasoning": "Penguin Solutions Inc.在Google金融的每日漲幅榜上表現強勁，Seeking Alpha也將其列為值得關注的股票。其近期股價表現突出，可能受特定消息或市場熱點推動。",
       "sources": [
         "Seeking Alpha",
-        "Bloomberg"
-      ]
-    },
-    {
-      "ticker": "INTU",
-      "name": "Intuit",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將Intuit列為2026年7月高成長股息股票之一，特別指出其高殖利率。儘管近期股價有所下跌，但長期投資策略中，短期價格波動被視為噪音，其作為高質量公司仍具吸引力。",
-      "sources": [
-        "Seeking Alpha"
-      ]
-    },
-    {
-      "ticker": "EXE",
-      "name": "Expand Energy",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha分析師Elliott Gue將Expand Energy評為「強烈買入」，目標價為132美元，遠高於目前90美元以下的水平。理由是其在低天然氣價格下仍具彈性的自由現金流，以及液化天然氣出口增長、工業需求和電力部門擴張等中期催化劑。",
-      "sources": [
-        "Seeking Alpha"
-      ]
-    },
-    {
-      "ticker": "NOW",
-      "name": "ServiceNow",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Black Swan Dexteritas總裁兼投資組合經理Kim Bolton將ServiceNow列為其首選股之一。該公司提供基於雲端的AI平台，協助組織自動化數位工作流程，並在2026年第一季度實現22%的營收增長。此外，ServiceNow與Nvidia、Google Cloud和OpenAI等公司合作，加速企業AI創新。",
-      "sources": [
-        "BNN Bloomberg"
+        "Google 金融"
       ]
     }
   ],
@@ -85,12 +86,12 @@
       "ticker": "006208",
       "name": "富邦台灣50",
       "market": "TW",
-      "direction": "可布局",
-      "timeframe": "中長期",
-      "reasoning": "富邦台灣50 (006208) 近期宣布配發每單位4.75元的歷史新高股息，年化殖利率約3.79%，其中很大一部分來自資本利得，且這部分通常免稅。這顯示006208可能正嘗試結合市值成長與現金流，走出與0050差異化的路線。其主要持股集中在台灣科技巨頭，台積電佔比高達59.52%。若此高股息策略延續，且台灣科技股表現強勁，006208對尋求資本利得與穩定現金流的投資者而言，具備布局價值。",
+      "direction": "觀望",
+      "timeframe": "中長期分批布局",
+      "reasoning": "富邦台灣50 (006208) 追蹤台灣市值前50大企業，其中台積電佔比近六成。近期雖有外資賣超導致股價拉回，但官股行庫進場具穩盤意味。長期投資者可考慮分批布局以分散風險，短期則需觀望籌碼與技術指標轉穩。",
       "sources": [
-        "Fubon Asset Management",
-        "聯合新聞網",
+        "富邦投信",
+        "玩股網",
         "豐存股"
       ]
     },
@@ -98,13 +99,16 @@
       "ticker": "TSM",
       "name": "台積電 ADR",
       "market": "US",
-      "direction": "觀望",
-      "timeframe": "短期",
-      "reasoning": "台積電ADR (TSM) 即將於7月16日公布2026年第二季度財報，市場普遍預期受AI晶片強勁需求帶動，營收和獲利將大幅增長，分析師普遍看好並上調目標價。然而，GuruFocus指出TSM目前股價較其內在價值高估約48%，本益比32.87倍也顯著高於五年中位數22.78倍，顯示估值偏高。儘管長期前景看好，但短期內在財報公布前及高估值風險下，建議觀望。",
+      "direction": "可布局",
+      "timeframe": "中長期持有",
+      "reasoning": "台積電ADR (TSM) 受益於全球AI晶片需求供不應求，分析師普遍給予「強氣買入」評級，平均目標價約490.34美元。儘管短期股價可能因市場情緒波動，但其在半導體先進製程的領先地位及AI趨勢的長期支撐，使其具備強勁成長動能。",
       "sources": [
-        "GuruFocus",
-        "Zacks Investment Research",
-        "Benzinga"
+        "玩股網",
+        "財報狗股票",
+        "みんかぶ米国株",
+        "豐雲學堂",
+        "HiStock嗨投資理財社群",
+        "Moomoo"
       ]
     },
     {
@@ -112,30 +116,32 @@
       "name": "特斯拉",
       "market": "US",
       "direction": "觀望",
-      "timeframe": "短期",
-      "reasoning": "特斯拉 (TSLA) 第二季度交付量超出華爾街預期，並積極投入Robotaxi和AI領域，預計2026年將是其自Model 3以來最大的投資年。RBC Capital Markets因SpaceX潛在合併可能性將目標價上調至500美元。然而，近期股價出現下跌，且GuruFocus認為其股價較內在價值高估40.7%。儘管長期有成長潛力，但短期股價波動較大且估值偏高，建議投資者保持觀望。",
+      "timeframe": "短期波動大，等待明確訊號",
+      "reasoning": "特斯拉 (TSLA) 近期股價受盤前下跌及Meta市值超越等消息影響，短期波動較大。儘管分析師平均目標價仍有上漲空間，但其Robotaxi服務進展、電動車市場競爭加劇及馬斯克相關言論仍為不確定因素，建議投資人短期可先觀望，等待更明確的市場訊號。",
       "sources": [
-        "Vantage Markets",
-        "The Motley Fool",
-        "GuruFocus",
-        "Zacks Equity Research",
-        "Moomoo"
+        "英為財情Investing.com",
+        "財報狗股票",
+        "Moomoo",
+        "eToro"
       ]
     },
     {
       "ticker": "NVDA",
       "name": "輝達",
       "market": "US",
-      "direction": "觀望",
-      "timeframe": "短期",
-      "reasoning": "輝達 (NVDA) 受益於全球AI基礎設施熱潮，第一季度營運現金流創紀錄，並授權1190億美元的股票回購。然而，其2026年股價表現落後於同業，市場對AI熱潮的可持續性存在疑問。Finbold的AI預測顯示，到2026年7月31日，NVDA股價可能持平或小幅下跌。儘管公司基本面強勁，但近期市場對AI股的擔憂以及高估值，建議短期內保持觀望。",
+      "direction": "可布局",
+      "timeframe": "長期持有",
+      "reasoning": "輝達 (NVDA) 在AI熱潮中扮演核心角色，儘管估值偏高，但其GPU技術及CUDA軟體生態系構築了強大護城河。分析師對其長期展望樂觀，預期2030年股價可能達800-1000美元，且中國可能允許採購H200晶片，為其帶來新動能，適合長期布局。",
       "sources": [
-        "Zacks Investment Research",
-        "Finbold",
-        "The Motley Fool",
-        "Intellectia AI"
+        "財報狗股票",
+        "Titan FX",
+        "FinGuider 美股資訊網",
+        "Investing.com",
+        "玩股網",
+        "PChome Online 新聞",
+        "中央廣播電臺"
       ]
     }
   ],
-  "last_updated": "2026-07-08T08:30:44.734696+08:00"
+  "last_updated": "2026-07-09T08:30:55.775665+08:00"
 }
