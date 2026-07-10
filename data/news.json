@@ -1,83 +1,74 @@
 {
-  "summary": "中東地緣政治緊張局勢升級，油價飆升，美股漲跌互見，AI板塊估值受關注。",
+  "summary": "中東地緣政治緊張推升油價，但AI晶片股表現強勁，抵銷部分市場擔憂，全球股市呈現震盪後反彈格局。",
   "articles": [
     {
       "source": "股癌",
-      "title": "股癌EP677：關注大趨勢與資金流向，思考股價下跌原因",
-      "summary": "股癌在最新一集節目中強調，投資應掌握大趨勢如AI發展，並密切關注資金流向。他提醒，股價短期下跌可能受利空或市場情緒影響，但若基本面未變，長期展望仍可能維持不變，投資人應避免過度恐慌。"
+      "title": "EP677：市場震盪下的強勢族群與半導體報告解析",
+      "summary": "股癌主持人分析近期台股與美股震盪，指出中小型股雖有修正，但CCL、矽晶圓、封測等強勢族群仍健康輪動。同時深入解析Semi Analysis關於Blackwell（GB200）正交背板材料與Kiber問題的報告，並提及Palantir、CrowdStrike、Cloudflare等龍頭股線型看好。",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZ5VWKo4HUl3mcF4OnebWN_BUXbl7AkjXNSkwqfmYSL3ObmbZqavEMPh8FMsJELilr1FGStTODuzsACTAOFzFuY_F7k23fdT3EVyIHVuYN2TtA8YQIlEE7t9OxDqE="
     },
     {
       "source": "Bloomberg",
-      "title": "川普稱伊朗停火協議「已結束」，美股下跌油價飆升",
-      "summary": "美國總統川普表示與伊朗的停火協議「已結束」，導致中東地緣政治緊張局勢升級。受此影響，美國股指期貨下跌，國際油價大幅飆升。市場正重新評估地緣政治風險對全球經濟的潛在影響。"
+      "title": "油價漲幅受限，全球股市反彈：市場綜述",
+      "summary": "彭博社報導指出，儘管油價因中東局勢緊張而上漲，但全球股市已開始反彈。市場正消化地緣政治風險，並尋找新的平衡點，顯示投資者情緒在波動中趨於穩定。",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4x2rkyhwbiYTMlm2RGXgWZxD7rRRLNHnCDkC6HH_3mrg3K4Vtgrh0q7xApdP70ofTJu3RWjSPjwWLh9Ni_qYRNxY2VKh_n9W9SGhPXaqgHo6F"
     },
     {
       "source": "Reuters",
-      "title": "派拉蒙與華納兄弟合併案受阻，美國多州擬起訴阻擋",
-      "summary": "根據路透社報導，派拉蒙與華納兄弟探索高達1100億美元的合併案面臨美國多州政府的反壟斷訴訟威脅。各州擔憂此合併案將破壞市場競爭，可能導致影音串流平台訂閱價格上漲、裁員及內容多樣性減少。"
+      "title": "美光投資千億引爆晶片股狂潮，那斯達克指數大漲",
+      "summary": "路透社報導，美股週四在晶片股強勢領軍下，那斯達克指數收盤大漲。儘管美伊衝突升溫引發通膨擔憂，但記憶體大廠美光宣布在美國投資超過2500億美元以滿足AI晶片需求，成功點燃半導體與人工智慧概念股漲勢，抵消了中東局勢的陰霾。",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5ve2RM-NfMUdkxbINID_pWIGG7DTqKdc6tfUww2Qkk3rpG9g6bSbtMrxTCrG3MBLrpajBND9MVCH_tuceX-J7hlCwxYwflYnyLVcTqXnSuMwVkZHh4f1ciVWYv4lRG_L1WCOmq5IBmkgB-pDRHJfzIiA="
     },
     {
       "source": "CNBC",
-      "title": "美股半導體股上演「報復性反彈」，看好博通表現",
-      "summary": "CNBC分析指出，儘管整體市場受地緣政治緊張局勢影響，美股半導體板塊近期卻呈現「報復性反彈」。其中，博通（Broadcom）表現尤其受到看好，顯示資金對特定AI及半導體領域的信心依然強勁。"
+      "title": "貝萊德降低並重新調整對AI相關公司的投資敞口",
+      "summary": "CNBC報導，貝萊德全球固定收益首席投資官裏德表示，已降低並重新調整對與人工智能直接相關公司的投資敞口。此舉可能反映了機構投資者對AI板塊估值過高或風險集中的謹慎態度，值得市場關注。",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE70gojBef5OfFy_aANybOlLO8SjLU-0waBVYmc5Ig0QKxH3OnNv-nQPdG52-NoFhLeUwQesd0yIsZ5ID90BT_GiUjkCklqfn_n9liabLybYZWFBD8h-SSK5z_0n4PUBGvreHL4ukOJCtsrF0VQjPQVmGrG7CvOOVt9NBlooIShgKBejMp97T2ndmsV4D2RmDq1Qa1qme0d"
     }
   ],
   "stock_radar": [
     {
-      "ticker": "AVGO",
-      "name": "博通",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中短期",
-      "reasoning": "CNBC財經名嘴看好博通在美股半導體股「報復性反彈」中的表現。蘋果公司宣布將支出逾300億美元與博通達成晶片供應協議，此消息對博通股價形成強勁支撐。",
-      "sources": [
-        "CNBC",
-        "鉅亨網"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "name": "美光科技",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將美光科技列為「強烈買入」或「買入」評級的頂級股票之一，顯示其在投資社群中受到看好。記憶體市場需求回溫及AI相關應用有望帶動其長期成長。",
-      "sources": [
-        "Seeking Alpha"
-      ]
-    },
-    {
       "ticker": "PLTR",
-      "name": "Palantir Technologies",
+      "name": "Palantir Technologies Inc.",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將Palantir Technologies列為其「頂級股票」清單，顯示分析師對其數據分析和AI解決方案的潛力持樂觀態度。其在政府和商業領域的應用擴展值得關注。",
+      "timeframe": "長期布局",
+      "reasoning": "股癌最新一集提及Palantir線型已重回右上角，長線趨勢看好。作為數據分析與AI領域的龍頭，其技術應用廣泛，具備長期成長潛力。",
       "sources": [
-        "Seeking Alpha"
+        "股癌"
       ]
     },
     {
-      "ticker": "META",
-      "name": "Meta Platforms",
+      "ticker": "CRWD",
+      "name": "CrowdStrike Holdings, Inc.",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將Meta Platforms列為「頂級股票」之一，顯示市場對其在AI領域的投資及廣告業務的復甦抱有期待。儘管短期內股價可能受市場情緒影響，但長期發展潛力仍受關注。",
+      "timeframe": "長期布局",
+      "reasoning": "股癌最新分析指出CrowdStrike線型表現強勁，已重回右上角，顯示其在網路安全領域的領導地位穩固。隨著企業對資安需求提升，長期成長動能充足。",
       "sources": [
-        "Seeking Alpha"
+        "股癌"
       ]
     },
     {
-      "ticker": "PENG",
-      "name": "Penguin Solutions Inc.",
+      "ticker": "NET",
+      "name": "Cloudflare, Inc.",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "短期",
-      "reasoning": "Penguin Solutions Inc.在Google金融的每日漲幅榜上表現強勁，Seeking Alpha也將其列為值得關注的股票。其近期股價表現突出，可能受特定消息或市場熱點推動。",
+      "timeframe": "長期布局",
+      "reasoning": "股癌節目中提到Cloudflare線型表現良好，重回上升趨勢。作為內容傳遞網路與網路安全服務提供商，在數位轉型與雲端應用普及下，具備長期投資價值。",
       "sources": [
-        "Seeking Alpha",
-        "Google 金融"
+        "股癌"
+      ]
+    },
+    {
+      "ticker": "CIEN",
+      "name": "Ciena Corporation",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "中長期布局",
+      "reasoning": "Seeking Alpha在2026年推薦的十大選股中提及Ciena，指出其為高速互聯領域領導者，受益於AI數據中心互聯需求，預計2026年營收中位增長20%。",
+      "sources": [
+        "Seeking Alpha"
       ]
     }
   ],
@@ -87,11 +78,10 @@
       "name": "富邦台灣50",
       "market": "TW",
       "direction": "觀望",
-      "timeframe": "中長期分批布局",
-      "reasoning": "富邦台灣50 (006208) 追蹤台灣市值前50大企業，其中台積電佔比近六成。近期雖有外資賣超導致股價拉回，但官股行庫進場具穩盤意味。長期投資者可考慮分批布局以分散風險，短期則需觀望籌碼與技術指標轉穩。",
+      "timeframe": "短期觀望，長期可布局",
+      "reasoning": "富邦台灣50近期一日及一週報酬率略有下跌，但近三個月表現強勁，報酬率達33.57%。作為追蹤台灣市值前50大公司的ETF，其走勢與大盤高度相關。考量近期市場波動及中東地緣政治不確定性，短期可保持觀望，但長期而言，台灣科技產業在全球供應鏈中的關鍵地位，使其仍是穩健的長期布局標的。",
       "sources": [
-        "富邦投信",
-        "玩股網",
+        "MoneyDJ理財網",
         "豐存股"
       ]
     },
@@ -100,15 +90,11 @@
       "name": "台積電 ADR",
       "market": "US",
       "direction": "可布局",
-      "timeframe": "中長期持有",
-      "reasoning": "台積電ADR (TSM) 受益於全球AI晶片需求供不應求，分析師普遍給予「強氣買入」評級，平均目標價約490.34美元。儘管短期股價可能因市場情緒波動，但其在半導體先進製程的領先地位及AI趨勢的長期支撐，使其具備強勁成長動能。",
+      "timeframe": "分批布局",
+      "reasoning": "台積電ADR近期股價上漲，並有消息指出Meta自研AI晶片「Iris」將於9月由台積電代工生產，顯示其在AI晶片製造領域的領導地位與強勁需求。儘管半導體產業存在週期性，但AI趨勢的長期發展為台積電帶來持續成長動能。建議可採分批布局策略，掌握其在先進製程的優勢。",
       "sources": [
-        "玩股網",
-        "財報狗股票",
-        "みんかぶ米国株",
-        "豐雲學堂",
-        "HiStock嗨投資理財社群",
-        "Moomoo"
+        "富途牛牛",
+        "世界日報"
       ]
     },
     {
@@ -116,13 +102,12 @@
       "name": "特斯拉",
       "market": "US",
       "direction": "觀望",
-      "timeframe": "短期波動大，等待明確訊號",
-      "reasoning": "特斯拉 (TSLA) 近期股價受盤前下跌及Meta市值超越等消息影響，短期波動較大。儘管分析師平均目標價仍有上漲空間，但其Robotaxi服務進展、電動車市場競爭加劇及馬斯克相關言論仍為不確定因素，建議投資人短期可先觀望，等待更明確的市場訊號。",
+      "timeframe": "短期觀望",
+      "reasoning": "特斯拉近期股價有所下跌，但Model Y在6月重奪中國最暢銷車型頭銜，且公司正積極擴展儲能與虛擬電廠業務，2026年第二季儲能部署量顯著增長。儘管電動車市場競爭激烈，但其能源業務的發展潛力值得關注。短期股價波動較大，建議觀望其能源業務的實際營收貢獻及市場對其估值的反應。",
       "sources": [
-        "英為財情Investing.com",
-        "財報狗股票",
+        "TradingView",
         "Moomoo",
-        "eToro"
+        "Readmo.ai"
       ]
     },
     {
@@ -130,18 +115,15 @@
       "name": "輝達",
       "market": "US",
       "direction": "可布局",
-      "timeframe": "長期持有",
-      "reasoning": "輝達 (NVDA) 在AI熱潮中扮演核心角色，儘管估值偏高，但其GPU技術及CUDA軟體生態系構築了強大護城河。分析師對其長期展望樂觀，預期2030年股價可能達800-1000美元，且中國可能允許採購H200晶片，為其帶來新動能，適合長期布局。",
+      "timeframe": "分批布局",
+      "reasoning": "輝達股價近期雖有回落，但其估值已接近「合理區間」，且仍是AI基礎設施的核心。CUDA生態系統、資料中心市佔率及AI需求是其三大優勢，支撐其高品質成長股地位。儘管貝萊德等機構可能調整AI相關投資敞口，但若相信AI趨勢可延續，當前估值提供分批布局的機會，而非一次重押。",
       "sources": [
+        "TradingView",
         "財報狗股票",
-        "Titan FX",
-        "FinGuider 美股資訊網",
-        "Investing.com",
-        "玩股網",
-        "PChome Online 新聞",
-        "中央廣播電臺"
+        "Readmo.ai",
+        "群益期貨"
       ]
     }
   ],
-  "last_updated": "2026-07-09T08:30:55.775665+08:00"
+  "last_updated": "2026-07-10T08:30:35.990941+08:00"
 }
