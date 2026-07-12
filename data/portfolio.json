@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-11T08:30:05+08:00",
+  "last_updated": "2026-07-12T08:30:06+08:00",
   "exchange_rate_usd_twd": 32.1,
   "total_cost_twd": 997420,
   "total_value_twd": 1922675,
@@ -14,8 +14,8 @@
       "quantity": 7000,
       "avg_price": 129.17,
       "current_price": 245.7,
-      "price_change": -0.45,
-      "price_change_pct": -0.18,
+      "price_change": 0.0,
+      "price_change_pct": 0.0,
       "current_value_twd": 1719900,
       "cost_twd": 904190,
       "gain_loss_twd": 815710,

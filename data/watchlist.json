@@ -1,29 +1,29 @@
 {
-  "last_updated": "2026-07-11T08:30:06+08:00",
+  "last_updated": "2026-07-12T08:30:08+08:00",
   "stocks": [
     {
       "ticker": "006208",
       "name": "富邦台灣50",
       "market": "TW",
       "current_price": 245.7,
-      "change": -0.45,
-      "change_pct": -0.18
+      "change": 0.0,
+      "change_pct": 0.0
     },
     {
       "ticker": "0050",
       "name": "元大台灣50",
       "market": "TW",
       "current_price": 105.8,
-      "change": -0.25,
-      "change_pct": -0.24
+      "change": 0.0,
+      "change_pct": 0.0
     },
     {
       "ticker": "00878",
       "name": "國泰永續高股息",
       "market": "TW",
       "current_price": 33.19,
-      "change": -0.01,
-      "change_pct": -0.03
+      "change": 0.0,
+      "change_pct": 0.0
     },
     {
       "ticker": "TSM",
