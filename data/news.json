@@ -1,25 +1,25 @@
 {
-  "summary": "通膨數據降溫提振市場情緒，美股上漲，銀行股財報亮眼，AI支出持續推動科技股表現，但IBM發出預警。",
+  "summary": "AI熱潮持續推動科技股上漲，然通膨與地緣政治風險仍存。",
   "articles": [
     {
       "source": "股癌",
-      "title": "EP678 | 🎮",
-      "summary": "股癌最新一集探討了金融投資知識與海內外財經時事，並提及「好像是很難得的躲噴」，暗示市場可能避開了某次下跌。節目持續以白話文分析複雜議題，並透過聽眾問答環節提供多元觀點，強調投資邏輯與風險控管的重要性。"
+      "title": "股癌EP678筆記：Meta、封裝與導線架的資金輪動",
+      "summary": "股癌最新一集討論Meta出租GPU對算力價格及AI軟體毛利率的影響，並追蹤記憶體、被動元件、功率元件、封裝與導線架等零組件漲價趨勢。他觀察到資金正從主流族群輪動至短期內有營收獲利潛力的元件，並指出輝達與Meta股價持續走強。"
     },
     {
       "source": "Bloomberg",
-      "title": "通膨數據疲軟抑制升息預期，美股債市齊揚",
-      "summary": "最新通膨數據顯示消費者物價指數年增率低於預期，市場對聯準會升息的預期減弱，推動股市和債市上漲。此外，倫敦金融業對AI工具的採用已相當普遍，近九成專業人士每日或每週使用，並認為AI技能將比傳統技能更重要。"
+      "title": "ASML財報提振科技股，油價因中東衝突升溫",
+      "summary": "彭博報導指出，ASML強勁的財報表現提振科技股上漲，顯示全球對AI晶片需求旺盛。然而，美國與伊朗間的衝突升級導致油價上揚，引發市場對聯準會升息預期的擔憂，使得債券市場承壓。"
     },
     {
       "source": "Reuters",
-      "title": "通膨數據疲軟與銀行財報提振市場情緒，標普500及那斯達克上漲",
-      "summary": "週二標普500指數和那斯達克指數上漲，因通膨數據低於預期，市場預期聯準會可能採取較不激進的升息立場。同時，大型銀行第二季財報表現強勁，也提振了整體市場信心，科技股領漲金融板塊。"
+      "title": "BHP銅產量未達預期，預警智利產量將下降",
+      "summary": "礦業巨頭BHP集團公布第四季銅產量低於預期，主要受智利埃斯康迪達和潘帕諾特礦場產量下降影響。公司同時預警明年智利銅產量將進一步下滑，儘管鐵礦石平均價格上漲，但市場對其銅業務前景表示擔憂。"
     },
     {
       "source": "CNBC",
-      "title": "市場開盤漲跌互見，IBM發出預警，但通膨降溫",
-      "summary": "週二美股開盤漲跌互見，IBM因軟體和基礎設施業務疲軟發出預警，股價大跌。然而，由於伊朗戰爭後油價回落，上月通膨數據降溫，核心消費者物價指數年增率為3.5%，低於預期，市場對此反應積極。"
+      "title": "華爾街受通膨降溫與財報提振，晶片股表現分歧",
+      "summary": "華爾街股市因通膨數據降溫和強勁財報而上揚，但晶片股表現分歧，美光、英特爾和AMD下跌，而ASML因AI晶片需求旺盛上調財測。聯準會官員表示通膨已達頂峰，但部分專家仍對過度樂觀提出警告。"
     }
   ],
   "stock_radar": [
@@ -28,52 +28,41 @@
       "name": "美光科技",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha指出，美光科技在2026年上半年表現強勁，受益於全球AI熱潮，其股價和營收成長顯著。儘管已大幅上漲，但仍維持具吸引力的估值，並被Seeking Alpha量化評級為「強力買入」，顯示其在AI基礎設施建置中扮演關鍵角色。",
+      "timeframe": "短期至中期",
+      "reasoning": "Wedbush分析師Dan Ives稱美光科技為「AI記憶體短缺」的最佳美股標的，預估需求與供給比達15比1，且AI需求正推動DRAM和NAND數據中心位元總市場份額在2026年首次超過50%。公司股價今年來已上漲243.33%，過去一年上漲696.76%，營收和毛利率表現強勁。",
       "sources": [
-        "Seeking Alpha"
+        "CNBC Dan Ives"
       ]
     },
     {
-      "ticker": "AMD",
-      "name": "超微半導體",
+      "ticker": "AVGO",
+      "name": "博通",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將超微半導體列為2026年下半年值得關注的股票，其在AI領域的強勁表現推動了股價和營收成長。公司基本面穩固，量化評級為「強力買入」，且估值具吸引力，顯示其在半導體產業中的領先地位和持續成長潛力。",
+      "timeframe": "中期",
+      "reasoning": "Wedbush分析師Dan Ives指出，博通預計第三季AI相關營收將達160億美元，成長超過200%。這顯示博通在AI基礎設施領域的強勁成長動能，值得投資人持續關注。",
       "sources": [
-        "Seeking Alpha"
+        "CNBC Dan Ives"
       ]
     },
     {
-      "ticker": "CIEN",
-      "name": "西恩那",
+      "ticker": "LRCX",
+      "name": "科林研發",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha分析指出，Ciena Corporation受益於全球AI熱潮，其股價表現優異，並保持良好的整體因子評級。公司在行業中排名靠前，獲得量化「強力買入」評級，顯示其在AI基礎設施建置中具有強勁的成長動能和投資潛力。",
+      "timeframe": "中期",
+      "reasoning": "Wedbush分析師Dan Ives提到，科林研發因HBM製造需求而股價今年來飆升105%。作為半導體設備供應商，LRCX直接受益於AI晶片生產的擴張，其在HBM領域的關鍵作用使其前景看好。",
       "sources": [
-        "Seeking Alpha"
+        "CNBC Dan Ives"
       ]
     },
     {
-      "ticker": "CVX",
-      "name": "雪佛龍",
+      "ticker": "STRL",
+      "name": "Sterling Infrastructure, Inc.",
       "market": "US",
       "direction": "值得關注",
       "timeframe": "中長期",
-      "reasoning": "Seeking Alpha推薦雪佛龍為2026年7月高股息股票之一，其估值偏低且獲利能力強勁。公司股息安全，派息率合理，且在Seeking Alpha量化排名中具有吸引力，適合尋求穩定股息收入並降低投資組合波動的投資者。",
-      "sources": [
-        "Seeking Alpha"
-      ]
-    },
-    {
-      "ticker": "NKE",
-      "name": "耐吉",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha指出，耐吉擁有36年連續派息和24年股息增長的紀錄，對尋求股息收入和成長的長期投資者具吸引力。公司在投資組合中佔比合理，並預計將進一步增加，因其提供具吸引力的風險回報。",
+      "reasoning": "Seeking Alpha將Sterling Infrastructure列為2026年下半年表現最佳的股票之一，因其在北美半導體製造項目和AI服務基礎設施方面表現突出。作為AI基礎設施提供商，STRL為數據中心和製造設施提供全面的場地開發服務，受益於AI產業的蓬勃發展。",
       "sources": [
         "Seeking Alpha"
       ]
@@ -84,10 +73,15 @@
       "ticker": "006208",
       "name": "富邦台灣50",
       "market": "TW",
-      "direction": "觀望",
-      "timeframe": "短期",
-      "reasoning": "目前搜尋結果中未找到關於富邦台灣50（006208）的最新具體財經新聞或分析。由於缺乏近期市場動態和KOL觀點，建議投資人對此標的保持觀望態度，等待更多明確資訊出現，以避免在資訊不充足的情況下做出投資決策。",
-      "sources": []
+      "direction": "可布局",
+      "timeframe": "短期至中長期",
+      "reasoning": "006208富邦台灣50於2026年7月16日除息，每股配發4.75元現金股利，創歷史新高，殖利率達1.93%。其今年以來績效達64.29%，近一年績效更高達118.36%。雖然本次高配息部分來自資本利得，但長期追蹤台灣50指數，表現穩健，適合中長期配置。",
+      "sources": [
+        "玩股網",
+        "MoneyDJ理財網",
+        "鉅亨網",
+        "今周刊"
+      ]
     },
     {
       "ticker": "TSM",
@@ -95,13 +89,13 @@
       "market": "US",
       "direction": "可布局",
       "timeframe": "中長期",
-      "reasoning": "台積電ADR預計於7月16日公布第二季財報，市場預期受AI需求強勁帶動，營收將有顯著成長，並上調2026年資本支出展望。公司作為全球主要AI晶片製造商，掌握先進製程技術，多家分析師給予「買入」評級，並預計全年營收成長超過30%。儘管地緣政治風險存在，但其在AI基礎設施中的關鍵地位使其具備長期布局價值。",
+      "reasoning": "台積電ADR (TSM) 獲華爾街分析師普遍給予「強力買入」評級。公司受惠於強勁的AI需求，上調長期展望，並擴大先進封裝產能。第二季財報預計營收年增36%，每股盈餘成長55%。儘管短期可能因財報公布而有波動，但長期AI趨勢支撐其成長動能。",
       "sources": [
-        "Zacks Investment Research",
-        "MarketBeat",
-        "Forbes",
-        "24/7 Wall St.",
-        "BNN Bloomberg"
+        "玩股網",
+        "Morningstar",
+        "Finviz",
+        "Investing.com",
+        "TipRanks.com"
       ]
     },
     {
@@ -110,15 +104,15 @@
       "market": "US",
       "direction": "觀望",
       "timeframe": "短期",
-      "reasoning": "特斯拉將於7月22日公布第二季財報，近期股價波動較大，雖有分析師上調目標價，但GuruFocus評估其股價仍被高估35.4%。公司正推出新款Model Y L系列，並強調軟體與AI業務的成長。然而，SpaceX的公開發行可能分散投資者對特斯拉的關注，且歷史上財報後股價表現不確定，建議投資人短期內保持觀望。",
+      "reasoning": "特斯拉 (TSLA) 分析師共識為「持有」。儘管第二季交車量超預期，但股價卻下跌，顯示市場已提前反應利多，並將焦點轉向AI、Robotaxi等新事業的獲利能力及毛利率。技術分析顯示「強烈賣出」訊號，且財報前預期股價波動較大，建議觀望。",
       "sources": [
-        "GuruFocus",
-        "Zacks Equity Research",
-        "OurAlpha",
-        "The Motley Fool",
-        "24/7 Wall St.",
-        "富途牛牛",
-        "wickedstocks.com"
+        "Public.com",
+        "TipRanks",
+        "Perplexity",
+        "WEEX",
+        "鉅亨網",
+        "Investing.com 香港",
+        "北美財經"
       ]
     },
     {
@@ -127,14 +121,18 @@
       "market": "US",
       "direction": "可布局",
       "timeframe": "中長期",
-      "reasoning": "輝達正積極尋求與三菱重工合作開發AI數據中心，並調整亞洲客戶群以符合晶片出口規定。GuruFocus評估其股價被低估42.5%，且GF Score高達95/100，顯示強勁的長期潛力。儘管近期有內部人士賣股，且AI預測短期股價持平，但KeyBanc和Zacks均上調目標價至「買入」，加上Blackwell Ultra需求旺盛及Vera Rubin按計畫推出，AI領域的領導地位使其具備長期布局價值。",
+      "reasoning": "輝達 (NVDA) 獲分析師「強力買入」評級。儘管近期股價有所修正，但其預估本益比已低於標普500指數，提供中長期布局機會。中國與阿聯酋出口限制的放寬，有望改善海外市場預期。輝達在AI領域仍具主導地位與寬廣護城河，營收持續強勁成長。",
       "sources": [
-        "GuruFocus",
-        "Finbold",
-        "MarketBeat",
-        "YouTube (The News On NVIDIA Stock, Micron Stock, Memory Stocks - NVDA Update)"
+        "Robinhood",
+        "豐雲學堂",
+        "Morningstar",
+        "Perplexity",
+        "TradingKey",
+        "鉅亨網",
+        "YouTube",
+        "豐雲學堂"
       ]
     }
   ],
-  "last_updated": "2026-07-15T08:30:37.790634+08:00"
+  "last_updated": "2026-07-16T08:30:58.081080+08:00"
 }
