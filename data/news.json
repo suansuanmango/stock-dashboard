@@ -1,85 +1,89 @@
 {
-  "summary": "全球股市受晶片股與AI需求提振，油價上漲，日圓續貶。",
+  "summary": "市場情緒謹慎，投資人觀望科技巨頭財報與聯準會利率決策，地緣政治緊張推升油價，美國民眾對經濟前景普遍悲觀。",
   "articles": [
     {
       "source": "股癌",
-      "title": "EP680 | 至少碗筷不用買",
-      "summary": "股癌最新一集節目探討體味管理的重要性，並介紹一款不含鋁鹽、酒精、重金屬的體香膏，強調其能有效管理體味長達24小時。節目中以幽默方式提醒聽眾，在日常社交與通勤中，體味管理是現代人不可或缺的必備品，避免成為「人未到，味先到」的尷尬情況。",
-      "url": "https://podcasts.apple.com/tw/podcast/gooaye-%E8%82%A1%E7%99%8C/id1504994081?i=1000662657375"
+      "title": "再一次相信真愛存在的機會",
+      "summary": "股癌最新一集探討戒菸如同投資，需放棄短期刺激追求長期健康複利，並鼓勵使用戒菸輔助品。節目中提及尼古清戒菸口含錠與噴霧即將上市，強調戒菸不應僅靠意志力，而是藉助工具緩解菸癮，專注生活每一刻。",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJzUn0ddSN9CcLnBIXsAxsVnyMPPGh1YoDqWGbCwHDVV3jcqDoYzBwz8ahz5u3aadQbnbHC6kZxTC9_W8P_qMRiIF7TLFgJxC980_f_8BHZ5Thb_YNoGoBH3jcJecUe2JTuhNAgO55_kd1G1gYLRfj9r0U1GkZMkWuLxLAKpxSXaKr4zGylQ=="
     },
     {
       "source": "Bloomberg",
-      "title": "台灣之虎回歸！AI讓經濟起飛前彭博記者：重現亞洲四小龍榮景",
-      "summary": "前彭博社記者何貴森撰文指出，全球AI需求帶動台灣經濟成長，今年第一季成長率逼近15%，重現昔日「亞洲四小龍」榮景。台灣對美出口已超越對中國出口，顯示其經濟「脫中親美」策略奏效，台美經貿關係因AI與供應鏈重組而快速升溫。",
-      "url": "https://www.nownews.com/news/6476402"
+      "title": "韓國股市強勁反彈，槓桿頭寸平倉似乎接近尾聲",
+      "summary": "彭博報導指出，韓國股市近期出現強勁反彈，顯示市場上因槓桿交易引發的平倉壓力可能已接近尾聲。在市場承壓時期，美股雖常被視為「矮子裡的將軍」，但歷史顯示此優勢難以長期維持，資金流向流動性更強的美國資產，但後續走向仍不確定。",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsk7dj7BT8VSi-IaGLE2SGLyRPrnuggw3zUbUolcHkIuIF86r1_D3hzYJ8iHdGhXqzmM_L1nU1G3VwiSFdpwJdhPFcRXFSkMEY9_yTMqp3CZoK5U99U59xm6hQ0_zLVMO7KQ=="
     },
     {
       "source": "Reuters",
-      "title": "美股晶片股大漲！油價創5週新高、日圓貶破163關卡",
-      "summary": "全球金融市場週二震盪，美股在晶片股領軍下強勢收高，那斯達克大漲逾1%。中東局勢緊張推升布蘭特原油期貨至每桶91.01美元，美國西德州原油至每桶84.91美元，雙雙創下5週新高。日圓兌美元貶值0.41%至163.14日圓，創下1986年12月以來新低。",
-      "url": "https://www.ftvnews.com.tw/news/detail/2026722W0021"
+      "title": "美股互有漲跌，標普那指收低，投資人靜待科技巨頭財報",
+      "summary": "路透社報導，美股週三收盤互有漲跌，標普500與那斯達克指數雙雙收低，投資人正屏息等待科技巨頭財報，以評估AI熱潮能否持續。費城半導體指數收高，但軟體股表現不佳，投資人對AI相關投資變得更加挑剔。地緣政治緊張與油價上漲也引發通膨擔憂。",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYVO94n1R2Vt6Q8m3mAm8NnieTIlSgO7p3aaQGg3MyYc2BBodZO1pYothONLomQDrceW0zOhrSp3kUhin_MPGINbmJSYDj3ifsggjGMYZZ8OZ9LcyjAbY2ttzHKA04AvaufBCB9Z0zjCQ-BoRD"
     },
     {
       "source": "CNBC",
-      "title": "別在AI投資上梭哈！克雷默：分散布局才是長勝關鍵建議增持醫療、金融等非科技股",
-      "summary": "CNBC主持人Jim Cramer建議投資人，儘管AI是重要投資主題，但不應將資金過度集中於AI概念股，尤其是半導體族群。他強調應透過分散配置降低投資組合波動，避免單一產業回檔造成重大損失，並建議增持醫療保健、工業及金融等非科技股的優質企業。",
-      "url": "https://news.cnyes.com/news/id/5607371"
+      "title": "CNBC調查顯示美國經濟前景惡化，逾6成美國人對經濟悲觀",
+      "summary": "CNBC最新全美經濟調查顯示，儘管華爾街與美股表現強勁，但逾6成美國民眾對經濟現況及未來展望抱持悲觀態度，為疫情後最差結果之一。高物價是主要壓力來源，多數家庭已削減基本生活支出，並減少非必要消費，總統川普的施政滿意度也因此下滑。",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDHYpotm6s3Ar6QEFN8vw3VrlHpNd7ivlxuW9GCRqMSc5z_XySpmrDjnqe03jrRqVLQQsHZRwtk8DoTJ99vUdP7EWze50U-F1WIo0xAXmwN8iyDW8AHxApCjsdraBVHw=="
     }
   ],
   "stock_radar": [
     {
-      "ticker": "CRDO",
-      "name": "Credo Technology Group Holding Ltd",
+      "ticker": "VICR",
+      "name": "Vicor",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha於2026年7月14日將Credo Technology Group Holding Ltd (CRDO) 列為下半年十大股票之一，給予「強力買入」(Strong Buy) 的量化評級，並指出其市值達441.7億美元，在所屬產業中排名靠前。",
+      "timeframe": "長期布局",
+      "reasoning": "根據Seeking Alpha報導，Vicor被列為市值逾100億美元大型工業股中的「Strong Buy」標的。市場目前偏好此類評等較高的個股，顯示資金可能流向基本面強勁且具成長潛力的工業領域公司。",
       "sources": [
-        "Seeking Alpha"
+        "Seeking Alpha",
+        "Reuters"
       ]
     },
     {
-      "ticker": "LITE",
-      "name": "Lumentum Holdings Inc.",
+      "ticker": "BE",
+      "name": "Bloom Energy",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha於2026年7月14日將Lumentum Holdings Inc. (LITE) 列為下半年十大股票之一，給予「強力買入」(Strong Buy) 的量化評級，其市值為597.6億美元。",
+      "timeframe": "長期布局",
+      "reasoning": "Seeking Alpha將Bloom Energy評為「Strong Buy」標的，屬於市值超過100億美元的大型工業股。在當前市場環境下，投資者傾向於尋找具有穩健評級和良好基本面的公司，Bloom Energy作為能源相關企業，可能受益於產業趨勢。",
       "sources": [
-        "Seeking Alpha"
+        "Seeking Alpha",
+        "Reuters"
       ]
     },
     {
-      "ticker": "AVGO",
-      "name": "Broadcom",
+      "ticker": "STRL",
+      "name": "Sterling Infrastructure",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha於2026年7月1日發布的「2026年7月高成長股息股」報告中，將Broadcom (AVGO) 列為預期回報率最高的股票之一，預計回報率達52.80%，顯示其成長潛力受到看好。",
+      "timeframe": "長期布局",
+      "reasoning": "Sterling Infrastructure在Seeking Alpha的報告中被評為「Strong Buy」的大型工業股。這類公司在市場資金流向中受到青睞，反映了分析師對其未來表現的信心，尤其在基礎設施建設領域可能存在長期增長機會。",
       "sources": [
-        "Seeking Alpha"
+        "Seeking Alpha",
+        "Reuters"
       ]
     },
     {
-      "ticker": "INTU",
-      "name": "Intuit",
+      "ticker": "ATI",
+      "name": "ATI Inc.",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha於2026年7月1日發布的「2026年7月高成長股息股」報告中，將Intuit (INTU) 列為預期回報率最高的股票之一，預計回報率達31.10%，顯示其成長潛力受到看好。",
+      "timeframe": "長期布局",
+      "reasoning": "ATI Inc.被Seeking Alpha評選為「Strong Buy」的大型工業股之一。在當前市場對基本面穩健的工業股需求增加的情況下，ATI作為材料科技公司，其創新能力和市場地位可能使其成為值得關注的標的。",
       "sources": [
-        "Seeking Alpha"
+        "Seeking Alpha",
+        "Reuters"
       ]
     },
     {
-      "ticker": "CIEN",
-      "name": "Ciena Corporation",
+      "ticker": "RVMD",
+      "name": "Revolution Medicines",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha在2026年7月的報告中多次提及Ciena Corporation (CIEN)，包括在7月14日將其列為受益於AI熱潮的「強力買入」股票，並在7月9日指出其年初至今回報率達107%。",
+      "timeframe": "中長期布局",
+      "reasoning": "Franklin Biotechnology Discovery Fund首席經理人Evan McCulloch特別看好Revolution Medicines，一家專注腫瘤治療的臨床階段公司。其胰臟癌口服藥物daraxonrasib在第三期試驗中表現優異，預計將向美國FDA申請核准，被視為「篤定會獲批」的重磅新藥，具備強勁成長潛力。",
       "sources": [
-        "Seeking Alpha"
+        "美股放大鏡"
       ]
     }
   ],
@@ -88,14 +92,13 @@
       "ticker": "006208",
       "name": "富邦台灣50",
       "market": "TW",
-      "direction": "可布局",
-      "timeframe": "長期",
-      "reasoning": "富邦台灣50 (006208) 截至2026年7月20日收盤價為226.00元，近期表現強勁，今年以來績效達63.69%，近一年績效更高達118.36% (截至7月9日)。該ETF追蹤台灣50指數，涵蓋台灣市值最大的50家公司，代表台股整體表現。最新公告每單位配息4.75元，創掛牌以來新高，預計8月10日入帳。儘管配息金額高於0050，其配息組成中資本利得佔比提升。考量其長期追蹤台股大盤的特性及優異的歷史績效，對於尋求台灣市場整體成長的長期投資者而言，仍具布局價值。",
+      "direction": "觀望",
+      "timeframe": "短期觀望，中長期可布局",
+      "reasoning": "富邦台灣50 (006208) 近期股價約在237.40元，與元大台灣50 (0050) 相比，006208的配息策略主要以股利收入為主，較能吸引小資族。然而，近期市場波動較大，006208在股災後仍處於貼息狀態，顯示其短期表現可能不如0050穩健。考量到市場對ETF配息策略的差異化關注，以及其成分股受大盤影響的特性，短期內建議觀望，待市場趨穩或有更明確的利多消息再考慮布局。",
       "sources": [
-        "Investing.com",
-        "今周刊",
-        "豐存股",
-        "綠角財經筆記"
+        "鉅亨網",
+        "PChome 股市",
+        "財訊"
       ]
     },
     {
@@ -103,14 +106,12 @@
       "name": "台積電 ADR",
       "market": "US",
       "direction": "可布局",
-      "timeframe": "中長期",
-      "reasoning": "台積電ADR (TSM) 在2026年7月21日盤中大漲5.03%，報422.55美元，顯示市場對其前景樂觀。作為全球領先的半導體製造商，台積電是AI晶片供應鏈的關鍵核心，受益於全球AI需求的持續增長。儘管股價近期波動，但其在AI領域的不可取代性及技術領先地位，為其中長期成長提供堅實支撐。投資人可關注其即將於7月17日公布的財報，以評估短期走勢，但長期而言，其在全球科技產業中的戰略地位使其成為具吸引力的布局標的。",
+      "timeframe": "中長期布局",
+      "reasoning": "台積電ADR (TSM) 最新價格約為424.61美元，近期股價表現強勁。儘管官方預估第三季營收將季增12%，但2奈米製程量產初期折舊與海外建廠成本可能使Q3毛利率略有回調至65%~67%。然而，市場普遍認為台積電在先進製程領域的領先地位在未來幾年難以被超越，高階產能供不應求是事實。長期來看，AI列車才剛加速，台積電作為關鍵供應商，仍具備強勁成長動能，適合中長期布局。",
       "sources": [
-        "鉅亨網",
         "玩股網",
-        "股市智投",
-        "KuCoin",
-        "中新經緯"
+        "財報狗股票",
+        "股市爆料同學會"
       ]
     },
     {
@@ -118,13 +119,13 @@
       "name": "特斯拉",
       "market": "US",
       "direction": "觀望",
-      "timeframe": "短期",
-      "reasoning": "特斯拉 (TSLA) 股價在2026年7月21日盤中上漲3.46%，主要受機構法人樂觀情緒及對即將公布的第二季度財報期待所驅動。華爾街預計其Q2營收將達264億美元，EPS增長近30%。然而，市場估值重心正轉向自駕軟體、機器人技術與儲能營收成長，而非單純的電動車銷售。技術指標顯示賣出訊號，且投資人仍密切關注全球執行力與定價風險。考量財報公布在即，短期內股價可能因消息面而劇烈波動，建議投資人暫時觀望，待財報結果明朗後再評估。",
+      "timeframe": "短期觀望",
+      "reasoning": "特斯拉 (TSLA) 最新價格約為378.93美元。在第二季度財報公布前，市場氣氛偏向保守，空頭部位快速增加，技術面也顯示偏弱，股價跌破50日與200日移動平均線。RSI降至39，MACD出現看跌交叉，表明賣壓仍在。市場需要更強的基本面催化劑才能重建買盤信心。因此，短期內建議觀望，等待財報結果及市場對其成長預期的反應。",
       "sources": [
-        "HK MoneyClub",
-        "智通財經APP",
-        "WEEX問答",
-        "鉅亨網"
+        "英為財情Investing.com",
+        "TradingView",
+        "延伸閱讀文章",
+        "特斯拉汽車-TSLA-收盤行情"
       ]
     },
     {
@@ -132,16 +133,15 @@
       "name": "輝達",
       "market": "US",
       "direction": "可布局",
-      "timeframe": "長期",
-      "reasoning": "輝達 (NVDA) 股價在2026年7月16日報207.4美元，7月累計漲幅達3.65%，顯示市場對其長期AI成長邏輯仍具信心。執行長黃仁勳親自回應市場對新品延期、雲端廠商自研ASIC及客戶集中度的擔憂，強調Rubin Ultra架構將按計劃出貨，且AI晶片需求並未降溫。公司Q1營收達816億美元，年增85%，資料中心營收年增92%。此外，輝達新增800億美元回購授權並提高配息，強化其作為成長股與具現金回報能力的形象。儘管AI預測模型對7月底股價看法分歧，但其在AI領域的領導地位及多元成長來源使其具備長期布局價值。",
+      "timeframe": "中長期布局",
+      "reasoning": "輝達 (NVDA) 最新價格約為212.55美元。技術分析顯示今日為買入評級，一個月評級為強力買入訊號。儘管近期股價波動率較高，但輝達在AI領域的領導地位及其產品在市場上的強勁需求，使其長期成長潛力依然看好。市場對AI算力需求的持續推升，將為輝達帶來穩定的營收增長。建議中長期投資者可考慮布局。",
       "sources": [
-        "TradingKey",
-        "HKMoneyClub",
-        "TIKR.com",
-        "KuCoin",
-        "三立新聞網"
+        "財報狗股票",
+        "玩股網",
+        "TradingView",
+        "Investing.com 香港"
       ]
     }
   ],
-  "last_updated": "2026-07-22T08:31:55.364132+08:00"
+  "last_updated": "2026-07-23T08:30:34.792145+08:00"
 }
