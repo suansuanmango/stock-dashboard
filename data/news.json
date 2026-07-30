@@ -1,82 +1,81 @@
 {
-  "summary": "晶片股承壓，油價因地緣政治波動，市場觀望聯準會決議。",
+  "summary": "全球市場受AI發展、地緣政治與央行政策影響，波動加劇，企業財報表現分歧。",
   "articles": [
     {
       "source": "股癌",
-      "title": "EP682 | 魂系everywhere",
-      "summary": "股癌最新一集探討晦澀金融投資知識與海內外財經時事，並由NordVPN贊助。節目旨在以白話方式剖析複雜資訊，讓散戶投資者也能輕鬆理解並從中找到樂趣。"
+      "title": "EP683 | 一個月前的自己對未來寄予厚望",
+      "summary": "謝孟恭在最新一集中探討市場觀察與個人投資心境，並提及贊助商產品。節目風格維持其一貫的白話剖析金融投資知識與海內外財經時事，適合各類投資人收聽。"
     },
     {
       "source": "Bloomberg",
-      "title": "油價因伊朗襲擊跳漲，美股期貨下跌：市場總結",
-      "summary": "美國攔截伊朗對中東部隊的襲擊後，原油價格跳漲逾4%至每桶82.75美元，結束三日跌勢。美股股指期貨微跌0.1%，市場對地緣政治緊張局勢升溫反應敏感，投資者情緒趨於謹慎。"
+      "title": "彭博收購Canoe Intelligence強化私市數據管理，AI債券市場降溫，韓國股市連日熔斷引發緊急會議",
+      "summary": "彭博宣布收購AI數據管理平台Canoe Intelligence，以強化私市數據能力。同時，AI債券市場熱度降溫，大型科技公司發債成本上升。韓國股市因連續兩日觸發熔斷機制，政府將召開緊急會議討論市場形勢，顯示全球市場波動加劇。"
     },
     {
       "source": "Reuters",
-      "title": "美股標普500微幅收高蘋果市值首破5兆美元",
-      "summary": "美股週二表現分歧，標普500指數受波音與可口可樂帶動微幅收高，抵銷晶片股下跌壓力。蘋果股價上揚，市值首度突破5兆美元。市場觀望科技巨頭財報與聯準會利率決議，資金流向非科技股，顯示價值投資與穩健經濟數據支撐市場。"
+      "title": "聯合國專家報告指控波音727s為蘇丹準軍事部隊運送武器，緬甸軍方升級殺戮",
+      "summary": "聯合國專家報告指出，與美國軍事承包商相關的波音727s飛機，為蘇丹快速支援部隊運送傭兵、武器和無人機。此外，緬甸軍方在三月重組指揮結構後，對平民的鎮壓和空襲行動顯著加劇，引發國際關注。"
     },
     {
       "source": "CNBC",
-      "title": "中國開始量產光刻機，CNBC點出1大致命傷",
-      "summary": "中國一家國有半導體設備公司傳出已量產浸沒式深紫外曝光設備（DUV），計劃今年生產約5套系統。CNBC報導指出，此突破仍有致命傷，包括僅限低階領域且良率是巨大挑戰，短期難撼動ASML主導地位。"
+      "title": "美股開盤走高油價下跌，\"大空頭\"投資者對AI泡沫發出警告，CNBC分析師推薦Netflix等股",
+      "summary": "美股市場開盤上漲，油價因美伊衝突緩和而下跌。然而，知名「大空頭」投資者史蒂夫·艾斯曼對AI熱潮未能兌現高預期可能帶來的風險提出警告。CNBC節目中，分析師推薦Netflix、Quanta Services和Raymond James Financial等股票。"
     }
   ],
   "stock_radar": [
     {
-      "ticker": "PEP",
-      "name": "PepsiCo",
+      "ticker": "MU",
+      "name": "美光科技",
       "market": "US",
       "direction": "值得關注",
       "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將PepsiCo列為2026年7月高收益股之一，認為其具備低估值與強勁獲利能力。作為全球食品飲料巨頭，其業務穩定且具防禦性，適合尋求穩定收益的投資者。",
+      "reasoning": "Seeking Alpha指出美光科技是受益於全球AI熱潮的半導體公司之一，在H2 2026的十大精選股中表現出色，具備強勁的成長潛力。",
       "sources": [
         "Seeking Alpha"
       ]
     },
     {
-      "ticker": "NVO",
-      "name": "Novo Nordisk",
+      "ticker": "AMD",
+      "name": "超微半導體",
       "market": "US",
       "direction": "值得關注",
       "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將Novo Nordisk列為2026年7月高收益股之一，強調其低估值與強勁獲利能力。該公司在糖尿病和肥胖症藥物市場具領導地位，成長潛力受看好。",
+      "reasoning": "Seeking Alpha將超微半導體列為H2 2026表現優異的半導體公司，受惠於AI基礎設施建置需求，是值得關注的AI概念股。",
       "sources": [
         "Seeking Alpha"
       ]
     },
     {
-      "ticker": "NUE",
-      "name": "Nucor Corporation",
+      "ticker": "STRL",
+      "name": "斯特林基礎設施",
       "market": "US",
       "direction": "值得關注",
       "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將Nucor列為2026年7月表現最佳的股息王之一，今年以來漲幅達52.67%。游庭皓的財經速解讀也提及Nucor股價飆漲，CEO讚揚特朗普關稅助益強勁季度表現。",
-      "sources": [
-        "Seeking Alpha",
-        "游庭皓"
-      ]
-    },
-    {
-      "ticker": "JNJ",
-      "name": "Johnson & Johnson",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將Johnson & Johnson列為2026年7月表現優異的股息王，今年以來漲幅達28.69%。作為醫療保健巨頭，其業務穩健且具防禦性，適合長期持有。",
+      "reasoning": "Seeking Alpha推薦斯特林基礎設施為領先的AI服務基礎設施供應商，在半導體製造項目中表現突出，是投資組合中的頂級持股。",
       "sources": [
         "Seeking Alpha"
       ]
     },
     {
-      "ticker": "TGT",
-      "name": "Target",
+      "ticker": "NFLX",
+      "name": "網飛",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將Target列為2026年7月表現強勁的股息王，今年以來漲幅達42.64%。作為零售業巨頭，其穩定的營收和股息增長受到青睞。",
+      "timeframe": "短期",
+      "reasoning": "CNBC「Halftime Report Final Trades」節目中，Ritholtz Wealth Management的Joshua Brown推薦Netflix，儘管第二季財報喜憂參半，但仍被視為值得關注的標的。",
       "sources": [
-        "Seeking Alpha"
+        "CNBC"
+      ]
+    },
+    {
+      "ticker": "PWR",
+      "name": "昆塔服務",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "短期",
+      "reasoning": "Hightower Advisors的Stephanie Link在CNBC節目中指出，Quanta Services股價已從高點下跌25%，並將於7月30日公布財報，值得關注其潛在反彈機會。",
+      "sources": [
+        "CNBC"
       ]
     }
   ],
@@ -85,15 +84,14 @@
       "ticker": "006208",
       "name": "富邦台灣50",
       "market": "TW",
-      "direction": "觀望",
-      "timeframe": "短期",
-      "reasoning": "富邦台灣50 (006208) 近期股價微幅下跌，與元大台灣50 (0050) 相比，006208仍處於貼息狀態，且配息來源以股利收入為主，對小資族較具吸引力。然而，外資近期連續賣超，顯示市場對其短期走勢持觀望態度。考量其配息特性與近期法人動向，短期內建議觀望。",
+      "direction": "可布局",
+      "timeframe": "中長期",
+      "reasoning": "富邦台灣50 (006208) 近期配息創歷史新高，年化殖利率達3.79%，顯示其穩健的股利政策。作為追蹤台灣前50大公司的ETF，具備分散風險的優勢。考量台灣經濟成長率上修，且其成分股多為權值股，長期而言具備布局價值。",
       "sources": [
-        "玩股網",
-        "美股放大鏡",
-        "HiStock嗨投資理財社群",
-        "股市爆料同學會",
-        "PChome 股市"
+        "永豐金證券",
+        "鉅亨網",
+        "PChome 股市",
+        "股市爆料同學會"
       ]
     },
     {
@@ -102,12 +100,11 @@
       "market": "US",
       "direction": "可布局",
       "timeframe": "中長期",
-      "reasoning": "台積電ADR (TSM) 近期雖受半導體板塊回調影響而下跌，但其作為全球最大晶圓代工公司，2025年第二季營收與淨利雙創新高，全年業績成長預估調升至30%。公司積極擴建晶圓廠，2奈米製程預計2026年初商用，顯示其長期成長動能強勁。儘管短期波動，長期來看仍具布局價值。",
+      "reasoning": "台積電ADR (TSM) 儘管近期受AI股回檔影響股價下跌，但分析師普遍給予「強烈買入」評級，平均目標價顯示仍有顯著上漲空間。第二季財報表現強勁，營收和EPS均大幅成長。長期來看，台積電在全球半導體產業的領導地位和AI晶片需求仍是其成長動能。",
       "sources": [
-        "HiStock嗨投資理財社群",
-        "玩股網",
-        "StockQ.org",
-        "ETtoday財經雲"
+        "財報狗股票",
+        "みんかぶ米国株",
+        "Investing.com"
       ]
     },
     {
@@ -116,12 +113,12 @@
       "market": "US",
       "direction": "觀望",
       "timeframe": "短期",
-      "reasoning": "特斯拉 (TSLA) 第二季業績不如預期，股價重挫15%，儘管華爾街仍看好其上漲潛力。公司計畫大幅增加資本支出於AI和自駕技術，但高利潤車型產量疲軟影響盈利。近期監管消息亦帶來不確定性。在財報表現與監管風險並存下，短期內建議觀望。",
+      "reasoning": "特斯拉 (TSLA) 第二季財報顯示營收和交付量成長，但營業利潤率大幅下滑至1.4%且自由現金流轉負，導致股價大跌。市場對其AI豪賭的資金投入與汽車主業獲利能力產生疑慮。儘管分析師仍給予「超配」評級，但在利潤率承壓及AI投資效益未明前，建議短期觀望。",
       "sources": [
-        "美股放大鏡",
-        "理財寶",
-        "TradingKey",
-        "Moomoo"
+        "英為財情Investing.com",
+        "富途牛牛",
+        "鉅亨網",
+        "YouTube"
       ]
     },
     {
@@ -130,15 +127,16 @@
       "market": "US",
       "direction": "可布局",
       "timeframe": "中長期",
-      "reasoning": "輝達 (NVDA) 近期股價雖受晶片股回調影響，今年漲幅遠遜於同行，但其基本面仍強勁。公司積極推進與OpenAI、SK海力士及西門子的AI合作，分析師認為其估值被「錯殺」逾30%，預計未來幾年營收與EPS仍將高速增長。考慮其在AI領域的領導地位及長期成長潛力，建議可布局。",
+      "reasoning": "輝達 (NVDA) 近期股價受AI算力需求及海外出口政策鬆動影響而走強。中國考慮允許限量購買H200晶片，阿聯出口限制放寬，均改善其海外市場預期。儘管有「大空頭」對AI泡沫提出警告，但市場對AI基礎設施的長期需求仍持樂觀態度，輝達作為AI晶片領導者，中長期仍具布局潛力。",
       "sources": [
-        "LINE TODAY",
-        "三立新聞網",
-        "鉅亨網",
-        "TradingView",
-        "FX168"
+        "美股評析",
+        "財報狗股票",
+        "玩股網",
+        "CMoney美股股市",
+        "FinGuider美股資訊網",
+        "CNBC"
       ]
     }
   ],
-  "last_updated": "2026-07-29T08:31:01.878246+08:00"
+  "last_updated": "2026-07-30T08:30:42.170552+08:00"
 }
