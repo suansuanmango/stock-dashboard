@@ -1,82 +1,70 @@
 {
-  "summary": "市場關注美日聯手干預日圓匯市、中國維持寬鬆貨幣政策，並等待美國ISM製造業PMI等關鍵經濟數據與企業財報，整體氣氛偏向觀望與謹慎。",
+  "summary": "美伊局勢緩和推升美股道瓊創新高，亞馬遜市值破3兆，市場氣氛樂觀。",
   "articles": [
     {
       "source": "股癌",
-      "title": "EP684 | 終於可以喘一下",
-      "summary": "股癌最新一集以投資虧損與身體虧損類比，強調體重如股價，身體組成才是基本面，建議透過科學數據「替身體去槓桿」。節目由體脂計贊助，探討如何優化人生最重要的投資，將晦澀的金融投資知識與生活健康結合，提供輕鬆有趣的觀點。"
+      "title": "終於可以喘一下",
+      "summary": "股癌最新一集探討身體健康投資，透過贊助商的八電極體脂計，強調身體組成比體重更重要，呼籲聽眾應像檢視對帳單一樣，用科學數據為身體「去槓桿」，優化人生最重要的投資。"
     },
     {
       "source": "Bloomberg",
-      "title": "本週市場聚焦美國就業與製造業數據，SpaceX財報受矚",
-      "summary": "本週美股市場將密切關注多項經濟數據，特別是圍繞就業、製造業及服務業的報告，以評估經濟健康狀況。SpaceX將公布上市後首份季度業績，而其他科技與半導體巨頭的財報也將陸續登場，可能牽動市場情緒。"
+      "title": "美股強勁開局，道瓊創新高，亞馬遜市值突破3兆美元",
+      "summary": "美股八月開局強勁，道瓊工業指數創下收盤歷史新高，亞馬遜市值首度突破3兆美元大關。主要受美伊緊張局勢緩和、油價大跌5%及美債殖利率下滑等因素影響，緩解市場對通膨與升息的擔憂，帶動美股全面大漲。"
     },
     {
       "source": "Reuters",
-      "title": "美日聯手干預匯市阻貶日圓，外資轉向印度股市避險",
-      "summary": "美日兩國15年來首度聯手干預匯市，以阻止日圓跌至40年歷史新低，美國財政部長表示不排除再次干預。同時，亞洲AI股市熱潮降溫，外資避險資金轉向印度股市，使其成為市場矚目的「反AI」交易新避風港。"
+      "title": "美伊局勢緩和油價跌道瓊創歷史新高、亞馬遜市值破3兆",
+      "summary": "路透社報導指出，美國總統川普表示將與伊朗就重新開放荷姆茲海峽展開談判，儘管伊朗否認，仍促使原油價格收盤大跌約5%。油價與美債殖利率雙雙下滑，緩解通膨擔憂，推升道瓊工業指數創歷史新高，亞馬遜市值也突破3兆美元。"
     },
     {
       "source": "CNBC",
-      "title": "美日協同行動穩定日圓匯率，全球市場關注政策協調",
-      "summary": "美國總統川普證實美國正協助日本支撐疲軟日圓，美日兩國已採取聯合行動干預匯市，以遏制日圓過度貶值。此舉為15年來首次，顯示兩國在貨幣政策上的罕見協調，對全球匯市產生重要影響，市場將持續關注後續發展。"
+      "title": "道指寫歷史新高一掃科技股不安氣氛",
+      "summary": "CNBC報導，美國道瓊工業指數上漲近700點，創歷史新高，波音、微軟、亞馬遜等大型科技股全面走高。人工智慧大數據公司Palantir公布亮眼財報，營收大幅成長，為近期瀰漫不安氣氛的AI類股注入強心針，市場情緒轉趨樂觀。"
     }
   ],
   "stock_radar": [
     {
-      "ticker": "CRDO",
-      "name": "Credo Technology Group Holding Ltd",
+      "ticker": "MPWR",
+      "name": "Monolithic Power Systems",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "2026年下半年",
-      "reasoning": "Seeking Alpha在2026年下半年十大精選股中將Credo Technology Group Holding Ltd列為「強力買入」，其市值達441.7億美元，在量化評級中表現優異，顯示其在產業中具有強勁的增長潛力。",
+      "timeframe": "中長期",
+      "reasoning": "Seeking Alpha於2026年8月2日將Monolithic Power Systems列為高成長股，預期回報率高且基本面成長快速，顯示其在當前市場中具備投資潛力。",
       "sources": [
         "Seeking Alpha"
       ]
     },
     {
-      "ticker": "LITE",
-      "name": "Lumentum Holdings Inc.",
+      "ticker": "ACN",
+      "name": "Accenture",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "2026年下半年",
-      "reasoning": "Lumentum Holdings Inc.被Seeking Alpha評為2026年下半年十大精選股之一，獲得「強力買入」評級，市值達597.6億美元。該公司在量化評級中表現突出，顯示其基本面穩健且具備增長動能。",
-      "sources": [
-        "Seeking Alpha"
-      ]
+      "timeframe": "中長期",
+      "reasoning": "Seeking Alpha在2026年8月2日的報告中指出，Accenture表現強勁，被評為最被低估的股票之一，並具有最高的預期回報，適合長期投資者關注。"
     },
     {
-      "ticker": "TTMI",
-      "name": "TTM Technologies, Inc.",
+      "ticker": "LLY",
+      "name": "Eli Lilly",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "2026年下半年",
-      "reasoning": "Seeking Alpha將TTM Technologies, Inc.納入2026年下半年十大精選股，給予「強力買入」評級。該公司市值為141.6億美元，在量化評級中表現優異，暗示其在未來幾個月內有望展現良好市場表現。",
-      "sources": [
-        "Seeking Alpha"
-      ]
+      "timeframe": "中長期",
+      "reasoning": "Seeking Alpha於2026年8月2日將Eli Lilly列入高成長股名單，其預期回報率高且基本面成長迅速，顯示公司具備穩健的長期發展潛力。"
     },
     {
-      "ticker": "SNDK",
-      "name": "Sandisk Corporation",
+      "ticker": "DOX",
+      "name": "Amdocs",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "2026年下半年",
-      "reasoning": "Sandisk Corporation在Seeking Alpha的2026年下半年十大精選股中被評為「強力買入」，市值高達2479億美元。其在量化評級中位居產業前列，顯示其在儲存解決方案領域的強大競爭力與增長潛力。",
-      "sources": [
-        "Seeking Alpha"
-      ]
+      "timeframe": "中長期",
+      "reasoning": "Seeking Alpha在2026年8月2日的報告中指出，Amdocs具有高股息收益機會，且被評為最被低估的股票之一，預期回報率高，適合尋求價值與收益的投資者。"
     },
     {
-      "ticker": "STRL",
-      "name": "Sterling Infrastructure, Inc.",
+      "ticker": "ZTS",
+      "name": "Zoetis",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "2026年下半年",
-      "reasoning": "Sterling Infrastructure, Inc.被Seeking Alpha選為2026年下半年十大精選股，並獲得「強力買入」評級。該公司市值為202.5億美元，顯示其在基礎設施建設領域的穩健表現與未來增長空間。",
-      "sources": [
-        "Seeking Alpha"
-      ]
+      "timeframe": "中長期",
+      "reasoning": "Seeking Alpha於2026年8月2日將Zoetis列為最被低估且預期回報率最高的股票之一，顯示其在當前市場中具有顯著的價值投資潛力。"
     }
   ],
   "ai_analysis": [
@@ -86,27 +74,26 @@
       "market": "TW",
       "direction": "觀望",
       "timeframe": "短期",
-      "reasoning": "富邦台灣50（006208）在過去12個月中漲幅高達97.19%，近期股價亦有顯著上漲，顯示市場對台灣大型權值股的樂觀情緒。然而，在經歷大幅上漲後，短期內可能面臨獲利了結壓力或市場修正風險。考量到其已處於相對高點，且全球市場正等待關鍵經濟數據，建議投資人短期內可採取觀望態度，等待更明確的進場時機或回調機會。",
+      "reasoning": "富邦台灣50近期股價雖在60日內有8%漲幅，但近一週與近一月呈現下跌，且外資近20日偏向賣超，約佔成交量-8.3%。儘管8月10日預計配發4.75元現金股利，但短期內外資賣壓與股價波動，建議投資人可先觀望。",
       "sources": [
-        "玩股網",
-        "PChome 股市",
-        "英為財情",
-        "鉅亨網"
+        "FinLab",
+        "MoneyDJ理財網",
+        "豐存股",
+        "玩股網"
       ]
     },
     {
       "ticker": "TSM",
       "name": "台積電 ADR",
       "market": "US",
-      "direction": "可布局",
-      "timeframe": "中長期",
-      "reasoning": "台積電ADR（TSM）作為全球領先的半導體製造商，是AI產業發展的關鍵供應鏈核心，其技術領先地位穩固。儘管近期股價有所波動，但長期來看，隨著AI應用持續擴展，對高性能晶片的需求將不斷增長，台積電ADR有望持續受益。Seeking Alpha也將其列為AI關鍵建構者。建議投資人可考慮中長期布局，把握AI趨勢帶來的成長機會。",
+      "direction": "觀望",
+      "timeframe": "短期",
+      "reasoning": "台積電ADR近期股價波動劇烈，7月底曾大跌4.5%，隨後又出現5.02%的反彈，顯示市場情緒不穩。儘管8月3日小幅上漲，但晶片股整體仍面臨AI資本支出回報疑慮及中國競爭加劇的壓力，短期內建議投資人保持觀望。",
       "sources": [
-        "股時候",
-        "玩股網",
         "HiStock嗨投資理財社群",
+        "玩股網",
         "鉅亨網",
-        "Seeking Alpha"
+        "聯合新聞網"
       ]
     },
     {
@@ -115,12 +102,10 @@
       "market": "US",
       "direction": "觀望",
       "timeframe": "短期",
-      "reasoning": "特斯拉（TSLA）即將於8月4日公布季度業績，市場預期營收強勁但盈利能力承壓，且有分析指出長期存在賣出訊號，目標價也被調降。儘管其在AI自駕車領域具潛力，但短期內面臨財報不確定性及市場對其估值的重新評估。建議投資人短期內保持觀望，待財報結果及市場反應明朗後再做決策。",
+      "reasoning": "特斯拉股價近期表現分歧，8月3日盤中上漲3.39%，但分析師普遍維持「持有」評等，並指出其高估值、競爭壓力及盈利能力減弱。FactSet最新調查也下修2026年EPS預估至1.71美元，儘管低成本車款進度超前，短期內仍建議觀望。",
       "sources": [
-        "Moomoo",
-        "YouTube (Wicked Stocks)",
-        "TradingView",
-        "富途牛牛",
+        "HK MoneyClub",
+        "美股放大鏡",
         "鉅亨網"
       ]
     },
@@ -130,15 +115,15 @@
       "market": "US",
       "direction": "可布局",
       "timeframe": "中長期",
-      "reasoning": "輝達（NVDA）作為AI數據中心建設的核心供應商，其GPU在AI運算領域具有黃金標準地位，需求持續增長。儘管今年以來股價表現不及標普500指數，但Seeking Alpha認為其基於股息收益理論被低估，且即將公布的財報有望成為股價上漲催化劑。考慮到其在AI領域的領導地位和長期增長潛力，建議投資人可考慮中長期布局。",
+      "reasoning": "輝達8月3日盤中上漲3.01%，雲端服務供應商對Blackwell系統基礎設施支出增加，製造良率提升有望突破供應限制。儘管技術指標有分歧賣出訊號，但法人投資興趣強勁，且8月26日將公布財報，市場預期將是股價上漲的催化劑，中長期可考慮布局。",
       "sources": [
-        "The Motley Fool",
+        "HK MoneyClub",
+        "Finbold",
         "永豐金證券",
-        "CMoney投資網誌",
-        "輝達公司-收盤行情",
-        "Seeking Alpha"
+        "The Motley Fool",
+        "TradingKey"
       ]
     }
   ],
-  "last_updated": "2026-08-03T08:30:52.279012+08:00"
+  "last_updated": "2026-08-04T08:30:42.175385+08:00"
 }
