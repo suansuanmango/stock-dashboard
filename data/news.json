@@ -1,35 +1,57 @@
 {
-  "summary": "美伊局勢緩和推升美股道瓊創新高，亞馬遜市值破3兆，市場氣氛樂觀。",
+  "summary": "美股受AI財報與中東局勢樂觀情緒激勵創歷史新高，但AI投資與市場去槓桿化仍存挑戰。",
   "articles": [
     {
       "source": "股癌",
-      "title": "終於可以喘一下",
-      "summary": "股癌最新一集探討身體健康投資，透過贊助商的八電極體脂計，強調身體組成比體重更重要，呼籲聽眾應像檢視對帳單一樣，用科學數據為身體「去槓桿」，優化人生最重要的投資。"
+      "title": "EP684 | 終於可以喘一下",
+      "summary": "主委謝孟恭藉體脂計比喻投資應專注基本面而非短期股價波動。市場近期經歷「史詩級大反彈」，核心主因是「去槓桿」，而非基本面惡化。高槓桿部位被迫平倉導致劇烈波動，但此為健康均值回歸。提醒投資人應留意長期規律，並對不懂的商品保持警惕。"
     },
     {
       "source": "Bloomberg",
-      "title": "美股強勁開局，道瓊創新高，亞馬遜市值突破3兆美元",
-      "summary": "美股八月開局強勁，道瓊工業指數創下收盤歷史新高，亞馬遜市值首度突破3兆美元大關。主要受美伊緊張局勢緩和、油價大跌5%及美債殖利率下滑等因素影響，緩解市場對通膨與升息的擔憂，帶動美股全面大漲。"
+      "title": "鉅額AI投資無阻美企獲利美股道瓊、標普同創新高",
+      "summary": "美股道瓊與標普500指數受AI與基建產業獲利及油價走低激勵，雙雙創歷史新高。英特爾與SpaceX等企業看好未來發展，AI大數據業者Palantir與開拓重工業績亮眼，暫緩市場對AI晶片鉅額投資的憂慮。"
     },
     {
       "source": "Reuters",
-      "title": "美伊局勢緩和油價跌道瓊創歷史新高、亞馬遜市值破3兆",
-      "summary": "路透社報導指出，美國總統川普表示將與伊朗就重新開放荷姆茲海峽展開談判，儘管伊朗否認，仍促使原油價格收盤大跌約5%。油價與美債殖利率雙雙下滑，緩解通膨擔憂，推升道瓊工業指數創歷史新高，亞馬遜市值也突破3兆美元。"
+      "title": "Dow, S&P 500 close at record on AI-linked earnings, Mideast deal hopes",
+      "summary": "標普500和道瓊指數週二因AI相關企業如Caterpillar和Palantir的強勁財報而創下歷史新高，緩解了市場對需求的擔憂。同時，中東局勢有望達成協議，原油價格和美國公債殖利率下跌，進一步支撐股市上漲。"
     },
     {
       "source": "CNBC",
-      "title": "道指寫歷史新高一掃科技股不安氣氛",
-      "summary": "CNBC報導，美國道瓊工業指數上漲近700點，創歷史新高，波音、微軟、亞馬遜等大型科技股全面走高。人工智慧大數據公司Palantir公布亮眼財報，營收大幅成長，為近期瀰漫不安氣氛的AI類股注入強心針，市場情緒轉趨樂觀。"
+      "title": "美股大漲、標普500登7700點新高五大正面催化劑發威",
+      "summary": "華爾街股市週二強勁走高，標普500指數首度登上7700點，專家指出是美國財長貝森特釋出伊朗談判利多、企業財報亮眼、油價下跌、公債殖利率下滑以及市場去槓桿化完成等五大利多同步發酵的結果。"
     }
   ],
   "stock_radar": [
     {
-      "ticker": "MPWR",
-      "name": "Monolithic Power Systems",
+      "ticker": "SNDK",
+      "name": "Sandisk Corp.",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "1-2年",
+      "reasoning": "Seeking Alpha於2026年8月3日將Sandisk評為「買入」，理由是其預期收益估值具吸引力，儘管近期大幅修正，但仍有強勁的底線增長。",
+      "sources": [
+        "Seeking Alpha"
+      ]
+    },
+    {
+      "ticker": "DELL",
+      "name": "戴爾",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "中短期",
+      "reasoning": "股癌筆記EP454提及戴爾股價便宜，預期市盈率約十幾倍，遠低於同業。其ISG部門預計卓越增長，AI PC與AI伺服器業務擴張亦為主要驅動力。",
+      "sources": [
+        "股癌"
+      ]
+    },
+    {
+      "ticker": "INTU",
+      "name": "Intuit Inc.",
       "market": "US",
       "direction": "值得關注",
       "timeframe": "中長期",
-      "reasoning": "Seeking Alpha於2026年8月2日將Monolithic Power Systems列為高成長股，預期回報率高且基本面成長快速，顯示其在當前市場中具備投資潛力。",
+      "reasoning": "Seeking Alpha於2026年8月2日將Intuit列為高成長股息股，根據估值模型顯示其有顯著潛在折價，且自由現金流本益比（P/FCF）為11倍，具吸引力。",
       "sources": [
         "Seeking Alpha"
       ]
@@ -40,31 +62,23 @@
       "market": "US",
       "direction": "值得關注",
       "timeframe": "中長期",
-      "reasoning": "Seeking Alpha在2026年8月2日的報告中指出，Accenture表現強勁，被評為最被低估的股票之一，並具有最高的預期回報，適合長期投資者關注。"
+      "reasoning": "Seeking Alpha於2026年8月2日指出Accenture為高成長股息股，其顯著折價已獲股息收益率理論與自由現金流模型證實。",
+      "sources": [
+        "Seeking Alpha"
+      ]
     },
     {
-      "ticker": "LLY",
-      "name": "Eli Lilly",
+      "ticker": "CAT",
+      "name": "Caterpillar",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha於2026年8月2日將Eli Lilly列入高成長股名單，其預期回報率高且基本面成長迅速，顯示公司具備穩健的長期發展潛力。"
-    },
-    {
-      "ticker": "DOX",
-      "name": "Amdocs",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha在2026年8月2日的報告中指出，Amdocs具有高股息收益機會，且被評為最被低估的股票之一，預期回報率高，適合尋求價值與收益的投資者。"
-    },
-    {
-      "ticker": "ZTS",
-      "name": "Zoetis",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha於2026年8月2日將Zoetis列為最被低估且預期回報率最高的股票之一，顯示其在當前市場中具有顯著的價值投資潛力。"
+      "timeframe": "中短期",
+      "reasoning": "路透社與CNBC於2026年8月4日報導，Caterpillar因強勁財報、創紀錄獲利以及AI資料中心建設帶動的發電與建築設備需求增加而表現亮眼。Jim Cramer亦提及Caterpillar的優異表現。",
+      "sources": [
+        "Reuters",
+        "CNBC",
+        "24/7 Wall St."
+      ]
     }
   ],
   "ai_analysis": [
@@ -74,26 +88,25 @@
       "market": "TW",
       "direction": "觀望",
       "timeframe": "短期",
-      "reasoning": "富邦台灣50近期股價雖在60日內有8%漲幅，但近一週與近一月呈現下跌，且外資近20日偏向賣超，約佔成交量-8.3%。儘管8月10日預計配發4.75元現金股利，但短期內外資賣壓與股價波動，建議投資人可先觀望。",
+      "reasoning": "富邦台灣50近期股價下跌1.04%，顯示市場情緒偏弱。雖然台灣股市整體受AI概念股帶動，但大盤仍有去槓桿化壓力。考量到市場波動及去槓桿化的不確定性，短期內建議觀望，待市場趨勢更明朗再考慮布局。",
       "sources": [
-        "FinLab",
-        "MoneyDJ理財網",
-        "豐存股",
-        "玩股網"
+        "玩股網",
+        "股市爆料同學會",
+        "股癌"
       ]
     },
     {
       "ticker": "TSM",
       "name": "台積電 ADR",
       "market": "US",
-      "direction": "觀望",
-      "timeframe": "短期",
-      "reasoning": "台積電ADR近期股價波動劇烈，7月底曾大跌4.5%，隨後又出現5.02%的反彈，顯示市場情緒不穩。儘管8月3日小幅上漲，但晶片股整體仍面臨AI資本支出回報疑慮及中國競爭加劇的壓力，短期內建議投資人保持觀望。",
+      "direction": "可布局",
+      "timeframe": "中長期",
+      "reasoning": "台積電ADR近期上漲2.72%，Wedbush預期其3奈米製程產能擴張有望提前達標，主要受Nvidia、AMD等客戶強勁需求驅動。分析師給予「強力買入」評級，目標價達540.20美元，顯示市場對其先進製程技術及未來營收成長抱持樂觀態度，適合中長期布局。",
       "sources": [
-        "HiStock嗨投資理財社群",
         "玩股網",
-        "鉅亨網",
-        "聯合新聞網"
+        "HiStock嗨投資理財社群",
+        "Investing.com 香港",
+        "鉅亨網"
       ]
     },
     {
@@ -102,11 +115,12 @@
       "market": "US",
       "direction": "觀望",
       "timeframe": "短期",
-      "reasoning": "特斯拉股價近期表現分歧，8月3日盤中上漲3.39%，但分析師普遍維持「持有」評等，並指出其高估值、競爭壓力及盈利能力減弱。FactSet最新調查也下修2026年EPS預估至1.71美元，儘管低成本車款進度超前，短期內仍建議觀望。",
+      "reasoning": "特斯拉股價近期雖有反彈，但月度下跌幅度仍大。第二季營收雖超預期，但EPS未達標且汽車業務利潤率受壓，導致盤後股價下跌。儘管上海工廠交付量創新高，且公司正處於Robotaxi、Optimus及AI晶片製造的「投資階段」，但短期內盈利壓力及市場對其高估值的質疑，建議觀望。",
       "sources": [
-        "HK MoneyClub",
-        "美股放大鏡",
-        "鉅亨網"
+        "TradingView",
+        "Moomoo",
+        "Investing.com",
+        "東方財富網"
       ]
     },
     {
@@ -115,15 +129,17 @@
       "market": "US",
       "direction": "可布局",
       "timeframe": "中長期",
-      "reasoning": "輝達8月3日盤中上漲3.01%，雲端服務供應商對Blackwell系統基礎設施支出增加，製造良率提升有望突破供應限制。儘管技術指標有分歧賣出訊號，但法人投資興趣強勁，且8月26日將公布財報，市場預期將是股價上漲的催化劑，中長期可考慮布局。",
+      "reasoning": "輝達股價近期持續上漲，第一季營收年增85%，第二季財測強勁，主要由資料中心業務驅動。儘管有華為科學家提出物理極限的警告，但市場對其AI晶片需求仍旺盛，且Jim Cramer指出Nvidia晶片稀缺且價值堅挺。分析師預期最高目標價達743.10美元，顯示其在AI領域的領導地位穩固，適合中長期布局。",
       "sources": [
-        "HK MoneyClub",
-        "Finbold",
-        "永豐金證券",
-        "The Motley Fool",
-        "TradingKey"
+        "TradingView",
+        "財報狗股票",
+        "玩股網",
+        "經濟日報",
+        "24/7 Wall St.",
+        "PChome Online 新聞",
+        "Seeking Alpha"
       ]
     }
   ],
-  "last_updated": "2026-08-04T08:30:42.175385+08:00"
+  "last_updated": "2026-08-05T08:30:52.557838+08:00"
 }
