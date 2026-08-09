@@ -1,69 +1,69 @@
 {
-  "last_updated": "2026-08-03T08:30:11+08:00",
+  "last_updated": "2026-08-09T08:30:06+08:00",
   "stocks": [
     {
       "ticker": "006208",
       "name": "富邦台灣50",
       "market": "TW",
       "current_price": 235.35,
-      "change": 20.95,
-      "change_pct": 9.77
+      "change": -1.2,
+      "change_pct": -0.51
     },
     {
       "ticker": "0050",
       "name": "元大台灣50",
       "market": "TW",
       "current_price": 102.85,
-      "change": 9.35,
-      "change_pct": 10.0
+      "change": -0.45,
+      "change_pct": -0.44
     },
     {
       "ticker": "00878",
       "name": "國泰永續高股息",
       "market": "TW",
-      "current_price": 32.43,
-      "change": 1.68,
-      "change_pct": 5.46
+      "current_price": 32.81,
+      "change": -0.03,
+      "change_pct": -0.09
     },
     {
       "ticker": "TSM",
       "name": "台積電 ADR",
       "market": "US",
-      "current_price": 404.25,
-      "change": 0.94,
-      "change_pct": 0.23
+      "current_price": 420.04,
+      "change": 1.84,
+      "change_pct": 0.44
     },
     {
       "ticker": "TSLA",
       "name": "特斯拉",
       "market": "US",
-      "current_price": 311.21,
-      "change": 2.36,
-      "change_pct": 0.76
+      "current_price": 328.58,
+      "change": 9.05,
+      "change_pct": 2.83
     },
     {
       "ticker": "NVDA",
       "name": "輝達",
       "market": "US",
-      "current_price": 200.75,
-      "change": 5.71,
-      "change_pct": 2.93
+      "current_price": 223.96,
+      "change": 4.97,
+      "change_pct": 2.27
     },
     {
       "ticker": "SPY",
       "name": "S&P 500 ETF",
       "market": "US",
-      "current_price": 747.03,
-      "change": 5.34,
-      "change_pct": 0.72
+      "current_price": 773.26,
+      "change": 4.7,
+      "change_pct": 0.61
     },
     {
       "ticker": "QQQ",
       "name": "Nasdaq 100 ETF",
       "market": "US",
-      "current_price": 687.99,
-      "change": 4.44,
-      "change_pct": 0.65
+      "current_price": 723.03,
+      "change": 8.38,
+      "change_pct": 1.17
     }
   ]
 }
