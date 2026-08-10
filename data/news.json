@@ -1,82 +1,81 @@
 {
-  "summary": "美國7月非農就業數據意外疲軟，市場對聯準會9月升息預期大幅降溫，帶動美股三大指數全面上漲，創下4月以來最佳單週表現，科技股表現尤其強勁。",
+  "summary": "油價因中東局勢緊張而上漲，美股在就業數據疲軟下創高，市場對AI和網路安全板塊保持樂觀，但仍需關注通膨數據。",
   "articles": [
     {
       "source": "股癌",
-      "title": "EP685 | 人類又找回勇氣了",
-      "summary": "股癌最新一集節目討論了颱風天的心態調整與健康改變，並提及美股NVIDIA攻上200美元、Meta宣布出租算力而非退賽，以及記憶體、被動元件、功率元件持續漲價缺貨等市場現象。節目也探討了光通訊族群內部輪動，強調慢慢來比較快，守住本金的重要性，並鼓勵聽眾不因市場大漲而自責。"
+      "title": "EP686 | 市場修正與避險策略：軟體股強勁反彈，AI伺服器帶動被動元件需求",
+      "summary": "股癌指出，七月市場劇烈修正非基本面轉壞，而是資金與槓桿過高引發的踩踏。美股軟體股如Palantir、Cloudflare財報後強勁反彈，顯示資金回流。他強調避險與多空配置的重要性，以平滑資產曲線。此外，AI伺服器與資料中心對被動元件及功率元件的需求持續增長，產業前景看好。"
     },
     {
       "source": "Bloomberg",
-      "title": "Market Open: Stocks Higher After Weak Jobs Report, Lyft & Airbnb Rise After Earnings",
-      "summary": "CNBC報導，美國7月就業報告弱於預期，道瓊指數上漲20點，標普500指數上漲三分之一百分點，那斯達克綜合指數上漲9/10個百分點。分析師認為，疲軟的就業數據降低了聯準會9月升息的可能性。Lyft和Airbnb在財報公布後股價上漲，而Under Armour則因年度銷售預期下降而下跌。"
+      "title": "油價因荷姆茲海峽協議不明朗而上漲，美股期貨持穩",
+      "summary": "彭博報導，週一油價在亞洲早盤上漲，美國股指期貨持穩，因投資者等待荷姆茲海峽重新開放協議的進展。全球基準布蘭特原油價格開盤突破每桶84美元，此前三個交易日已上漲逾5%。標普500指數期貨變化不大，該指數上週五收盤上漲0.6%並創下新高。"
     },
     {
       "source": "Reuters",
-      "title": "US suffers unexpected job losses in July, markets dial back rate hike expectations",
-      "summary": "路透社報導，美國7月非農就業人數意外減少2.3萬人，且前兩個月數據大幅下修，導致金融市場對聯準會下個月升息的預期減弱。儘管失業率降至4.1%，但主要原因是26.4萬人退出勞動力市場，勞動參與率降至近5年半新低。就業下滑主要集中在地方政府教育部門及休閒餐旅業。"
+      "title": "油價因荷姆茲海峽重啟不確定性而上漲",
+      "summary": "路透社報導，由於伊朗與阿曼就新航運路線的協議進入最後階段，但美國仍需滿足其他條件，荷姆茲海峽重啟的不確定性持續，導致週一油價上漲。布蘭特原油期貨上漲1.44%至每桶84.79美元，美國西德州中級原油上漲1.08%至79.29美元。"
     },
     {
       "source": "CNBC",
-      "title": "Weak jobs report backs Fed pause as inflation takes center stage, Kelly and Hatzius",
-      "summary": "CNBC報導，7月份疲軟的美國就業報告支持了聯準會暫停升息的觀點，而通膨仍是關鍵的政策驅動因素。高盛經濟學家Jan Hatzius指出，潛在的就業增長大幅放緩。儘管勞動力市場被描述為「不強勁但緊俏」，但工資增長放緩，加上就業數據疲軟，使一些經濟學家相信聯準會今年不會收緊貨幣政策。"
+      "title": "Jim Cramer列出五大投資主題與13檔股票，網路安全領跑",
+      "summary": "Jim Cramer在CNBC《Mad Money》節目中提出五大投資主題：消費者支出、AI基礎設施、網路安全、併購和醫療保健，並推薦了13檔股票。其中，網路安全股Palo Alto Networks和CrowdStrike表現突出，漲幅分別達102.85%和89.08%。半導體設備股也表現強勁，Cramer將此歸因於數據中心記憶體短缺。"
     }
   ],
   "stock_radar": [
     {
-      "ticker": "MPWR",
-      "name": "Monolithic Power Systems",
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "長期",
-      "reasoning": "Seeking Alpha在2026年8月的「高成長股息股」列表中將Monolithic Power Systems列為具有高預期回報和快速基本面增長的標的，其五年營收增長率高達27.00%。該公司被認為是質量優良且估值被低估的潛力股，適合長期投資組合配置。",
+      "timeframe": "短期",
+      "reasoning": "CNBC的Jim Cramer將網路安全列為五大投資主題之一，並點名Palo Alto Networks，該股在2026年已上漲102.85%，顯示其在網路安全領域的強勁表現和市場認可度。",
+      "sources": [
+        "CNBC (Jim Cramer)"
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "短期",
+      "reasoning": "Jim Cramer同樣看好網路安全板塊，並提及CrowdStrike在2026年上漲89.08%。這反映了市場對其在網路安全解決方案領域的強勁需求和增長潛力。",
+      "sources": [
+        "CNBC (Jim Cramer)"
+      ]
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "短期",
+      "reasoning": "股癌在其最新podcast中指出，美股軟體股在經歷市場修正後表現強勁，Palantir在財報後出現報復性噴出，顯示資金明顯回流軟體領域，具備實質獲利支撐。",
+      "sources": [
+        "股癌"
+      ]
+    },
+    {
+      "ticker": "OBIO",
+      "name": "Orchestra BioMed",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "中短期",
+      "reasoning": "Seeking Alpha在2026年7月的「稀有選股」中提及Orchestra BioMed，該公司在醫療保健領域，正接近關鍵試驗結果公布，具有強大的成功潛力，值得投資者關注。",
       "sources": [
         "Seeking Alpha"
       ]
     },
     {
-      "ticker": "APH",
-      "name": "Amphenol",
+      "ticker": "AMAT",
+      "name": "Applied Materials",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "長期",
-      "reasoning": "Seeking Alpha的2026年8月高成長股息股榜單中，Amphenol因其高預期回報和穩健的基本面增長而受到關注，五年營收增長率為21.85%。儘管近期表現有所波動，但其被視為具有長期投資價值的優質公司，適合納入多元化投資組合。",
+      "timeframe": "短期",
+      "reasoning": "Jim Cramer將AI基礎設施列為重要投資主題，並指出半導體設備股表現強勁，Applied Materials在2026年上漲100.52%，主要受數據中心記憶體短缺推動。",
       "sources": [
-        "Seeking Alpha"
-      ]
-    },
-    {
-      "ticker": "LLY",
-      "name": "Eli Lilly",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "長期",
-      "reasoning": "Eli Lilly在Seeking Alpha的2026年8月高成長股息股列表中被提及，具有高預期回報和21.58%的五年營收增長率。該公司被認為是基本面強勁且估值具吸引力的美國股票之一，適合尋求長期增長和價值的投資者。",
-      "sources": [
-        "Seeking Alpha"
-      ]
-    },
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "長期",
-      "reasoning": "Seeking Alpha在2026年8月的報告中指出，Microsoft在7月份表現強勁，股價上漲20%。該公司被列為高成長股息股之一，顯示其基本面穩健且具有增長潛力。Bloomberg Surveillance也提及科技股近期強勁反彈，Microsoft在四天內上漲26%。",
-      "sources": [
-        "Seeking Alpha",
-        "Bloomberg"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "長期",
-      "reasoning": "Seeking Alpha在2026年7月新分析師的股票推薦中提到了Amazon。儘管市場情緒可能受短期波動影響，但Amazon作為科技巨頭，其基本面和長期增長潛力仍受分析師看好，尤其是在電商和雲端服務領域的領導地位。",
-      "sources": [
-        "Seeking Alpha"
+        "CNBC (Jim Cramer)"
       ]
     }
   ],
@@ -87,11 +86,11 @@
       "market": "TW",
       "direction": "觀望",
       "timeframe": "短期",
-      "reasoning": "富邦台灣50 (006208) 截至2026年8月5日收盤價為238.25元，近60日還原股價上漲8.2%，顯示短期表現強勁。最近一次配息金額為每單位新台幣4.75元，創歷史新高，其中七成以上來自已實現資本利得。然而，FinLab數據顯示外資近期賣超，且該頁面不提供買賣建議，僅整理數據現況。考慮到近期股價上漲與外資賣超的混合訊號，建議短期內可保持觀望，等待更明確的趨勢。",
+      "reasoning": "富邦台灣50作為追蹤台灣前50大公司的ETF，其表現與台灣整體市場高度相關。儘管股癌提及台股相對穩定，但目前市場仍處於尋找新主流的震盪整理期，且近期股價小幅下跌。在趨勢不明朗的情況下，建議投資者暫時觀望，等待更明確的市場方向。",
       "sources": [
-        "FinLab",
-        "永豐金證券",
-        "PChome 股市"
+        "鉅亨網",
+        "PChome 股市",
+        "股癌"
       ]
     },
     {
@@ -100,12 +99,11 @@
       "market": "US",
       "direction": "可布局",
       "timeframe": "中長期",
-      "reasoning": "台積電ADR (TSM) 截至2026年8月6日股價為418.20美元。Morningstar在7月16日將其公允價值預估上調27%至新台幣3,440元，原因是台積電第二季度業績超出預期並上調財測。公司將2026年資本支出預算提高80億美元至620億美元，全年營收增長目標上調至超過40%。這些積極的財報和展望，加上其在半導體產業的領導地位，顯示出強勁的成長潛力，適合中長期布局。",
+      "reasoning": "台積電ADR作為全球半導體領導者，其營運與AI產業發展緊密相連。游庭皓於8月5日表示，台積電已站回月線，並看好明年EPS有望突破150元，顯示其基本面強勁。AI投資週期加速推進，對台積電先進製程的需求持續旺盛，儘管市場波動，其在AI供應鏈的關鍵地位使其成為具備長期布局價值的標的。",
       "sources": [
-        "HiStock嗨投資理財社群",
         "玩股網",
-        "Morningstar",
-        "豐雲學堂"
+        "財報狗",
+        "理財寶 (游庭皓)"
       ]
     },
     {
@@ -114,27 +112,26 @@
       "market": "US",
       "direction": "觀望",
       "timeframe": "短期",
-      "reasoning": "特斯拉 (TSLA) 股價在2026年8月7日盤中上漲3.31%，主要受美國就業數據疲軟緩解升息擔憂的宏觀因素影響。公司在自動駕駛計程車(Robotaxi)車隊和高毛利軟體即服務(SaaS)計劃方面取得進展，Megapack產量增長也有助於營收多元化。然而，Tradingkey指出儘管機構投資人興趣濃厚，技術指標仍發出賣出訊號。市場輿情指數也處於看空狀態。綜合宏觀利好與技術面及輿情面的混合訊號，短期內建議觀望。",
+      "reasoning": "特斯拉近期面臨挑戰，儘管FSD業務被視為新的增長引擎，但其2026年第二季財報顯示利潤率大幅下滑至1.4%，導致股價在財報後暴跌14.5%。這引發了市場對其核心汽車業務盈利能力和AI豪賭能否帶來實際回報的疑慮。在不確定性較高的情況下，建議投資者暫時觀望。",
       "sources": [
-        "HK MoneyClub",
-        "美股放大鏡",
-        "TradingKey"
+        "CMoney美股股市",
+        "Moomoo",
+        "YouTube (Tesla財報分析)"
       ]
     },
     {
       "ticker": "NVDA",
       "name": "輝達",
       "market": "US",
-      "direction": "可布局",
-      "timeframe": "中長期",
-      "reasoning": "輝達 (NVDA) 截至2026年8月3日股價為200.75美元，年初至今上漲5.75%，但仍較歷史高點低15%。華爾街分析師普遍給予「買入/增持」評級，認為其在AI GPU市場佔有率超過80%，且AI基礎設施建設預計到2030年將達到3-4兆美元，營收預計將大幅增長。儘管近期財報公布後股價反應趨於平淡甚至略有下跌，但其在AI數據中心建設中的核心地位和強勁的長期結構性趨勢，使其在中長期仍具布局價值。",
+      "direction": "觀望",
+      "timeframe": "短期",
+      "reasoning": "輝達作為AI晶片領導者，近期股價從低點悄悄反彈18%，並獲得Elon Musk的讚揚及超大規模雲端運算業者AI資本支出的支持。然而，8月26日的財報將是關鍵壓力測試，若下季展望不如預期，當前反彈空間可能成為套牢起點。在財報結果公布前，市場存在較大不確定性，建議投資者保持觀望。",
       "sources": [
-        "Investing.com",
-        "The Motley Fool",
-        "TradingView"
+        "CMoney投資網誌",
+        "經濟日報",
+        "美股放大鏡"
       ]
     }
   ],
-  "last_updated": "2026-08-08T08:30:35.709363+08:00",
-  "error": "AI 回傳格式錯誤，請稍後再試"
+  "last_updated": "2026-08-10T08:30:52.620095+08:00"
 }
