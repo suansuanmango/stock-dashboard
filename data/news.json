@@ -1,68 +1,83 @@
 {
-  "summary": "市場情緒分歧，科技股與AI需求推動標普500創新高，但零售財報、油價及季節性回調風險引發謹慎。",
+  "summary": "AI熱潮推升部分市場，然全球債市因通膨與地緣政治緊張而劇烈拋售，美股恐面臨回檔壓力。",
   "articles": [
     {
       "source": "股癌",
-      "title": "晦澀金融投資知識直白講，重要海內外時事輕鬆談",
-      "summary": "股癌節目由謝孟恭製作，旨在以淺顯易懂的方式剖析晦澀的金融投資知識與海內外財經時事。不論是資深投資者或新手，都能從中獲得投資樂趣並建立獨立思考體系，反映台灣新一代投資者對全球化資訊的渴求。近期節目內容包含贊助商產品介紹，如行李箱和中秋禮盒，但核心仍圍繞財經議題的分享與討論。"
+      "title": "市場端談絕世大反彈不必等第二隻腳、HBM 降規的利空寬鬆解讀",
+      "summary": "股癌節目探討市場反彈、HBM降規的利空解讀，以及TPU遞延與光通被禁的傳聞。節目中也提及Palantir財報證明AI無法取代軟體，並討論新一代股民將2.5倍槓桿視為常態的亂象。市場分析指出，反彈至均線可能引發套牢賣壓，主流族群形態已遭破壞，老AI股則以低本益比防守吸金。",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTRDHEWNfxjBEezPlJXUdLISsmF1Ddt740eWj2otic_qdDi3EYqOIgWLBy88g4SUBiMWqVKnKoeTh-eEKkh486G0dTBVnnpaJgS7ofgQcvjmm27uwbZ_6M"
     },
     {
       "source": "Bloomberg",
-      "title": "科技股提振股市，中東和平前景黯淡，AI融資需求攀升",
-      "summary": "受Anthropic PBC強勁營收增長提振，科技股推動全球股市上揚，強化了市場對AI大規模支出將持續的看法。然而，以色列與伊朗支持的真主黨在中東地區的衝突升級，使和平前景蒙上陰影，並擾亂全球市場。同時，為滿足AI投資需求，Alphabet正考慮首次發行澳元債券，顯示AI領域融資需求持續攀升。"
+      "title": "AI 效應發酵彭博：台企年獲利看增50% 幾乎是去年底預估的三倍",
+      "summary": "彭博資訊最新預估顯示，受人工智慧（AI）熱潮持續推升，台灣企業今年獲利將成長50%，幾乎是去年底預估的三倍。這反映了AI對台灣科技業的強勁帶動作用，預期相關產業將迎來顯著的業績增長，為整體經濟帶來正面影響。",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9ogzqNimW1oZzR4K5VWooZl4kR7tci09DXFY5qjXnFDE_lCn6nDQw7TwrlTaqo4xK4S7CD_gmwNX63l6wmaCUQ5rfwMkFcDhzQPX_jZFZq9mijo3dikGxwC_qWykHB7NnGFkATxlIfSU"
     },
     {
       "source": "Reuters",
-      "title": "美股三大指數收跌，觀望零售財報與油價上漲引發憂慮，AI支出疑慮消退",
-      "summary": "美股三大指數週一集體收跌，投資人正觀望大型零售商財報以評估美國消費者支出狀況。此外，美國與伊朗談判未見進展導致國際油價上漲，加劇市場謹慎氣氛。儘管如此，人工智慧（AI）相關企業公布強勁財報後，大型投資者對科技巨頭大舉投資能否獲得報酬的疑慮已消退，轉而聚焦長期贏家。"
+      "title": "外國私人買家縮手！美債需求暴跌恐加劇拋售潮",
+      "summary": "路透社報導，最新官方數據顯示，外國私人投資者對美國國債的需求急劇下滑，過去一年淨買入額大跌逾四成。在各國央行持續拋售美債的同時，私人資金的撤退恐讓面臨龐大債務的美國政府，迎來更高的借貸成本。",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuRGF9A_Zj5Tr-dnSNYl5Gm6ARy36TiewBsx7IxJQ7lPdcxTUii1BKPiQuWOE9VpmdEYkIf2a7hbKQ4LS8lK2o5FFmSibfBwrUlRIbvLsUmc9CL368aGHdrjmJurrVqhQbXPTSF5nuHGMkmlsZDJgrL6g"
     },
     {
       "source": "CNBC",
-      "title": "標普500指數創新高漲勢恐受暫時性因素推動，華爾街警告8至10月或迎大幅回撤",
-      "summary": "標普500指數在近期交易日中上漲並創下歷史新高，但CNBC專欄作家警告，此漲勢可能主要反映投資者擔憂情緒的緩解，而非基本面持續改善。華爾街策略師普遍預期，8月中旬至10月中旬可能迎來至少7%的大幅回撤，因歷史季節性拋售期、地緣衝突及消費疲軟等因素。"
+      "title": "在南韓不買、跑去美國買溢價10％！南韓散戶這操作讓專家直呼「太瘋狂」",
+      "summary": "CNBC報導，南韓散戶資金大舉轉戰美股，7月淨買進約8.4億美元的SK海力士美國存託憑證（ADR），即使同一家公司的股票在南韓就能直接買到。專家指出，SK海力士ADR近期相較南韓本地股票溢價約10%，波動性也更高，這類操作被視為投機過度的警訊。",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-lntzHutGm7DjWB-hCBK1Bsqf-jsUVUpfVHzAIxBsppq4aT3Cu3u8QRIr5bGPxTFtSaCc5qRHVLqaDYtYhYS-WS7a9MXsQXasnXeXRzUK9xYPO9c7P72VAsJH5DyUPa-kMIeH9cNYGVWeyukYqA"
     }
   ],
   "stock_radar": [
+    {
+      "ticker": "AMD",
+      "name": "超微半導體",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "長期布局",
+      "reasoning": "Seeking Alpha將AMD列為「買入」評級，並強調其在AI加速器和伺服器處理器領域的強勁競爭力，預計2026年營收和EPS將有顯著增長。",
+      "sources": [
+        "Seeking Alpha"
+      ]
+    },
+    {
+      "ticker": "CIEN",
+      "name": "賽納科技",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "長期布局",
+      "reasoning": "Seeking Alpha將CIEN列為「買入」評級，並指出其在全球高速互聯領域的領導地位，擁有創紀錄的訂單量，並受惠於AI數據中心的強勁需求。",
+      "sources": [
+        "Seeking Alpha"
+      ]
+    },
+    {
+      "ticker": "ATI",
+      "name": "ATI公司",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "長期布局",
+      "reasoning": "Seeking Alpha將ATI列為「買入」評級，並強調其在航空航天和能源業務的強勁表現，預計2026年EPS將有穩健增長。",
+      "sources": [
+        "Seeking Alpha"
+      ]
+    },
+    {
+      "ticker": "DELL",
+      "name": "戴爾",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "中長期布局",
+      "reasoning": "股癌認為戴爾是「便宜的股票」，其基礎設施解決方案部門（ISG）和AI伺服器業務表現卓越，積壓訂單高達29億美元，顯示供不應求的狀況，預期GPU出貨改善後將帶來可觀營收和獲利。",
+      "sources": [
+        "股癌"
+      ]
+    },
     {
       "ticker": "MU",
       "name": "美光科技",
       "market": "US",
       "direction": "值得關注",
       "timeframe": "中長期布局",
-      "reasoning": "Seeking Alpha指出，美光科技在2026年上半年表現優異，大幅跑贏標普500指數，且估值仍具吸引力，動能未見衰退跡象。作為半導體公司，美光受益於AI基礎設施的建置需求，是AI供應鏈中的關鍵組成部分，具備長期增長潛力。",
-      "sources": [
-        "Seeking Alpha"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "name": "超微半導體",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期布局",
-      "reasoning": "Seeking Alpha將超微半導體列為2026年上半年表現強勁的股票之一，其回報率顯著超越大盤。AMD在AI領域扮演重要角色，其產品對於AI基礎設施的建置至關重要，儘管市場對科技股需求和潛在升息有所疑慮，但AI基礎設施週期仍持續帶來增長。",
-      "sources": [
-        "Seeking Alpha"
-      ]
-    },
-    {
-      "ticker": "VICR",
-      "name": "Vicor Corporation",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期布局",
-      "reasoning": "Vicor Corporation在Seeking Alpha的量化評級中獲得「強力買入」評價，並在所屬產業和板塊中排名第一。該公司作為AI基礎設施建置的關鍵組成部分，有望從AI熱潮中受益。其強勁的量化指標顯示出良好的投資潛力。",
-      "sources": [
-        "Seeking Alpha"
-      ]
-    },
-    {
-      "ticker": "SNDK",
-      "name": "Sandisk Corporation",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期布局",
-      "reasoning": "Seeking Alpha給予Sandisk Corporation「強力買入」的量化評級，並在所屬產業和板塊中名列前茅。作為提供儲存解決方案的公司，Sandisk在AI基礎設施建置中扮演重要角色，有望隨著AI數據和計算需求的增長而持續受益。",
+      "reasoning": "Seeking Alpha將美光列為「買入」評級，強調其在記憶體晶片領域的領先地位，特別是HBM（高頻寬記憶體）對Nvidia Blackwell晶片的關鍵性，2026年HBM4產能已售罄，受益於AI基礎設施的爆炸性增長。",
       "sources": [
         "Seeking Alpha"
       ]
@@ -73,15 +88,12 @@
       "ticker": "006208",
       "name": "富邦台灣50",
       "market": "TW",
-      "direction": "觀望",
-      "timeframe": "短期觀望，中長期可布局",
-      "reasoning": "富邦台灣50追蹤台灣市值前50大公司，近期台灣股市市值衝上全球第六，顯示大盤整體表現強勁。然而，市場也提醒投資人可能存在「賺了指數賠價差」的情況，意指個股表現與大盤指數可能脫鉤。儘管長期看好台灣市場發展，但短期內需留意個股選擇與市場波動，建議觀望並等待更明確的進場時機，或針對特定成分股進行研究。",
+      "direction": "可布局",
+      "timeframe": "中長期",
+      "reasoning": "富邦台灣50追蹤台灣前50大公司，受惠於AI熱潮帶動台灣企業2026年獲利預計成長50%。儘管短期可能受市場波動影響，但長期基本面受AI產業升級支撐，具備布局潛力。",
       "sources": [
-        "玩股網",
-        "Goodinfo!台灣股市資訊網",
-        "股市爆料同學會",
-        "PChome 股市",
-        "鉅亨網"
+        "Bloomberg",
+        "MoneyDJ理財網"
       ]
     },
     {
@@ -89,14 +101,12 @@
       "name": "台積電 ADR",
       "market": "US",
       "direction": "可布局",
-      "timeframe": "中長期布局",
-      "reasoning": "台積電ADR在2026年7月16日公布的最新季報顯示，每股盈餘（EPS）達4.31美元，年增10.8%，季增74.49%，表現強勁。台積電作為全球領先的晶圓代工廠，在AI晶片供應鏈中扮演關鍵角色，AI算力需求持續供不應求，為其帶來穩健的成長動能。儘管全球經濟存在不確定性，但AI趨勢的長期發展將持續支撐台積電的營運表現，使其成為值得中長期布局的標的。",
+      "timeframe": "中長期",
+      "reasoning": "台積電ADR近期雖受科技股拋售及升息預期影響，但基本面強勁，月營收年增45%，2026年營收目標上調逾40%。CoWoS訂單滿載，並擴大資本支出，顯示其在AI晶片供應鏈的關鍵地位與長期成長動能。",
       "sources": [
-        "玩股網",
-        "HiStock嗨投資理財社群",
-        "財報狗股票",
-        "Investing.com 香港",
-        "報酬績效"
+        "Investing.com",
+        "Morningstar",
+        "經濟日報"
       ]
     },
     {
@@ -104,13 +114,11 @@
       "name": "特斯拉",
       "market": "US",
       "direction": "觀望",
-      "timeframe": "短期觀望",
-      "reasoning": "特斯拉在2026年7月23日公布的最新季報顯示，每股盈餘（EPS）為0.33美元，較市場預期低38.89%，季減17.5%，表現不如預期。然而，特斯拉計劃於本月在奧斯汀公開推出Cybercab無人駕駛出租車，此消息已引發Uber和Lyft股價下跌，顯示市場對其未來潛力仍有期待。儘管長期展望有自動駕駛等創新業務支撐，但短期內財報表現不佳可能導致股價波動，建議投資人短期觀望，等待營運數據改善或新業務進展更為明確。",
+      "timeframe": "短期",
+      "reasoning": "特斯拉近期消息面多空交雜，雖有Cybercab無人駕駛計程車推出計畫及與SpaceX潛在合併的利多，但股價處於盤整區間。歐洲央行對科技股估值修正的警告，以及美國電動車市場觸底跡象，建議投資人短期保持觀望。",
       "sources": [
         "英為財情",
-        "TradingView",
-        "財報狗股票",
-        "鉅亨網"
+        "TradingView"
       ]
     },
     {
@@ -118,17 +126,14 @@
       "name": "輝達",
       "market": "US",
       "direction": "可布局",
-      "timeframe": "中長期布局，留意近期財報",
-      "reasoning": "輝達在2026年5月21日公布的最新季報顯示，每股盈餘（EPS）為1.87美元，季增5.65%，年增130.86%，表現強勁。作為AI晶片龍頭，輝達在AI算力需求持續增長的背景下，營收和獲利能力表現突出。市場正密切關注輝達下週即將公布的最新財報，預期AI需求將持續推動其成長。儘管短期可能因財報預期而有波動，但其在AI領域的領導地位和創新能力，使其仍是中長期值得布局的標的。",
+      "timeframe": "中長期",
+      "reasoning": "輝達作為AI領域領導者，儘管市值近期有所波動，但其強勁的財報表現（營收年增130.86%）及在AI供應鏈中的戰略地位，使其長期前景看好。AI需求持續增長將是其主要驅動力。",
       "sources": [
         "財報狗股票",
-        "玩股網",
-        "股市爆料同學會",
-        "TradingView",
-        "報酬績效",
-        "民視財經網"
+        "美股放大鏡",
+        "TradingView"
       ]
     }
   ],
-  "last_updated": "2026-08-18T08:30:43.526334+08:00"
+  "last_updated": "2026-08-19T08:30:49.880286+08:00"
 }
