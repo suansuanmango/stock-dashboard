@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-08-23T08:30:05+08:00",
-  "exchange_rate_usd_twd": 31.82,
-  "total_cost_twd": 996607,
-  "total_value_twd": 1865358,
-  "total_gain_loss_twd": 868751,
+  "last_updated": "2026-08-24T08:30:12+08:00",
+  "exchange_rate_usd_twd": 31.78,
+  "total_cost_twd": 996491,
+  "total_value_twd": 1865118,
+  "total_gain_loss_twd": 868628,
   "total_gain_loss_pct": 87.17,
   "holdings": [
     {
@@ -31,9 +31,9 @@
       "current_price": 418.95,
       "price_change": 2.95,
       "price_change_pct": 0.71,
-      "current_value_twd": 79986,
-      "cost_twd": 9655,
-      "gain_loss_twd": 70331,
+      "current_value_twd": 79885,
+      "cost_twd": 9643,
+      "gain_loss_twd": 70243,
       "gain_loss_pct": 728.46
     },
     {
@@ -46,9 +46,9 @@
       "current_price": 362.86,
       "price_change": 17.73,
       "price_change_pct": 5.14,
-      "current_value_twd": 69277,
-      "cost_twd": 48509,
-      "gain_loss_twd": 20768,
+      "current_value_twd": 69190,
+      "cost_twd": 48448,
+      "gain_loss_twd": 20742,
       "gain_loss_pct": 42.81
     },
     {
@@ -61,9 +61,9 @@
       "current_price": 214.72,
       "price_change": -2.13,
       "price_change_pct": -0.98,
-      "current_value_twd": 40994,
-      "cost_twd": 34253,
-      "gain_loss_twd": 6741,
+      "current_value_twd": 40943,
+      "cost_twd": 34210,
+      "gain_loss_twd": 6733,
       "gain_loss_pct": 19.68,
       "daily_gain_loss_twd": -2563,
       "daily_gain_loss_pct": -6.2
