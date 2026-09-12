@@ -1,67 +1,82 @@
 {
-  "summary": "美國8月PPI高於預期，加上油價上漲，加劇聯準會升息擔憂，市場情緒趨於謹慎。",
+  "summary": "聯準會升息擔憂與油價上漲使市場承壓，台股外資大砍，然AI需求仍帶動部分科技股表現強勁。",
   "articles": [
     {
       "source": "股癌",
-      "title": "EP695 | 盤勢震盪與AI伺服器回本速度",
-      "summary": "最新一集股癌探討當前市場維持震盪，搶快者易受挫，並提及Google Cloud在高盛會議中透露AI伺服器回收期不到兩年，自研晶片回收期更可減半，顯示AI市場印鈔速度驚人，高層傾向硬體投資。"
+      "title": "EP695 | 原來印這麼快🎙️",
+      "summary": "股癌最新節目探討市場情緒，建議投資人面對瘋狂行情時，應保持冷靜，避免衝動交易。節目中提及物理治療師研發的涼感忘憂枕，強調投資有賺有賠，但睡好覺是絕對的套利空間。"
     },
     {
       "source": "Bloomberg",
-      "title": "Anthropic IPO在即，Chime與Bugatti交易，市場關注AI融資",
-      "summary": "彭博報導指出，市場正期待Anthropic的首次公開募股（IPO），同時Chime銀行服務內部化，以及Bugatti交易完成。此外，中金公司分析認為，9月全球資產面臨多重挑戰，建議逢低增配中美科技股和黃金，因AI發債可能加速，美債利率變數增大。"
+      "title": "美國2026財年預算缺口已達1.97萬億美元",
+      "summary": "彭博社報導，距離年底僅剩一個月，美國2026財年預算缺口已達1.97萬億美元。此數據可能對市場情緒造成影響，尤其在聯準會升息預期與通膨擔憂並存的環境下，財政狀況值得關注。"
     },
     {
       "source": "Reuters",
-      "title": "美國8月PPI高於預期，升息隱憂加劇美股開盤走低",
-      "summary": "路透社報導，美國8月生產者物價指數（PPI）年增5.4%，略高於市場預期，加上中東戰事推升布蘭特原油突破每桶100美元，加劇聯準會升息擔憂。交易員預期聯準會下週升息一碼的機率已升至69.8%，導致美股主要指數週四開盤全面下挫。"
+      "title": "日本央行下週料升息25點子",
+      "summary": "路透社報導，日本央行預計下週將升息25點子，基準利率將升至1.25%，為1995年以來最高。鑑於通脹超標風險上升，日本央行可能釋放加快未來升息步伐的信號，市場將密切關注其對終端利率的規劃。"
     },
     {
       "source": "CNBC",
-      "title": "Jim Cramer呼籲投資者分散投資，勿侷限於AI股",
-      "summary": "CNBC報導，Jim Cramer敦促投資者應分散投資，不要僅限於AI股票，並點名GE Aerospace以約120億美元收購精密鑄造供應商Consolidated Precision Products。他建議投資者探索航空航天、金融科技、醫療保健和能源等領域的機會，認為市場過度關注AI相關股票。"
+      "title": "CNBC財經名嘴力挺英偉達，建議斥5000億美元回購股票",
+      "summary": "CNBC財經名嘴Jim Cramer表示，投資人不應對英偉達失去信心，並建議公司進行5000億美元的股票回購。他認為，這將展現市場所需的堅定信念，且在本益比14倍的情況下，英偉達股票是最佳投資。"
     }
   ],
   "stock_radar": [
     {
+      "ticker": "AMZN",
+      "name": "Amazon.com, Inc.",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "中長期",
+      "reasoning": "Seeking Alpha分析師GNG Research將Amazon列入9月觀察名單，因其Q2財報顯示AWS成長加速，AI及晶片業務突破250億美元，且OCF成長率預計未來幾年超過25%。目前股價P/OCF比率遠低於十年平均，具29%折價空間。",
+      "sources": [
+        "Seeking Alpha"
+      ]
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard Inc.",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "中長期",
+      "reasoning": "Seeking Alpha分析師將Mastercard列入9月觀察名單，儘管股息收益率不高，但2026年派息率預計在10%多。目前股價P/E比率遠低於十年平均，具14%折價空間，GNG Research估計有16%折價。",
+      "sources": [
+        "Seeking Alpha"
+      ]
+    },
+    {
       "ticker": "WING",
-      "name": "Wingstop",
+      "name": "Wingstop Inc.",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha在2026年9月的高成長股息股清單中，將Wingstop列為具深層價值潛力的公司之一。儘管過去一個月表現不佳，但其基本面仍受關注。"
+      "timeframe": "短期",
+      "reasoning": "Seeking Alpha報導Wingstop股價在8月下跌約15%，但其遠期股息收益率已是過去平均的近3倍，暗示可能存在約60%的折價。分析師預計未來成長強勁，且估值擴張可能帶來利好。",
+      "sources": [
+        "Seeking Alpha"
+      ]
     },
     {
-      "ticker": "ZTS",
-      "name": "Zoetis",
+      "ticker": "YUMC",
+      "name": "Yum China Brands",
       "market": "US",
       "direction": "值得關注",
       "timeframe": "中長期",
-      "reasoning": "Seeking Alpha於2026年9月將Zoetis列為高成長股息股及最被低估的股票之一，具備快速股息成長紀錄與潛在的價值回歸空間。"
+      "reasoning": "Seeking Alpha將Yum China Brands列為9月股息股機會，預期其未來回報率最高達23.84%。該分析結合了遠期股息收益率、預期盈利增長及估值擴張或收縮等指標，顯示其具高潛力。",
+      "sources": [
+        "Seeking Alpha"
+      ]
     },
     {
-      "ticker": "MSFT",
-      "name": "Microsoft",
+      "ticker": "ACN",
+      "name": "Accenture plc",
       "market": "US",
       "direction": "值得關注",
       "timeframe": "中長期",
-      "reasoning": "Seeking Alpha在2026年9月的高成長股息股清單中，將Microsoft列為具強勁盈利預期的成長型股票。其在AI基礎設施領域的投資與軟體業務的持續增長，使其成為值得關注的標的。"
-    },
-    {
-      "ticker": "LLY",
-      "name": "Eli Lilly",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha在2026年9月的高成長股息股清單中提及Eli Lilly，顯示其在成長型股票中具有穩健的盈利前景，值得投資者納入觀察。"
-    },
-    {
-      "ticker": "MU",
-      "name": "Micron Technology",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha在2026年中期回顧中指出，美光科技(MU)因其在HBM（高帶寬內存）領域的領導地位，以及改善的行業相對估值和強勁增長，仍具吸引力。"
+      "reasoning": "Seeking Alpha將Accenture列為9月股息股機會，預期其未來回報率高達18.56%。該分析基於其高預期未來回報、遠期股息收益率、預期盈利增長及估值擴張或收縮等綜合指標。",
+      "sources": [
+        "Seeking Alpha"
+      ]
     }
   ],
   "ai_analysis": [
@@ -69,34 +84,34 @@
       "ticker": "006208",
       "name": "富邦台灣50",
       "market": "TW",
-      "direction": "可布局",
-      "timeframe": "市場修正時",
-      "reasoning": "富邦台灣50 (006208) 近期股價表現穩健，截至2026年9月10日，最新值為249.55台幣，今年以來報酬率達69.52%。MoneyDJ理財網指出，在台股修正時，市值型ETF如006208是優選的布局標的。儘管近期台股面臨通膨壓力與美債殖利率上升的估值修正，但長期來看，其追蹤台灣50指數的特性使其能有效分散風險並參與市場成長。"
+      "direction": "觀望",
+      "timeframe": "短期",
+      "reasoning": "富邦台灣50 (006208) 近期股價呈現小幅下跌，一日跌幅1.38%，一週跌幅0.47%。儘管一個月仍有3.01%漲幅，但台股整體面臨外資大砍892.7億元，盤中一度下殺近千點的壓力。國家隊雖進場低接台積電等半導體股，顯示有支撐力道，但市場情緒仍受油價高檔震盪及升息陰霾籠罩。考量到大盤不確定性，建議短期觀望，等待市場趨穩。"
     },
     {
       "ticker": "TSM",
       "name": "台積電 ADR",
       "market": "US",
-      "direction": "觀望",
-      "timeframe": "等待明確訊號",
-      "reasoning": "台積電ADR (TSM) 近期股價在428-439美元區間震盪，9月8日收盤價為439美元。儘管其在全球半導體產業中扮演關鍵角色，且AI需求強勁，但目前市場缺乏明確的買進或賣出建議。投資者可持續關注其技術分析走勢與全球半導體產業的最新動態，等待更明確的市場訊號再行布局。"
+      "direction": "可布局",
+      "timeframe": "中長期",
+      "reasoning": "台積電ADR (TSM) 儘管近期台股受外資賣壓影響，國家隊進場低接半導體股提供支撐。分析師普遍給予「強烈買入」評級，平均目標價為552.38美元，預期有29.05%的上漲空間。Stifel也因8月營收表現良好而維持買入評級，目標價515美元。公司年初至今營收成長39.3%，顯示基本面強勁。考量其產業領導地位及AI需求帶動，中長期可布局。"
     },
     {
       "ticker": "TSLA",
       "name": "特斯拉",
       "market": "US",
       "direction": "觀望",
-      "timeframe": "等待估值回歸合理",
-      "reasoning": "特斯拉(TSLA)近期因Cybercab自駕計程車發表與FSD技術獲批而股價上漲，但市場對其高估值仍有疑慮。TradingKey指出，特斯拉媒體輿情處於看空狀態，且分析師平均目標價為381.42美元，低於近期股價。Motley Fool也提到，儘管自動駕駛前景可期，但特斯拉目前估值已反映未來成長，若成長速度不如預期，股價可能承壓。"
+      "timeframe": "短期",
+      "reasoning": "特斯拉 (TSLA) 近期股價波動劇烈，在Cybercab發布後下跌6%，因市場對發布會缺乏具體營運數據感到失望，且NHTSA啟動審計查詢。儘管有馬斯克暗示Cybercab有望赴歐的偏多消息，但中國8月零售銷量年減12.43%以及Seeking Alpha分析師給予「賣出」評級都構成壓力。短期內不確定性高，建議觀望。"
     },
     {
       "ticker": "NVDA",
       "name": "輝達",
       "market": "US",
       "direction": "可布局",
-      "timeframe": "長期持有",
-      "reasoning": "輝達(NVDA)股價在2026年持續創新高，年初至今已上漲約24%，遠超標普500指數。其頂尖晶片持續引領AI革命，最新季度營收年增106%，執行長黃仁勳表示AI已達轉折點。儘管市值龐大，但本益比29倍在強勁成長背景下仍顯合理。然而，其業績高度依賴AI投資，若AI支出縮減可能造成衝擊，但目前看來可能性不大。"
+      "timeframe": "中長期",
+      "reasoning": "輝達 (NVDA) 受益於強勁的AI需求，CEO黃仁勳表示資安將是AI下個重大應用領域。Finbold的AI Agent預測其股價有望在9月底前創新高，目標價介於230至244.5美元。華爾街分析師普遍給予「強烈買入」評級，平均目標價達325.23美元。CNBC名嘴Jim Cramer也力挺並建議進行大規模股票回購。公司近期收購Hugging Face，進一步強化AI生態系。基本面與市場情緒皆偏多，中長期可布局。"
     }
   ],
-  "last_updated": "2026-09-11T08:30:47.785361+08:00"
+  "last_updated": "2026-09-12T08:30:46.367340+08:00"
 }
