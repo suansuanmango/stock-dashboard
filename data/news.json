@@ -1,50 +1,57 @@
 {
-  "summary": "聯準會三年來首次升息，市場對AI資本支出疑慮升溫，美股面臨震盪考驗。",
+  "summary": "市場情緒複雜，美聯儲升息抗通膨，科技股表現分歧。",
   "articles": [
     {
       "source": "股癌",
-      "title": "EP695 | 原來印這麼快🎙️",
-      "summary": "股癌最新一集探討了金融市場的快速變化，指出無論行情如何波動，投資人情緒總是受到影響。節目中也提及贊助商的涼感忘憂枕，強調在瘋狂行情中保持冷靜的重要性，並提供聽眾專屬優惠，鼓勵投資人關注睡眠品質以應對市場壓力。",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTZS6ur-OUj99d2bHkBa5Ad04Yclw9atKtnXMC5yRzeWsVuOqTF7mU7rIeGz1Xx1AefS4c9fY80sF76kZ7xQySk6aqLm7ecC_hrtFvFX5Kbmanf3wBVpvmdeFDY6nWWu9lj3G107K2xPoxHbEJNRXSQoFHzToQX1YvFbts1KHqJGd3iSKOunE"
+      "title": "EP697 | you shall not pass!",
+      "summary": "「股癌」謝孟恭的最新節目持續剖析晦澀的金融投資知識與海內外財經時事，旨在幫助散戶理解複雜的市場動態。節目內容涵蓋總體經濟分析、產業趨勢探討及投資策略分享，無論是資深投資者或新手，都能從中獲得實用見解與投資樂趣，並透過直白易懂的方式，讓聽眾掌握最新市場脈動。"
     },
     {
       "source": "Bloomberg",
-      "title": "Fed 決策／華許：通膨居高太久這「三項變化」促成升息決定",
-      "summary": "聯準會主席華許表示，通膨居高不下且持續過久，促使聯準會全票通過升息一碼，將聯邦基金利率目標區間上調至3.75%-4.00%，為三年來首次升息。此決策反映了對價格穩定的主要關注，並暗示年底前可能再次升息，市場對此反應劇烈。",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFK4ESmOOu6F6MnKFcHlzqKH_a9KEysIeTzccE5GRdweLK6JTdrWZxN7pC6on_tgMEsDRokBCDcKYOUMLbuP16Gsl1hJSkI46b7pZtiRqo-yIxKkylVUZE1BnEk_izthkTslko"
+      "title": "美聯儲加息與特朗普立場相左，中期選舉在即。接下來會怎樣？",
+      "summary": "彭博社報導指出，美國聯準會近期升息的決策與總統特朗普的立場相左，在中期選舉前夕引發市場高度關注。此舉凸顯聯準會為遏制通膨所做的努力，儘管可能面臨政治壓力。市場正密切觀察聯準會的後續政策走向，以及這對美國經濟增長、通膨控制和政治格局可能帶來的深遠影響，投資者需謹慎評估。"
     },
     {
       "source": "Reuters",
-      "title": "路透：SK海力士與Intel洽談在美國生產記憶晶片",
-      "summary": "路透社引述消息指出，SK海力士正與Intel商討合作協議，若達成，SK海力士將首次在美國生產記憶晶片。這項合作可能涉及租用Intel俄亥俄州晶圓廠設施或成立合資企業，目前討論仍處於探索階段，尚未有最終決定。",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnoOU5XHJfmCk4JRXJiNkBPnZ1IAp8HqlAUtLq5wihgtZYJXGuyvgv78e0dtIknaWvIozQ17EYd3Szc8c6qn4Dyw84_EBBPhArwHJmUC9jlKGOW3Njr9A7Qchej3RGqWuLhhUy_E6f19vvkK-YE1LBNYsF81kyuhDEjz6irp7F8mTBGPzfNj7NT7McYSKhmZx0AJJoYU448USM2EcdBiamLys89K5fFtW1KBAOHcX-4FgUjbvA_o4FwsfoefR3o30BzrDyLoB2w5AhkamXadt2pZKYqtLobjWyF4vAX49oi5WHxhy1YmWK4npuR4E5BH4lqmLZzE2ykO-q62jyRYs4vYH13FJMh96T48d_bP9Rtd6d63EQpLVdSWfTQW4"
+      "title": "美國聯準會升息抗通膨，年底前再升息預期升溫",
+      "summary": "路透社報導，美國聯準會於9月16日宣布升息一碼，將聯邦基金利率目標區間調升至3.75%至4%，為三年來首次政策調整。聯準會主席華許強調，通膨仍處高檔，此次升息旨在引導通膨回歸2%目標。市場普遍預期聯準會可能在年底前再次升息一碼，以應對持續強勁的勞動市場與通膨數據，顯示貨幣政策緊縮趨勢不變。"
     },
     {
       "source": "CNBC",
-      "title": "美联储加息25基点三大股指高开低走沃什强调通胀太高持续太久了",
-      "summary": "美聯儲在9月16日宣布將基準利率上調25個基點，為三年來首次加息，主席沃許強調通膨過高且持續太久。此消息導致美股三大股指高開低走，道指跌逾1%，標普500指數和納指也收跌，顯示市場對緊縮貨幣政策的擔憂。",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0oYlW7hL730BW-X9FbBIXO7KAVeMtiYRgV5BuThXhatPYqCur5k7UOH_UPhupQBhHsfVaW7lNm7ulTtPGcNlEZnIlyf9waGaz-gS10kHESGVhrllqwf36mvI176B74dYCKmyAuMOaXAQxbYRoT0PXNl4Fzb0tC2sX7b0MuJSFExLORQ2vDMt8JRBFuRa_89ouh0CcLWVwi2MSjIFk0F9uwHAd9IHDTabOoCitUd0BfXY05jP0-8sjE0ySD_KZ3nXOe0ulezdKXd4O_f2YGA"
+      "title": "美國股指在美聯儲決定引發下跌後回升",
+      "summary": "CNBC市場分析顯示，美國股指在聯準會升息決議引發前一日拋售後於週四顯著回升，其中標普500指數上漲逾1%，納斯達克指數更上漲1.6%。油價下跌和債券收益率回落為市場提供了支撐。儘管投資者對聯準會可能再次加息的擔憂持續存在，導致市場波動，但部分科技股如英特爾和美光仍表現強勁，顯示市場情緒複雜。"
     }
   ],
   "stock_radar": [
     {
-      "ticker": "WSO",
-      "name": "Watsco, Inc.",
+      "ticker": "ZTS",
+      "name": "Zoetis",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "長期布局",
-      "reasoning": "Seeking Alpha於2026年9月14日報告指出，Watsco因EPS增長預期改善和估值更具吸引力，在高品質股息成長股名單中排名大幅上升，未來回報潛力增長約22%。",
+      "timeframe": "中長期",
+      "reasoning": "Seeking Alpha分析指出，Zoetis在9月被評為最具潛在低估值的股票之一，同時也具備最高的預期回報率。該公司在高品質股息成長股名單中表現突出，顯示其穩健的基本面和成長潛力，受到KOL的持續關注。",
       "sources": [
         "Seeking Alpha"
       ]
     },
     {
-      "ticker": "PAYX",
-      "name": "Paychex, Inc.",
+      "ticker": "ACN",
+      "name": "Accenture",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "長期布局",
-      "reasoning": "Seeking Alpha於2026年9月14日提及Paychex因預期EPS增長改善，在股息成長股名單中排名上升，未來成長潛力約增加5%。",
+      "timeframe": "中長期",
+      "reasoning": "Accenture在Seeking Alpha的報告中被多次提及，因其快速的股息增長、潛在的低估值以及高預期回報率而受到青睞。該公司在近期表現強勁，被視為高品質的成長股，KOL認為其具備良好的投資機會。",
+      "sources": [
+        "Seeking Alpha"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "中長期",
+      "reasoning": "Seeking Alpha將Microsoft列為9月高品質高成長股之一，儘管其估值可能已反映部分成長，但仍具備強勁的盈利預期。KOL認為Microsoft在科技領域的領導地位和持續創新，使其成為值得長期關注的標的。",
       "sources": [
         "Seeking Alpha"
       ]
@@ -54,19 +61,8 @@
       "name": "Eli Lilly and Company",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "長期布局",
-      "reasoning": "Seeking Alpha於2026年9月14日分析，Eli Lilly因估值改善，在高品質股息成長股名單中排名上升，未來回報潛力增長約13%。",
-      "sources": [
-        "Seeking Alpha"
-      ]
-    },
-    {
-      "ticker": "INMB",
-      "name": "INmune Bio",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期布局",
-      "reasoning": "Seeking Alpha於2026年9月4日指出，INmune Bio被Tejo Strategy Investing認為被嚴重低估，其RDEB藥物Ebstrocel的監管進展和6700萬美元的市值構成引人注目的投資論點。",
+      "timeframe": "中長期",
+      "reasoning": "Eli Lilly and Company在Seeking Alpha的報告中被評為高品質股息成長股的頂級表現者之一。KOL認為該公司在醫藥領域的強勁表現和成長潛力，使其成為值得關注的投資標的。",
       "sources": [
         "Seeking Alpha"
       ]
@@ -76,8 +72,8 @@
       "name": "Amazon.com, Inc.",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "長期布局",
-      "reasoning": "Seeking Alpha於2026年8月11日報告，Amazon的Q2財報強化了投資論點，AWS業務成長加速，AI和晶片業務均突破250億美元且年增率達三位數，北美和國際銷售表現強勁，預計未來幾年OCF每股增長將超過25%。",
+      "timeframe": "中長期",
+      "reasoning": "Seeking Alpha在9月觀察名單中提及Amazon.com，指出其第二季度財報表現強勁，AWS業務實現顯著增長，且AI和晶片業務也呈現快速擴張。KOL認為Amazon目前股價相對於其現金流而言被低估，具備長期投資價值。",
       "sources": [
         "Seeking Alpha"
       ]
@@ -89,35 +85,36 @@
       "name": "富邦台灣50",
       "market": "TW",
       "direction": "觀望",
-      "timeframe": "短期",
-      "reasoning": "截至2026年9月16日，富邦台50近五個交易日合計被三大法人賣超3,269張，其中外資賣超1,888張，自營商賣超1,387張，顯示法人籌碼流向偏空。儘管近20個交易日合計仍為買超，但近期連續賣超趨勢以及籌碼流向偏空訊號，建議短期內保持觀望。",
+      "timeframe": "短期觀望，中長期可布局",
+      "reasoning": "富邦台灣50 (006208) 近期籌碼面呈現複雜態勢。截至2026年9月17日，三大法人近5個交易日合計賣超2,642張，其中外資賣超1,779張，顯示短期有外資調節壓力。然而，若將時間拉長至近20個交易日，三大法人合計買超2,090張，表明中長期仍有法人資金流入。儘管外資近期偏賣，但該ETF股價近期創下252日新高，歷史數據顯示突破新高後60日平均報酬率為+4.75%，勝率達68.2%，平均贏大盤1.48個百分點。考量短期外資賣壓與中長期法人支持及歷史突破新高後的表現，建議短期觀望，中長期可布局。",
       "sources": [
-        "FinLab"
+        "FinLab",
+        "MoneyDJ理財網"
       ]
     },
     {
       "ticker": "TSM",
       "name": "台積電 ADR",
       "market": "US",
-      "direction": "觀望",
-      "timeframe": "短期",
-      "reasoning": "截至2026年9月16日，台積電ADR收盤價為413.75美元，漲跌幅為-1.02%。儘管台積電ADR在9月14日曾有上漲，但近期股價波動且離季線有約2.14%的折價，顯示短期內市場存在不確定性。考量到整體市場對半導體產業的觀望情緒，建議短期內可先觀望。",
+      "direction": "可布局",
+      "timeframe": "中長期可布局",
+      "reasoning": "台積電ADR (TSM) 受益於全球人工智慧(AI)基礎設施需求加速成長，近期營運表現亮眼。根據9月17日數據，TSM終盤上漲3.00%，並報告了強勁的月度銷售額。其在先進製程技術的領先地位以及穩固的定價能力，持續獲得機構投資者的青睞，有助於維持其高利潤率。技術分析指標顯示，MACD已發出買入訊號，而RSI則處於中性狀態，這表明儘管市場可能存在短期波動，但TSM股價仍具備穩健的上漲動能。綜合考量其產業領導地位與技術優勢，中長期可布局。",
       "sources": [
-        "玩股網",
-        "HiStock嗨投資理財社群"
+        "TradingKey",
+        "玩股網"
       ]
     },
     {
       "ticker": "TSLA",
       "name": "特斯拉",
       "market": "US",
-      "direction": "觀望",
-      "timeframe": "短期",
-      "reasoning": "特斯拉於2026年9月3日發布Cybercab後股價曾大幅上漲，但隨後因缺乏具體細節和監管審查，於9月4日下跌5.92%，9月11日累計下跌6%。AI分析在9月1日給出「持有」信號，但技術面中性且基本面喜憂參半，估值高企、競爭激烈及生產挑戰仍是風險。短期內因市場對Cybercab商業化前景的疑慮及監管不確定性，建議觀望。",
+      "direction": "可布局",
+      "timeframe": "短期可關注，中長期可布局",
+      "reasoning": "特斯拉 (TSLA) 近期股價表現強勁，9月17日盤中上漲逾4%，主要受其Optimus機器人業務的積極進展所驅動。公司近日向供應商下達約5000台Optimus機器人訂單，並計劃於2026年量產約5萬台，標誌著機器人業務從研發邁向量產。此外，充電基礎設施的持續擴張、中國市場的價格調整以及強勁的機構看漲情緒，共同為特斯拉股價提供上漲動能。技術指標也釋放出買入訊號，且分析師普遍持支持態度。儘管即將公布的財報預計EPS將年減6%，但機器人業務的突破性進展為其長期成長增添新動力，短期可關注，中長期可布局。",
       "sources": [
-        "山顶Ryak",
-        "TIKR.com",
-        "AI分析"
+        "亿欧",
+        "TradingKey",
+        "Zacks.com"
       ]
     },
     {
@@ -125,13 +122,15 @@
       "name": "輝達",
       "market": "US",
       "direction": "觀望",
-      "timeframe": "短期",
-      "reasoning": "輝達股價在2026年9月顯著承壓，跌破230美元關卡，主要受市場對AI資本支出持續性疑慮及總體經濟動盪影響。儘管8月表現強勁，但9月以來已累積約6.5%跌幅。市場正在檢驗AI榮景是否已達頂峰，且企業獲利過度集中於少數科技巨頭的現象也帶來估值下修風險。",
+      "timeframe": "短期觀望，中長期可布局",
+      "reasoning": "輝達 (NVDA) 儘管在AI基礎設施需求帶動下，持續報告三位數的營收增長，顯示其強勁的基本面，但短期內股價面臨多重挑戰。宏觀經濟的不確定性、美國國債收益率上升以及半導體板塊的獲利了結，導致其股價波動。Finbold AI Agent預測至9月底股價僅有溫和上漲空間，而BingX分析則提出420美元的看漲情境與180美元的看跌情境，顯示市場對其估值存在顯著分歧。Seeking Alpha也指出Nvidia被低估。考量短期市場情緒與估值分歧，建議短期觀望，中長期可布局。",
       "sources": [
-        "TOPONE Markets",
-        "鉅亨網"
+        "Finbold",
+        "BingX",
+        "TradingKey",
+        "Seeking Alpha"
       ]
     }
   ],
-  "last_updated": "2026-09-17T08:30:37.927386+08:00"
+  "last_updated": "2026-09-18T08:33:35.589682+08:00"
 }
