@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-10-04T08:30:10+08:00",
+  "last_updated": "2026-10-05T08:33:16+08:00",
   "stocks": [
     {
       "ticker": "006208",
       "name": "富邦台灣50",
       "market": "TW",
-      "current_price": 258.3,
-      "change": 0.05,
-      "change_pct": 0.02
+      "current_price": null,
+      "change": null,
+      "change_pct": null
     },
     {
       "ticker": "0050",
