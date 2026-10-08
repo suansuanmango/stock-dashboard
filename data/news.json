@@ -1,79 +1,92 @@
 {
-  "summary": "AI熱潮持續推動科技股創新高，但高利率與通膨壓力仍是市場隱憂。",
+  "summary": "聯準會鷹派言論與公債殖利率飆升導致市場普遍回調，投資人對通膨與AI股過度集中風險保持警惕。",
   "articles": [
     {
       "source": "股癌",
-      "title": "EP702 | 🐉 氣氛對了真相就淡薄了生活不該被看盤綁架",
-      "summary": "股癌最新一集探討市場氛圍如何影響投資判斷，強調生活不應被盤勢綁架。節目中也提及透過休閒遊戲放鬆的重要性，並宣傳十月週年慶活動，提供iPhone抽獎等優惠，鼓勵聽眾在投資之餘享受生活。"
+      "title": "EP703 | 🏈 可能生來就是喜歡擔心東擔心西",
+      "summary": "股癌最新一集討論在台股逼近五萬點時的部位配置策略，並強調生活不應被看盤綁架，應注重閱讀、運動及放鬆，例如透過玩「明星3缺1」來補血。節目也提及長時間工作或看盤時，正確的坐姿與骨盆支撐的重要性，建議投資人在配置股票部位的同時，也要顧及身體健康，避免越坐越歪越累。",
+      "sources": [
+        "cite: 16"
+      ]
     },
     {
       "source": "Bloomberg",
-      "title": "Record Tech, Rising Yields and AI Funding Boom",
-      "summary": "彭博報導指出，科技股在AI資金熱潮推動下，帶領那斯達克指數創下新高，儘管債券殖利率維持在數十年高點。專家們討論高利率是否會抑制資本支出，以及美國期中選舉對市場的潛在影響。"
+      "title": "達利歐最新接受Bloomberg專訪全文：美國債務危機或三年內爆發！警惕AI投資過度集中風險！",
+      "summary": "橋水基金創辦人瑞·達利歐在彭博專訪中警告，美國債務週期可能在三年內爆發危機，利率上升將引發信貸緊縮與財富衝突。他指出，全球資本因地緣政治重組，投資者應警惕AI等資產的風險過度集中，同時把握AI驅動生產力變革的機會。達利歐強調，當前AI投資估值昂貴且未來現金流不確定性高。",
+      "sources": [
+        "cite: 16",
+        "cite: 17"
+      ]
     },
     {
       "source": "Reuters",
-      "title": "S&P 500 and Nasdaq hit record highs on tech and AI-led buying",
-      "summary": "路透社報導，標普500指數和那斯達克指數在科技和AI相關股票的買盤帶動下，創下歷史新高。債券市場拋售暫停和油價穩定，為投資者在第三季財報季前帶來樂觀情緒。"
+      "title": "路透：川普尋求貿易談判籌碼美放緩飛機零件對中出口",
+      "summary": "路透社報導指出，川普政府正試圖放緩對中國的飛機零件出口，以作為貿易談判的籌碼。此舉旨在削弱中國對美國航空供應鏈的依賴，並在更廣泛的稀土礦物、汽車和晶片等產業貿易談判中增加華府的影響力。商務部已準備好在必要時進一步施壓，並限制對中國商用飛機公司的零件出口。",
+      "sources": [
+        "cite: 29"
+      ]
     },
     {
       "source": "CNBC",
-      "title": "Tech stocks lead market higher, Nvidia hits new all-time high",
-      "summary": "CNBC分析指出，科技股，特別是輝達等AI晶片製造商，正引領市場走向新高。儘管通膨和利率上升帶來擔憂，但AI基礎設施領域強勁的財報和樂觀的指引，為股市提供了上漲動力。"
+      "title": "美國一年期通脹預期升至3.9%——CNBC",
+      "summary": "CNBC報導，美國消費者對未來12個月的通脹預期中位數在9月升至3.9%，較8月高出0.3個百分點，創下自2023年5月以來的最高水平。同時，家庭支出預期也上升5.5%。儘管長期通脹預期變化不大，但市場普遍預計聯準會將在10月晚些時候的會議上維持基準利率不變，但官員對加息理由存在分歧。",
+      "sources": [
+        "cite: 28"
+      ]
     }
   ],
   "stock_radar": [
     {
-      "ticker": "AMZN",
-      "name": "亞馬遜",
+      "ticker": "NLST",
+      "name": "Netlist, Inc.",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "短期至中期",
-      "reasoning": "Seeking Alpha量化評級給予「強烈買入」，預期在即將到來的假日購物季中表現強勁。電商巨頭的穩固基本面和市場領導地位，使其在消費支出回溫時具備上漲潛力。",
+      "timeframe": "短期",
+      "reasoning": "Seeking Alpha量化評級系統給予Netlist (NLST) 4.98的「強力買入」評級，在低於10美元的股票中表現突出。該公司在近期交易中上漲17.88%，顯示強勁的動能和市場活躍度。儘管目前無盈利且現金流為負，但市場對其未來成長潛力抱持高度期待，值得短期關注。",
       "sources": [
         "Seeking Alpha"
       ]
     },
     {
-      "ticker": "PLTR",
-      "name": "Palantir",
+      "ticker": "PXS",
+      "name": "Pyxis Tankers Inc.",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中期",
-      "reasoning": "Black Swan Dexteritas的Kim Bolton將Palantir列為首選，指出其財務狀況穩定，流動性極佳且債務負擔輕。儘管本益比偏高反映市場對其高成長預期，但高效的資本利用率和強勁的股東權益報酬率值得關注。",
-      "sources": [
-        "Bloomberg (Kim Bolton)"
-      ]
-    },
-    {
-      "ticker": "NKE",
-      "name": "Nike",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha強調Nike目前估值被低估，且股息收益率具吸引力，遠高於歷史平均水平。儘管過去三年表現疲軟，但其當前本益比低於五年平均，顯示潛在的價值投資機會。",
+      "timeframe": "短期",
+      "reasoning": "Pyxis Tankers (PXS) 在Seeking Alpha的量化評級中獲得4.96的「強力買入」評級，顯示其在價值、成長、盈利能力、EPS修正和價格動能方面表現優異。作為一檔低於10美元的股票，其強勁的量化指標使其在同業中脫穎而出，具備潛在的投資機會。",
       "sources": [
         "Seeking Alpha"
       ]
     },
     {
-      "ticker": "MSFT",
-      "name": "微軟",
+      "ticker": "OABI",
+      "name": "OmniAb, Inc.",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將微軟列為高成長股息股，並推薦其買入看漲期權。作為AI領域的重要參與者，微軟在雲端服務和軟體方面的持續創新，使其在科技股牛市中保持領先地位，具備穩健的成長潛力。",
+      "timeframe": "短期",
+      "reasoning": "OmniAb (OABI) 獲得Seeking Alpha量化評級系統4.96的「強力買入」評級，顯示其在多項關鍵量化指標上表現強勁，包括價值、成長和盈利能力。該公司被認為是目前Seeking Alpha所有股票中評級最高的股票之一，尤其在低價股中更顯其吸引力。",
       "sources": [
         "Seeking Alpha"
       ]
     },
     {
-      "ticker": "LLY",
-      "name": "禮來",
+      "ticker": "CVALF",
+      "name": "Covalon Technologies Ltd.",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將禮來列為高成長股息股之一，顯示其在醫療保健領域的穩健表現和成長潛力。隨著人口老齡化和醫療需求增加，禮來在創新藥物研發上的投入，有望帶來長期穩定的回報。",
+      "timeframe": "短期",
+      "reasoning": "Covalon Technologies (CVALF) 在Seeking Alpha的量化評級中獲得4.94的「強力買入」評級。該評級系統強調其在價值、成長、盈利能力、EPS修正和價格動能方面的優勢。作為一檔被量化模型高度看好的低於10美元的股票，其基本面和市場表現值得投資者密切關注。",
+      "sources": [
+        "Seeking Alpha"
+      ]
+    },
+    {
+      "ticker": "NAT",
+      "name": "Nordic American Tankers Limited",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "短期",
+      "reasoning": "Nordic American Tankers (NAT) 獲得Seeking Alpha量化評級4.93的「強力買入」評級。該公司在量化指標上表現優異，被視為具有強勁的價值、成長和盈利能力。在當前市場環境下，其穩健的量化表現使其成為Seeking Alpha推薦的低價股之一。",
       "sources": [
         "Seeking Alpha"
       ]
@@ -84,41 +97,45 @@
       "ticker": "006208",
       "name": "富邦台灣50",
       "market": "TW",
-      "direction": "可布局",
-      "timeframe": "中長期",
-      "reasoning": "雖然沒有直接針對006208的最新分析，但全球科技股受AI需求推動表現強勁，S&P 500與Nasdaq創歷史新高。台灣股市與科技產業高度相關，若全球經濟穩定且AI趨勢不變，追蹤台灣50的006208可望受惠於整體市場成長動能。需留意全球利率與通膨壓力。",
+      "direction": "觀望",
+      "timeframe": "短期",
+      "reasoning": "富邦台灣50 (006208) 在2026年10月7日收盤下跌0.11%，顯示市場情緒趨於謹慎。受到美國聯準會鷹派會議紀要及10年期公債殖利率飆升至2002年以來高點的影響，整體風險性資產面臨回調壓力。儘管台灣加權指數近期表現強勢，但宏觀經濟不確定性增加，可能導致資金流向保守。因此，短期內建議投資人對富邦台灣50保持觀望態度，等待市場趨勢更加明朗。",
       "sources": [
-        "Bloomberg",
-        "Reuters",
-        "CNBC"
+        "玩股網",
+        "PChome 股市",
+        "股市爆料同學會",
+        "理財寶"
       ]
     },
     {
       "ticker": "TSM",
       "name": "台積電 ADR",
       "market": "US",
-      "direction": "可布局",
-      "timeframe": "中長期",
-      "reasoning": "台積電ADR近期表現強勁，受AI晶片需求持續旺盛的信心投票帶動，並領漲科技股。多數分析師給予「強烈買入」評級，平均目標價顯示仍有上漲空間。儘管有部分評估認為當前股價「割高」，但市場對先進製程產能供不應求的預期持續升溫，長期展望仍偏樂觀。",
+      "direction": "觀望",
+      "timeframe": "短期",
+      "reasoning": "台積電ADR (TSM) 在2026年10月7日下跌2.09%，主要受美國公債殖利率急升及聯準會鷹派立場影響，半導體類股普遍承壓。儘管分析師對其AI晶片需求前景樂觀，並給予買入評級，但特斯拉執行長馬斯克表示Terafab晶圓廠將由旗下企業獨立營運，而非由台積電主導，此消息可能對市場情緒造成影響。在高利率環境下，科技成長股估值面臨壓力，短期內建議觀望，等待市場對這些不確定因素的消化。",
       "sources": [
+        "玩股網",
         "Investing.com",
-        "みんかぶ米国株",
-        "理財寶"
+        "經濟日報",
+        "理財寶",
+        "鉅亨網"
       ]
     },
     {
       "ticker": "TSLA",
       "name": "特斯拉",
       "market": "US",
-      "direction": "可布局",
-      "timeframe": "中長期",
-      "reasoning": "特斯拉第三季交車量優於市場預期，歐洲需求回溫抵銷部分負面影響，帶動股價上漲。華爾街分析師普遍看好，認為AI前景（自動駕駛、Robotaxi、人形機器人）將持續支撐其高本益比。儘管短期波動，但長期成長潛力仍受市場關注。",
+      "direction": "觀望",
+      "timeframe": "短期",
+      "reasoning": "特斯拉 (TSLA) 近期股價在377美元附近高位盤整，面臨385美元的關鍵阻力。執行長馬斯克澄清特斯拉的Terafab晶圓廠將由旗下企業獨立建造與營運，粉碎了此前可能由台積電經營的傳聞，這可能影響市場對其未來生產策略的預期。在高利率環境下，成長股估值普遍承壓，加上市場對其電動車交付量及盈利能力的持續關注，短期內建議投資人保持觀望態度。",
       "sources": [
-        "TradingKey",
-        "優分析UAnalyze",
+        "TradingView",
+        "Investing.com",
         "經濟日報",
-        "英為財情",
-        "TIKR.com"
+        "FinGuider 美股資訊網",
+        "Moomoo",
+        "鉅亨網"
       ]
     },
     {
@@ -127,16 +144,16 @@
       "market": "US",
       "direction": "可布局",
       "timeframe": "中長期",
-      "reasoning": "輝達股價屢創新高，市值逼近6兆美元，主要受惠於強勁的AI需求及1500億美元的股票回購計畫。中國可能放寬H200晶片採購限制，加上SpaceX傳出巨額晶片訂單，進一步強化市場對其未來營收的樂觀預期。分析師普遍看好其長期成長潛力。",
+      "reasoning": "輝達 (NVDA) 在2026年10月7日微幅上漲0.14%，儘管整體半導體板塊受高利率環境影響，但其在AI領域的領導地位依然穩固。SpaceX傳出正洽談籌資400億美元用於採購輝達AI晶片，顯示市場對其產品的長期需求看好。分析師普遍給予「跑贏大市」評級，目標價達300美元。考量其在人工智慧生態系中的核心地位及未來成長潛力，中長期而言，輝達仍是值得關注的布局標的。",
       "sources": [
-        "TradingKey",
-        "優分析UAnalyze",
-        "ETtoday財經雲",
-        "TVBS新聞",
-        "經濟日報",
-        "TradingView"
+        "玩股網",
+        "TradingView",
+        "FinGuider 美股資訊網",
+        "Investing.com",
+        "理財寶",
+        "鉅亨網"
       ]
     }
   ],
-  "last_updated": "2026-10-07T08:30:47.954977+08:00"
+  "last_updated": "2026-10-08T08:31:03.169496+08:00"
 }
