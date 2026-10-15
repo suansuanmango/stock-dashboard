@@ -1,79 +1,79 @@
 {
-  "summary": "晶片股因競爭加劇而承壓，銀行財報好壞參半，AI投資熱潮引發通膨擔憂，市場情緒謹慎。",
+  "summary": "通膨擔憂與高利率壓抑美股，AI股波動，特斯拉與台積電ADR各有進展。",
   "articles": [
     {
       "source": "股癌",
-      "title": "股癌最新Podcast：願氣氛降臨!",
-      "summary": "謝孟恭透過輕鬆詼諧的方式，剖析晦澀的金融投資知識與海內外財經時事，並回應聽眾提問，協助散戶理解市場脈動與投資心法。"
+      "title": "EP705 | 🎀 佳句產生器",
+      "summary": "股癌最新一集EP705已上線，節目由謝孟恭主持，持續以白話文剖析晦澀金融知識與海內外財經時事，強調邏輯推演與風險控管，協助散戶建立獨立思考體系，而非提供選股建議。"
     },
     {
       "source": "Bloomberg",
-      "title": "美股從紀錄高點回落，銀行財報好壞參半",
-      "summary": "美國股市在企業財報季開跑後表現不一，標普500指數從歷史高點小幅回落，道瓊和那斯達克也下跌。高盛財報優於預期但股價波動，摩根大通獲利不如預期。"
+      "title": "U.S. stocks drop to their worst day since July as inflation worsens",
+      "summary": "美國股市在10月14日經歷自七月以來最差單日表現，S&P 500下跌1.1%，Nasdaq綜合指數下跌1.9%，主要受通膨惡化影響。九月消費者物價指數年增3.7%，高於預期，加劇聯準會升息擔憂，AI相關股票領跌。"
     },
     {
       "source": "Reuters",
-      "title": "晶片股重挫拖累美股，銀行財報喜憂參半",
-      "summary": "美國股市三大指數小幅收跌，主要受晶片類股拋售壓力及大型銀行財報好壞參半影響。美光科技等記憶體股因中國競爭擔憂而下跌，而銀行業績則未能全面提振市場情緒。"
+      "title": "Bill would allow larger HSA contributions for new parents",
+      "summary": "路透社報導，一項名為「STORK法案」的新提案將允許新生兒父母在子女出生或領養當年，為健康儲蓄帳戶（HSA）額外增加2,000美元的供款上限。此舉旨在幫助家庭支付生育、分娩及新生兒醫療費用，若通過將於2027年起生效。"
     },
     {
       "source": "CNBC",
-      "title": "中國記憶體技術突破，美光等晶片股承壓下跌",
-      "summary": "中國長鑫存儲技術公司宣布在新型記憶體晶片架構上取得進展，導致美光、SK海力士和三星電子等晶片製造商股價下跌，引發市場對競爭加劇的擔憂。"
+      "title": "Nasdaq indices fall 2% as AI stocks lead Wall Street meltdown - Key factors explained",
+      "summary": "CNBC分析指出，10月14日華爾街股市下跌，那斯達克指數下跌2%，主要由AI相關股票領跌。原因包括對債務上升的擔憂以及九月消費者物價指數（CPI）數據高於預期，導致市場對升息的預期增強。"
     }
   ],
   "stock_radar": [
     {
-      "ticker": "KFY",
-      "name": "Korn Ferry",
+      "ticker": "MSCI",
+      "name": "MSCI",
       "market": "US",
       "direction": "值得關注",
       "timeframe": "中長期",
-      "reasoning": "Seeking Alpha推薦Korn Ferry (KFY)為收入型投資者值得關注的標的，其預期股息收益率高達3.07%。該公司在當前市場環境下，提供相對穩定的收入來源，適合尋求股息收益的投資者。",
+      "reasoning": "Seeking Alpha將MSCI列為2026年10月高成長股息股票之一，顯示其在基本面與股息成長方面具潛力。儘管市場波動，此類具成長性的公司仍受關注，適合中長期投資者納入考量。",
       "sources": [
         "Seeking Alpha"
       ]
     },
     {
-      "ticker": "RDN",
-      "name": "Radian Group",
+      "ticker": "DPZ",
+      "name": "達美樂披薩",
       "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Radian Group (RDN)同樣被Seeking Alpha列為收入型投資者的推薦股，其預期股息收益率為3.01%。在尋求穩定現金流的投資策略中，RDN因其較高的收益率而具吸引力。",
-      "sources": [
-        "Seeking Alpha"
-      ]
-    },
-    {
-      "ticker": "ZTS",
-      "name": "Zoetis",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Zoetis (ZTS)被Seeking Alpha推薦給價值型投資者，並被評為最被低估的股票之一，依據股息收益率理論可能被低估71.02%。其目前收益率2.83%遠高於五年平均，顯示潛在價值。",
-      "sources": [
-        "Seeking Alpha"
-      ]
-    },
-    {
-      "ticker": "EOG",
-      "name": "EOG Resources",
-      "market": "US",
-      "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha將EOG Resources (EOG)列為成長型投資者可關注的標的，擁有最高的預期股息成長率16.8%。這顯示公司在保持股息成長的同時，也具備良好的營運擴張潛力。",
-      "sources": [
-        "Seeking Alpha"
-      ]
-    },
-    {
-      "ticker": "AMAT",
-      "name": "Applied Materials",
-      "market": "US",
-      "direction": "值得關注",
+      "direction": "可布局",
       "timeframe": "中短期",
-      "reasoning": "Applied Materials (AMAT)在Seeking Alpha的排名中大幅提升，主要受惠於更高的每股盈餘成長預期和有利的公允價值評估。該股在九月份表現強勁，顯示其在半導體設備領域的潛力。",
+      "reasoning": "Seeking Alpha指出達美樂披薩為10月最具吸引力的股息股之一，並被評為最被低估的股票。其估值可能提供入場機會，適合尋求價值與股息成長的投資者在中短期內考慮布局。",
+      "sources": [
+        "Seeking Alpha"
+      ]
+    },
+    {
+      "ticker": "LLY",
+      "name": "禮來",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "長期",
+      "reasoning": "禮來被Seeking Alpha列為10月高成長股息股票及表現優異者。作為製藥巨頭，其創新能力與穩健的財務表現使其具備長期投資價值，尤其在醫療保健領域持續成長的背景下。",
+      "sources": [
+        "Seeking Alpha"
+      ]
+    },
+    {
+      "ticker": "PEP",
+      "name": "百事公司",
+      "market": "US",
+      "direction": "可布局",
+      "timeframe": "中長期",
+      "reasoning": "Seeking Alpha認為百事公司估值具吸引力，且股息收益率遠高於歷史平均，顯示其被低估。在消費品領域，百事擁有強大的品牌與現金流，適合尋求穩定收益與潛在資本增值的投資者。",
+      "sources": [
+        "Seeking Alpha"
+      ]
+    },
+    {
+      "ticker": "VZ",
+      "name": "威瑞森",
+      "market": "US",
+      "direction": "可布局",
+      "timeframe": "中長期",
+      "reasoning": "Verizon被Seeking Alpha選為10月高收益股，提供具吸引力的股息收益，且被列為S&P500的「股息狗」。對於偏好穩定現金流的投資者而言，其高股息特性與電信業的防禦性值得關注。",
       "sources": [
         "Seeking Alpha"
       ]
@@ -86,7 +86,12 @@
       "market": "TW",
       "direction": "觀望",
       "timeframe": "短期",
-      "reasoning": "富邦台灣50近期雖有月度漲幅達6.93%，但近一週表現疲軟，下跌0.83%。更值得注意的是，三大法人（外資、投信、自營商）在過去5至20個交易日均呈現淨賣超，顯示機構資金流出。在市場情緒謹慎下，建議投資人暫時觀望，待法人賣壓趨緩或市場出現更明確方向再考慮布局。"
+      "reasoning": "富邦台灣50 (006208) 近期股價呈現小幅下跌，截至2026年10月14日為258.70台幣。更值得注意的是，截至10月12日，三大法人在過去5個交易日合計賣超2,746張，過去20個交易日合計賣超4,183張，顯示法人資金呈現流出態勢。在法人持續減碼的情況下，短期內建議觀望，待市場情緒與法人動向趨於穩定再考慮布局。",
+      "sources": [
+        "英為財情",
+        "FinLab",
+        "MoneyDJ理財網"
+      ]
     },
     {
       "ticker": "TSM",
@@ -94,24 +99,43 @@
       "market": "US",
       "direction": "觀望",
       "timeframe": "短期",
-      "reasoning": "台積電ADR近期受晶片類股整體賣壓影響，股價連續多日下跌，10月12日跌1.98%，10月8日跌3.01%。儘管其在AI供應鏈中先進封裝技術的關鍵地位受到矚目，但中國競爭對手長鑫存儲技術進展帶來的市場不確定性，以及整體晶片市場的謹慎情緒，建議投資人短期內保持觀望，等待市場對競爭格局的反應更為明朗。"
+      "reasoning": "台積電ADR (TSM) 近期股價承壓，10月8日跌破470美元，10月14日續跌至約429-431美元。儘管第三季營收創歷史新高，但9月營收月減導致部分資金獲利了結。分析師建議短期內應避免盲目抄底，觀察股價在450美元附近是否出現止跌訊號，再考慮建立部位。",
+      "sources": [
+        "TradingKey",
+        "みんかぶ米国株",
+        "玩股網"
+      ]
     },
     {
       "ticker": "TSLA",
       "name": "特斯拉",
       "market": "US",
-      "direction": "觀望",
+      "direction": "可布局",
       "timeframe": "中短期",
-      "reasoning": "特斯拉近期交付數據雖有亮點，第三季交付量優於預期，上海工廠交付量創新高。然而，中國市場競爭激烈導致本土銷量年減9.4%。其未來成長動能高度仰賴Cybercab等新技術的商業化落地，存在較高執行風險。儘管部分分析師看好其潛在漲幅，但市場對其估值與長期競爭力仍有分歧，建議投資人觀望，待其新業務進展更為明確。"
+      "reasoning": "特斯拉 (TSLA) 近期受多重利好消息提振，包括Cybercab註冊量大增、馬斯克獲頒國家科學獎及預期優於第二季交付量，市場情緒偏向看漲。10月15日Roadster車型將發布，儘管短期股價波動可能較大，但Robotaxi業務擴張及AI自動駕駛的潛力，使其在中短期內具備布局吸引力。",
+      "sources": [
+        "亿欧快讯",
+        "金融界",
+        "moomoo 社区",
+        "英為財情"
+      ]
     },
     {
       "ticker": "NVDA",
       "name": "輝達",
       "market": "US",
       "direction": "可布局",
-      "timeframe": "中長期",
-      "reasoning": "輝達作為AI晶片龍頭，持續受惠於全球AI投資熱潮，市值已達5.5兆美元，並引領美股牛市，標普500突破7800點。中國企業為彌補AI晶片缺口，大量採購輝達遊戲與工作站晶片，顯示其產品需求強勁。儘管晶片類股近期面臨競爭加劇的壓力，但輝達在AI領域的領導地位穩固，長期成長趨勢明確。短期波動不改其基本面優勢，適合中長期投資者逢低布局。"
+      "timeframe": "長期",
+      "reasoning": "輝達 (NVDA) 儘管在10月14日受市場對通膨與升息擔憂影響，股價下跌3%，但其長期前景依然強勁。NVIDIA宣布未來五年將投入10億美元支持美國科學研究，並計畫在歐洲AI新創及資料中心再投資20億美元，顯示其在AI領域的領導地位與持續擴張的決心。黃仁勳也強調AI安全，這些布局鞏固其長期成長潛力。",
+      "sources": [
+        "CNBC",
+        "NVIDIA Japan Blog",
+        "PR TIMES",
+        "Investing.com",
+        "經濟日報-聯合新聞網",
+        "優分析Uanalyze"
+      ]
     }
   ],
-  "last_updated": "2026-10-14T08:30:53.995045+08:00"
+  "last_updated": "2026-10-15T08:30:47.804007+08:00"
 }
