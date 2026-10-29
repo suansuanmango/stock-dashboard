@@ -1,29 +1,40 @@
 {
-  "summary": "AI熱潮持續帶動美股上揚，市場聚焦聯準會利率決策與科技巨頭財報，通膨擔憂仍存。",
+  "summary": "聯準會維持利率不變，但通膨擔憂未減；科技巨頭走勢分化，AI概念股仍受關注。",
   "articles": [
     {
       "source": "股癌",
-      "title": "EP708 | 風雨求平安",
-      "summary": "股癌最新一集探討金融投資知識與海內外財經時事，並回覆聽眾提問。節目強調邏輯推演與風險控管，協助投資者建立獨立思考體系，而非提供單純選股建議或市場預測。",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFl5Bzy7k6QSOp3JhJUXy9OKjaf8ALpIt3Wb-bz-e-onLa2gqzUZ9BuV--6roHxtla-x4RF2SaujneNVZCSSeULmf48hKEU53yiiwmli0URDikVz_Si2jfeVS8VpUcrEBvbg-ZNYez_GjBO8g="
+      "title": "EP709 | ⭐ 可以一起勇敢到十一月中嗎",
+      "summary": "股癌最新一集EP709於10月28日上線，主題為「可以一起勇敢到十一月中嗎」，內容主要圍繞悠活原力關健複方膠囊及海藻鈣鎂錠的獨家限定優惠活動，鼓勵聽眾把握雙11前的購物時機。節目中謝孟恭透過輕鬆的語氣，將晦澀的金融投資知識與海內外時事融入生活化討論，並穿插商品資訊，為散戶提供取暖與樂趣的平台。",
+      "sources": [
+        "2"
+      ]
     },
     {
       "source": "Bloomberg",
-      "title": "對沖基金Millennium擬將預測市場數據用於傳統資產交易策略",
-      "summary": "彭博社報導，對沖基金Millennium Management正開發工具，計劃將Polymarket和Kalshi等預測市場數據作為傳統資產交易策略的參考信號，特別關注地緣政治、經濟及大宗商品事件的預測結果。",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMAzTxH3PSHvN7dUiTN_wsLtPj6aFOp3qoBqdfKT5NGiAoumAxMhe_I0BfcNyktuDkA1fUaN_DvtLWgsMp-4fCqP3FPo4XCIH-Um3TU0fChgKwnLMSaAFQStMczMsqsAEvt7UMS8snWhrL4AQRdJHT_zn-maG9B0G-Vi9j7xzIge0PLgRAjc9TGRU9FrNTJ3BfxzHC0XL1yhaJTQ=="
+      "title": "亞洲股市有望上漲：市場綜述，美國債市疑慮加深政治僵局恐難解財政赤字",
+      "summary": "彭博社報導指出，受人工智能樂觀情緒重燃提振，亞洲股市有望上漲。然而，美國債券投資人對國會山莊潛在政治僵局能否有效解決財政走向的疑慮日益加深，傳統上政治僵局被視為有利於控制財政赤字，但市場現懷疑單純僵持已不足以解決結構性財政問題，顯示對美國政府龐大債務的深層焦慮。",
+      "sources": [
+        "39",
+        "40"
+      ]
     },
     {
       "source": "Reuters",
-      "title": "全球高通膨恐持續至2027，生活成本成選戰焦點",
-      "summary": "路透社調查顯示，全球經濟高通膨現象可能持續至明年，經濟學家上調多國2027年通膨預期，擔憂物價壓力長期存在。AI技術投資雖帶來韌性，但生活成本壓力已成為全球各地選戰焦點。",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH02eksa3wg5i0CX0Yo8DZFdWkQMbzW7HzhvtqAh4VpIgCD8I5i9WHQ0S17TI4biMmAVHtmnw1C0SHOfTCamwwGScFy4SA3ezi3rLUqR08JciusGPY3gnhCwE4NGm7zvjWgCDVSFrJmlzkbyQ=="
+      "title": "路透：全球高通膨恐持續至2027年物價壓力難消",
+      "summary": "路透社調查顯示，全球高通膨現象恐將持續至2027年，經濟學家日益擔憂物價壓力將持續存在，甚至演變成根深蒂固的問題。除了中東衝突推升能源成本外，金融環境趨緊也加劇了通膨疑慮。儘管人工智慧（AI）技術領域的投資已超過1兆美元，支撐部分經濟體展現韌性，但生活成本壓力仍持續擠壓家庭開支。",
+      "sources": [
+        "26"
+      ]
     },
     {
       "source": "CNBC",
-      "title": "Fed本周不升息也別鬆口氣！逾七成專家押12月再升",
-      "summary": "CNBC最新調查指出，逾九成專家預期聯準會本周將按兵不動，但逾七成認為12月將再升息。市場焦點轉向主席華許如何傳達進一步緊縮的可能性，以權衡通膨與經濟成長壓力。",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbco8xxUNLZ7FRsMEHqXCXG5ceUIx26PpwFOG0LxK-SYRIHBMXmKtjS60hjEibWVNoSz3NJJ2Xey-YipsUxNCXP42mGKls236OHc3CznwkyvJrqx_AxtX-tssq1ZlcbDtF0HkG3Ac="
+      "title": "美聯儲今晚料按兵不動，但通脹惡化恐逼其未來“下猛藥”，科技七巨頭相關性破十年低，投資者須精選個股",
+      "summary": "CNBC分析指出，市場普遍預期美聯儲將按兵不動，但通脹較上次會議以來進一步惡化，可能迫使美聯儲未來幾個月採取更大力度的緊縮措施。同時，曾被視為整體板塊交易的「科技七巨頭」出現結構性分化，其60天滾動相關性平均值跌至逾十年最低水平，反映投資者需轉向精選個股策略，而非將其視為單一板塊。",
+      "sources": [
+        "16",
+        "28",
+        "37"
+      ]
     }
   ],
   "stock_radar": [
@@ -32,32 +43,45 @@
       "name": "美光科技",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Seeking Alpha指出，高頻寬記憶體（HBM）是NVIDIA Blackwell晶片的關鍵，而美光科技2026年HBM4產能已售罄，顯示其在AI領域的強勁需求與重要性。",
+      "timeframe": "長期布局",
+      "reasoning": "游庭皓在討論AI建設狂潮時，將美光科技列為AI基礎設施的晶片供應商之一，顯示其在AI浪潮中扮演重要角色。Seeking Alpha也將美光科技列為2026年十大看好股票之一，並給予「強力買入」的量化評級，認為其在半導體產業中具有領先地位和強勁的成長潛力。",
       "sources": [
-        "Seeking Alpha"
+        "38",
+        "42",
+        "43"
       ]
     },
     {
-      "ticker": "QCOM",
-      "name": "高通",
+      "ticker": "AMAT",
+      "name": "應用材料",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "高通被Seeking Alpha新分析師列為2026年9月推薦股，市場對其在5G、物聯網及AI邊緣運算領域的發展潛力持樂觀態度，預期未來成長動能強勁。",
+      "timeframe": "中期布局",
+      "reasoning": "Seeking Alpha在2026年10月的「高品質股息成長股」報告中，指出應用材料因其更高的每股盈餘成長預期和有利的估值轉變，排名顯著提升。儘管9月股價表現強勁，但其仍被認為是具有吸引力的投資機會，顯示市場對其未來表現持樂觀態度。",
       "sources": [
-        "Seeking Alpha"
+        "36"
       ]
     },
     {
-      "ticker": "TDOC",
-      "name": "Teladoc Health",
+      "ticker": "DHI",
+      "name": "D.R. Horton",
       "market": "US",
       "direction": "值得關注",
-      "timeframe": "中長期",
-      "reasoning": "Teladoc Health被Seeking Alpha新分析師列為2026年9月推薦股，遠距醫療服務需求持續增長，公司在數位健康領域的領導地位使其具備長期發展潛力。",
+      "timeframe": "中期布局",
+      "reasoning": "Seeking Alpha的報告顯示，D.R. Horton在2026年10月的高品質股息成長股榜單中，排名上升6位。這一提升主要得益於其更高的每股盈餘成長預期，表明分析師對這家房屋建築商的盈利前景持積極看法，值得投資者關注。",
       "sources": [
-        "Seeking Alpha"
+        "36"
+      ]
+    },
+    {
+      "ticker": "HD",
+      "name": "家得寶",
+      "market": "US",
+      "direction": "值得關注",
+      "timeframe": "長期布局",
+      "reasoning": "Seeking Alpha在2026年10月的分析中指出，家得寶因股價下跌和更高的公允價值估計，使其在高品質股息成長股中的排名有所提升。儘管每股盈餘成長預期不變，但估值調整使其更具吸引力，對於尋求穩定成長和合理估值的投資者而言，家得寶是一個值得考慮的標的。",
+      "sources": [
+        "36"
       ]
     }
   ],
@@ -66,15 +90,15 @@
       "ticker": "006208",
       "name": "富邦台灣50",
       "market": "TW",
-      "direction": "可布局",
-      "timeframe": "中長期",
-      "reasoning": "富邦台灣50（006208）擬進行ETF分割，預計1拆8，旨在降低投資門檻並吸引更多投資人參與，有望提升市場流動性。基金規模接近5000億元，未來可能調降經理費率，對長期持有者有利。儘管近期表現平穩，但分割與潛在費用降低為長期布局提供誘因。",
+      "direction": "觀望",
+      "timeframe": "短期觀望",
+      "reasoning": "富邦台灣50（006208）近期宣布擬進行1拆8的分割，受益人會議將於12月18日召開，若通過可望降低入手門檻。然而，截至2026年10月28日，三大法人已連續13個交易日合計賣超9,416張，近20個交易日合計賣超32,978張，顯示法人籌碼呈現賣超趨勢。儘管分割可能帶來流動性改善，但法人持續賣超以及分割案通過與否的不確定性，建議投資人短期內保持觀望，待市場反應更明確後再做決策。",
       "sources": [
-        "MoneyDJ理財網",
-        "聯合新聞網",
-        "永豐金證券",
-        "PChome 股市",
-        "英為財情"
+        "8",
+        "9",
+        "10",
+        "12",
+        "13"
       ]
     },
     {
@@ -82,29 +106,29 @@
       "name": "台積電 ADR",
       "market": "US",
       "direction": "可布局",
-      "timeframe": "中長期",
-      "reasoning": "台積電ADR（TSM）近期股價上漲，儘管10月中旬曾因通膨與AI資金疑慮下跌，但分析師普遍給予積極樂觀評價，目標價中位數上修至554.5美元。AI產業對台積電先進晶片的高度依賴，支撐其長期成長動能，但需留意供應鏈風險。",
+      "timeframe": "長期布局",
+      "reasoning": "台積電ADR（TSM）在2026年10月29日收盤價為439.51美元，近期股價呈現上漲趨勢。儘管半導體產業面臨景氣循環、龐大資本支出及地緣政治風險，但台積電作為全球晶圓代工龍頭，持續擴充台灣及海外產能，並在AI時代扮演關鍵角色。其最新本益比約28.23倍，相較於其產業地位和成長潛力仍具吸引力。考慮到其技術領先地位和長期成長動能，建議投資人可考慮長期布局。",
       "sources": [
-        "玩股網",
-        "Vantage Markets",
-        "StockQ.org",
-        "鉅亨網",
-        "聯合新聞網"
+        "1",
+        "7",
+        "15",
+        "19",
+        "22"
       ]
     },
     {
       "ticker": "TSLA",
       "name": "特斯拉",
       "market": "US",
-      "direction": "可布局",
-      "timeframe": "短期至中長期",
-      "reasoning": "特斯拉（TSLA）近期股價強勁上漲，受惠於優異的獲利、自由現金流增加及汽車業務毛利率改善。Barclays上調其評級與目標價，看好其營運轉型、FSD普及和儲能業務需求。市場亦關注特斯拉與SpaceX潛在合併的可能性，為股價帶來估值溢價。",
+      "direction": "觀望",
+      "timeframe": "短期觀望",
+      "reasoning": "特斯拉（TSLA）股價在2026年10月12日約為382.70美元，年內波動劇烈，年初至今下跌14.90%。儘管Barclays將其評級上調至「增持」並將目標價調高至450美元，理由是營運好轉、FSD採用率提升及儲能業務需求旺盛，市場也存在特斯拉與SpaceX潛在合併的猜測。然而，特斯拉目前市盈率高達322倍，遠超行業平均，估值泡沫風險仍存。機構對其看法分歧，AI敘事與盈利壓力並存，建議投資人短期內保持觀望，等待更明確的盈利能力修復信號。",
       "sources": [
-        "TradingKey",
-        "Gotrade",
-        "Hk01",
-        "富途資訊",
-        "FinancialContent"
+        "11",
+        "14",
+        "29",
+        "31",
+        "33"
       ]
     },
     {
@@ -112,19 +136,16 @@
       "name": "輝達",
       "market": "US",
       "direction": "可布局",
-      "timeframe": "短期至中長期",
-      "reasoning": "輝達（NVDA）股價近期表現強勁，其估值已低於標普500指數平均水平，但華爾街預計其利潤將創紀錄。外媒分析指出，隨著超大規模AI企業陸續公布2027年資本支出計畫，市場將重新評估輝達價值，預期股價在2028年前可能翻倍，是逢低布局的理想時機。",
+      "timeframe": "長期布局",
+      "reasoning": "輝達（NVDA）作為AI時代的領航者，市值已突破5兆美元。儘管今年股價已上漲約21%，但華爾街預計其未來12個月每股收益將達12.03美元，且目前市盈率約18倍，甚至低於標普500指數的19倍，顯示相對大盤存在折價。外媒分析指出，市場尚未完全反映其2027年預期的巨大成長空間，隨著超大規模AI業者陸續公布資本支出指引，輝達股價有望迎來「巨獸級」行情。考慮到其在AI領域的領導地位和具吸引力的估值，建議投資人可考慮長期布局。",
       "sources": [
-        "Gotrade",
-        "Hk01",
-        "鉅亨號",
-        "ETtoday財經雲",
-        "TradingView",
-        "民視財經網",
-        "三立新聞網",
-        "Life 生活網"
+        "18",
+        "20",
+        "21",
+        "23",
+        "25"
       ]
     }
   ],
-  "last_updated": "2026-10-28T08:30:37.441360+08:00"
+  "last_updated": "2026-10-29T08:30:42.964961+08:00"
 }
